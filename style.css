@@ -1,0 +1,41 @@
+
+body { font-family: Times; }
+
+div.old { font-family: Times; }
+p.old   { font-family: Times; }
+
+div.journaltitle    { font-family: Times; font-size: 250%; font-weight: bold; text-transform: uppercase; margin-top: 0em; margin-bottom: 0em; }
+
+div.journalsubtitle { font-family: Times; font-size: 100%; font-weight: bold; text-transform: uppercase; margin-top: -1em; margin-bottom: 0em; }
+
+div.issn { font-family: Times; font-size: 75%; }
+
+
+div.controlbar { background: rgb(220, 230, 255); 
+	         padding: .5em; padding-bottom: 4em; }
+
+div.control { padding-bottom: 1em; margin-left: .5em; text-indent: -.5em; }
+
+div.archivebar { background: rgb(220, 230, 255);
+	         padding: .5em; padding-bottom: 2em;
+		 font-size: 90%; }
+
+div.editors { margin-left: +1em; font-size: 90%; }
+p.editor { margin-top: 0px; margin-bottom: 0px; margin-left: 1em; text-indent: -1em; }
+a.editor { text-decoration: none; }
+
+div.title { font-weight: bold; font-size: 100%; }
+a.title { text-decoration: none; }
+
+div.author { font-weight: bold; font-size: 90%; }
+span.citation {  }
+
+div.contentlinks { margin-top: 1em; }
+span.contentlink { margin-top: 1em; }
+
+a.selflink { color: gray;  }
+
+div.copyright { font-size: 75%; }
+div.stableurl { font-size: 75%; }
+
+div.accesslinks { font-size: 90%; }
