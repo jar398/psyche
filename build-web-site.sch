@@ -383,7 +383,7 @@
 	  (lambda (iport)
 	    ;; Skip over header.  Usually about 6 lines.
 	    (let loop ()
-	      (let ((line (read-line iport)))
+	      (let ((line (read-line-foo iport)))
 		(if (eof-object? line)
 		    (warn "ill-formed .txt file")
 		    (if (= (string-length line) 0)
@@ -396,7 +396,7 @@
 		   "Please consult the PDF file for the complete article."))
 	     (p (reverse
 		 (let loop ((items '()) (count 0))
-		   (let ((line (read-line iport)))
+		   (let ((line (read-line-foo iport)))
 		     (if (eof-object? line)
 			 items
 			 (let ((items (cons line items)))
@@ -427,10 +427,10 @@
 			foo))
 		    (cdr (iota 104))))
 	   (k 3)			;Number of columns
-	   (n (length vs))
+	   (n (length vs)) ;103
 	   ;; Add dummy entries to end of volumes list
-	   (vs (append vs (list (map (lambda (i) '()) (cdr (iota k))))))
-	   (n/k (/ (+ n (- k 1)) k)))
+	   (vs (append vs (map (lambda (i) '()) (cdr (iota k)))))
+	   (n/k (/ (+ n (- k 1)) k))) ;35
       (table (width= "100%")
 	     (apply map
 		    (lambda vv (apply tr vv))
@@ -438,6 +438,9 @@
 			   (sublist vs (* i n/k) (* (+ i 1) n/k)))
 			 (iota k))))))))
 		
+(define (round-up-to-nearest-multiple n k)
+  (- (+ n (- k 1)) (remainder (+ n (- k 1)) k)))
+
 (define (volume-stuff volnum here)
   (let* ((stuff (span "Volume "
 		      volnum
@@ -525,9 +528,9 @@
     (p (a (href= "http://psyche1.entclub.org/options/")
           "Memo on the future of " (i "Psyche")))
 
-    (p (a (hlink "src" here)
-          "Source code"
-	  " for this web site"))
+    (p (a (href= "https://github.com/jar398/psyche")
+          "Source code")
+       " for this web site")
 
     )))
 
@@ -679,10 +682,11 @@
 			     (stringify q))))
 	"supplemental")))
 
-(define (stringify x)
-  (cond ((number? x) (number->string x))
-	((symbol? x) (symbol->string x))
-	(else x)))
+; We get this from utils.scm
+;(define (stringify x)
+;  (cond ((number? x) (number->string x))
+;        ((symbol? x) (symbol->string x))
+;        (else x)))
 
 (define (article-citation art)
   (span (class= "citation")
@@ -836,7 +840,8 @@
 	       (td
 		(strong
 		 "This is the CEC archive of "
-		 (i "Psyche") ", which is now published by "
+		 (i "Psyche") " through 2000. "
+		 (i "Psyche") " is now published by "
 		 (a (href= "http://www.hindawi.com/journals/psyche/contents.html")
 		    "Hindawi Publishing")
 		 "."))))
@@ -1092,7 +1097,7 @@ var sc_security=\"42a09c97\";
 		      articles)
 		articles))
 
-	  (let ((line (read-line in)))
+	  (let ((line (read-line-foo in)))
 	    (cond ((eof-object? line)
 		   (finish-volume (finish-article)))
 		  ((< (string-length line) 2)
@@ -1198,13 +1203,12 @@ var sc_security=\"42a09c97\";
   (= (string-length line) 0))
 
 ; Adapted from scheme48/scheme/env/command.scm
-(define (read-line port)
+; read-line is defined in utils.scm - we could probably use that instead
+(define (read-line-foo port)
   (let loop ((l '()))
     (let ((c (read-char port)))
       (cond ((eof-object? c)
 	     c)
-	    ((char=? c #\newline)
-	     (list->string (reverse l)))
 	    ((char=? c #\newline)
 	     (list->string (reverse l)))
 	    (else
