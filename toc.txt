@@ -42,6 +42,7 @@ P	37
 S	17-038
 T	Fifth Meeting of the Entomological Society of America
 P	38
+Q	40
 
 V	17
 I	2
@@ -6456,6 +6457,7 @@ T	The Antiquity of Social Insects
 A	J. Bequaert
 A	F. M. Carpenter
 P	50
+Q	55
 
 V	48
 I	2-3
@@ -6504,6 +6506,7 @@ S	48-113
 T	The Inter-relationships of Certain Jassoid Genera (Jassoidea, Homoptera)
 A	J. W. Evans
 P	113
+Q	121
 
 V	48
 I	4
@@ -9558,6 +9561,47 @@ Q	190
 # N.b. volume 72 (3) is missing.
 
 V	72
+I	3
+
+S	72-191
+T	A Redefinition of <i>Ischyropalpus,</i> and Six New Species (Coleoptera: Anthicidae)
+A	Floyd G. Werner
+P	191
+
+S	72-210
+T	Notes on Neotropical Tabanidae VI. A New Species of <i>Lefiselaga</i> Macq. with Remarks on Related Genera
+A	G. B. Fairchild
+P	210
+
+S	72-218
+T	Self-Burying Behavior in the Genus <i>Sicarius</i> (Araneae, Sicariidae)
+A	Jonathan Reiskind
+P	218
+
+S	72-225
+T 	Second African Species of the Dacetine Ant Genus <i>Codiomyrmex</i>
+A	Robert W. Taylor
+P	225
+
+S	72-229
+T	Five New Species of the Genus <i>Tmarus</i> (Araneae, Thomisidae) from the West Indies
+A	Arthur M. Chickering
+P	229
+
+S	72-241
+T	A Key to the North American <i>Statira</i> (Coleoptera: Lagriidae)
+A	Carl T. Parsons
+P	241
+
+S	72-255
+# Obtained scan from Mary Sears
+T	The Genus <i>Neohermes</i> (Megaloptera: Corydalidae)
+A	Oliver S. Flint, Jr.
+P	255
+Q	263
+
+
+V	72
 I	4
 
 S	72-265
@@ -10401,15 +10445,59 @@ Q	512
 #P	515
 
 
-# Missing: v 78 #1-2
-#V	78
-#I	1-2
-#
-#S	78-001
-#T	The Reproductive Pattern of <i>Diponera grandis</i> Roger (Hymenoptera, Ponerinae) with Notes on the Ethology of the Species
-#A	Caryl P. Haskins
-#A	Paul A. Zahl
-#P	1
+# Missing from ant room set: v 78 #1-2
+V	78
+I	1-2
+
+S	78-001
+T	The Reproductive Pattern of <i>Diponera grandis</i> Roger (Hymenoptera, Ponerinae) with Notes on the Ethology of the Species
+A	Caryl P. Haskins
+A	Paul A. Zahl
+P	1
+
+S	78-012
+T	Fine Structure of the Thread Connections in the Orb Web of <i>Araneus diadematus</i>
+A	Robert R. Jackson
+P	12
+
+S	78-032
+T	<i>Micratopus</i> Casey in the United States (Coleoptera: Carabidae: Bembidiinae)
+A	Thomas C. Burr, Jr.
+P	32
+
+S	78-038
+T	Colonization of the Northeastern United States by Two Palearctic Moths (Lepidoptera : Tortricidae)
+A	Jerry A. Powell
+A	John M. Burns
+P	38
+
+S	78-049
+T	A New Scenopinidae (Diptera) from Bermuda
+A	L. P. Kelsey
+P	49
+
+S	78-051
+T	Differentiation of the Carabid Antenna Cleaner
+A	T. F. Hlavac
+P	51
+
+S	78-067
+T	Notes of the Phasmatodea of the West Indies: Two New Genera
+A	Carl Farr Moxey
+P	67
+
+S	78-084
+T	The Male Genitalia of Blattaria. VI. Blaberidae: Oxyhaloinae
+A	Louis M. Roth
+P	84
+
+S	78-107
+# Scan via Mary Sears
+T	Studies on the Biology of the Chrysopidae 11. The Feeding Behavior of the Adult of <i>Chrysopa carnea</i> (Neuroptera)
+A	Joseph K. Sheldon
+A	Ellis G. MacLeod
+P	107
+Q	121
 
 V	78
 I	3
@@ -14200,6 +14288,7 @@ S	98-251
 T	The American species of the orb-weaver genus <i>Carepalxis</i> and the new genus <i>Rubrepeira</i> (Araneae: Araneidae)
 A	Herbert W. Levi
 P	251
+Q	264
 
 V	98
 I	4
@@ -14334,6 +14423,7 @@ S	99-117
 T	Observations on the genus <i>Terataner</i> in Madagascar (Hymenoptera: Formicidae)
 A	Gary D. Alpert
 P	117
+Q	127
 
 V	99
 I	2-3
@@ -14397,6 +14487,7 @@ S	99-221
 T	American <i>Neoscona</i> and corrections to previous revisions of Neotropical orbweavers (Araneae: Araneidae)
 A	Herbert W. Levi
 P	221
+Q	239
 
 V	99
 I	4
@@ -14509,6 +14600,7 @@ A	R. Achoy
 A	M. C. Marin
 A	J. Ugalde
 P	93
+Q	119
 
 V	100
 I	3-4
@@ -14654,6 +14746,7 @@ S	101-127
 T	Frank Morton Carpenter (1902-1994): Academic biography and list of publications
 A	David G. Furth
 P	127
+Q	144
 
 V	101
 I	3-4

@@ -337,7 +337,7 @@
 					 (path->string here))))
 	   (span (class= "stableurl")
 		 (a (href= permalink)
-		    "Durable link: "
+		    "Stable URL: "
 		    permalink)))
 
 	 (br)
@@ -350,9 +350,9 @@
 		   (if (null? (cdr doi-list))
 		       (let ((doi (car doi-list)))
 			 (span (class= "stableurl")
-			       (a (href= (string-append "http://dx.doi.org/" doi))
-				  "At Hindawi: doi:"
-				  doi)
+			       "At Hindawi: "
+			       (let ((doi-url (string-append "http://dx.doi.org/" doi)))
+				 (a (href= doi-url) doi-url))
 			       (br)))
 		       '())	  ;Ambiguous... normal
 		   ;; TBD: filter out "Exchange Column"
@@ -539,24 +539,20 @@
    (div
     (h3 "Contact " (i "Psyche"))
     (p (dl
-	(dt (i "Psyche's") " new publisher as of July 2007:")
-	(dd (a (href= "http://www.hindawi.com/")
-	       "Hindawi Publishing Corporation"))))
-    (p (dl (dt "Jonathan Rees, manager, " (i "Psyche") " Online web site "
-	       "(sponsored by Cambridge Entomological Club)")))
-    (p (dl
-	(dt "Email address:")
-	(dd (a (href= "mailto:psyche@entclub.org") "psyche@entclub.org"))))
+	(dt "As of 2007, " (i "Psyche") " is published by "
+	    (a (href= "http://www.hindawi.com/")
+	       "Hindawi Publishing Corporation")
+	    ". All correspondence regarding current publication should be addressed to Hindawi.")))
+    (p (dl (dt "This archive of " (i "Psyche") " pre 2007 is provided by "
+	       " the Cambridge Entomological Club"
+	       " and is managed by Jonathan A. Rees. "
+	       "Email: "
+	       (a (href= "mailto:psyche@entclub.org") "psyche@entclub.org"))))
     (p (dl
 	(dt "Address for written correspondence:")
-	(dd (i "Psyche: A Journal of Entomology") (br)
-	    "Cambridge Entomological Club" (br)
+	(dd "Cambridge Entomological Club" (br)
 	    "26 Oxford St." (br)
-	    "Cambridge, MA 02138")))
-    (p (dl
-	(dt "Telephone with voice mail:")
-	(dd "+1 617 209-4263"))))))
-
+	    "Cambridge, MA 02138"))))))
 
 ; Article has:
 ;  title, authors, citation (volume, issue(?), page number start/end, year),
@@ -667,7 +663,7 @@
     (span (class= "contentlink")
 	  (a (href= (string-append "http://psyche.entclub.org/"
 				   (path->string path)))
-	     "Permalink"))))
+	     "Stable URL"))))
 
 ; The thing that comes after the ':' in a citation
 (define (article-page-range art)
