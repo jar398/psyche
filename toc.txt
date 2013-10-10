@@ -299,6 +299,283 @@ P	258
 Q	258
 
 
+# Need: v. 18 issues 1, 2, 4, 5, 6
+
+V	18
+I	1
+
+S	18-001
+T	On the Homologies and Mechanism of the Mouth-parts of Hemiptera
+A	F. Muir
+A	J. C. Kershaw
+P	1
+
+S	18-013
+T	A Note on the Hunting Habits of an American Ammophila
+A	C. H. Turner
+P	13
+
+S	18-015
+T	New Neotropical Ploearinae
+A	E. Bergroth
+P	15
+
+S	18-021
+T	Notes on Some Genera of Ophioniae with Toothed Femora
+A	C. T. Brues
+P	21
+
+S	18-027
+T	Notes on the Guests of Some Californian Ants
+A	W. M. Mann
+P	27
+
+S	18-032
+T	Western Lepidoptera IV
+A	C. R. Coolidge
+P	32
+
+S	18-034
+T	Additions to List of Sphingidae of America North of Mexico
+A	Wm. Barnes
+A	J. J. McDunnough
+P	34
+
+S	18-035
+T	Some Carabidae Taken in Connecticut
+A	A. B. Champlain
+P	35
+
+S	18-037
+T	New Predaceous and Parasitic Acarina
+A	H. E. Ewing
+P	37
+Q	43
+
+
+V	18
+I	2
+
+S	18-045
+T	A Revision of the North American Species of the Dipterous Genus Hydrophorus
+A	J. M. Aldrich
+P	45
+
+S	18-070
+T	The Dipterous Genus Diostracus Loew
+A	J. M. Aldrich
+P	70
+
+S	18-073
+T	Notes on the Dipterous Genera Proposed by Billberg in his Enumeratio Insectorum
+A	C. W. Johnson
+P	73
+
+S	18-074
+T	Another Imported Clover Weevil
+A	E. G. Titus
+P	74
+
+S	18-075
+T	On the Later Embryological Stages of the Head of <i>Pristhesancus papuensis</i>
+A	F. Muir
+A	J. C. Kershaw
+P	75
+
+S	18-080
+T	The Food Habits of Megarhinus
+A	Frederick Knab
+P	80
+
+S	18-082
+T	Stridulation of the Shiled-backed Grasshoppers of the Genera Neduba and Aglaothorax
+A	C. Pemberton
+P	82
+
+S	18-085
+T	A New Species of Lasioptera with Observations on Certain Homologies
+A	E. P. Felt
+P	85
+
+S	18-087
+T	Two New Species of Holcaspis from Mexico
+A	Wm. Beutenmuller
+P	87
+
+S	18-089
+T	Notes on om Genera of Blattidae
+A	A. N. Caudell
+P	89
+
+S	18-090
+T	<i>Lucilia sericata</i> as a Household Pest
+A	A. P. Morse
+P	90
+Q	92
+
+
+V	18
+I	3
+
+S	18-093
+T	Two Fungus-Growing Ants from Arizona
+A	W. M. Wheeler
+P	93
+
+S	18-102
+T	On Some Northwestern Ants and Their Guests
+A	W. M. Mann
+P	102
+
+S	18-110
+T	A New Slave-Making Ant from Japan
+A	M. Yano
+P	110
+
+S	18-112
+T	On <i>Melanetaerius infernalis</i> Fall
+A	W. M. Wheeler
+P	112
+
+S	18-114
+T	The Sound-Making of Diptera and Hymenoptera
+A	C. E. Pemberton
+P	114
+
+S	18-118
+T	The Stridulations of Two Interesting Locustidae
+A	H. A. Allard
+P	118
+
+S	18-120
+T	Another Aquatic Caterpillar
+A	W. T. M. Forbes
+P	120
+
+S	18-121
+T	A few Suggestions on the Care of the Eggs and the Rearing of the Walking-stick, <i>Diapheromera femorata</i> Say
+A	H. H. P. Severin
+A	H. C. Severin
+P	121
+Q	123
+
+
+V	18
+I	4
+
+S	18-125
+T	The Philippine Mosquitoes
+A	C. S. Ludlow
+P	125
+
+S	18-134
+T	A List of the Bees of the Genus <i>Perdita</i>
+A	T. D. G. Cockerell
+P	134
+
+S	18-144
+T	A New Genus of Reduviidae
+A	E. Bergroth
+P	144
+
+S	18-146
+T	Hosts of Insect Egg-Parasites in North and South America
+A	A. A. Girault 
+P	146 
+
+S	18-153
+T	Two New Names of Sphecoid Wasps 
+A	G. A. Rohwer
+P	153
+
+S	18-155
+# TOC has wrong page number
+T	Book Review: Howard's "The House Fly"
+A	C. T. Brues
+P	156
+Q	156
+
+
+V	18
+I	5
+
+S	18-157
+T	On Certain <i>Olene</i> Species
+A	William Barnes
+A	J. McDunnough
+P	157
+
+S	18-159
+T	Daniel William Coquillett
+P	159
+
+S	18-160
+T	<i>Tipula fallax</i> and Others
+A	R. W. Doane
+P	160
+
+S	18-166
+T	Pseudoscorpions in Ant Nests
+A	W. M. Wheeler
+P	166
+
+S	18-168
+T	Fluffy Cecropia Cocoons
+A	P. Rau
+P	168
+
+S	18-170
+T	Notes on Coleoptera from Connecticut
+A	A. B. Champlain
+P	170
+
+S	18-173
+T	Notes on a Sarcophagid Found in a Turtle
+A	T. L. Patterson
+P	173
+Q	174
+
+
+V	18
+I	6
+
+S	18-175
+T	Samuel Hubbard Scudder
+A	J. S. Kingsley
+P	175
+
+S	18-179
+T	Doctor Scudder's Work on the Lepidoptera
+A	William L. W. Field
+P	179
+
+S	18-181
+T	Scudder's Work on Fossil Insects
+A	T. D. A. Cockerell
+P	181
+
+S	18-187
+T	The Orthopterological Work of Mr. S. H. Scudder, with Personal Reminiscences
+A	Albert P. Morse
+P	187
+
+S	18-192
+T	Synonymical, and Other Notes on the Tipulidae (Diptera)
+A	Charles P. Alexander
+P	192
+
+S	18-203
+T	Three New Ants from Mexico and Central America
+A	William Morton Wheeler
+P	203
+
+S	18-209
+T	Book Review: <i>The Reduction of Domestic Mosquitoes</i> by Edward H. Ross
+A	R. W. Glaser
+P	209
+Q	209
+
+
 V	19
 I	1
 
@@ -337,13 +614,13 @@ S	19-022
 # This occupies just half a page
 T	Second International Congress of Entomologists
 P	22
-P	22
+Q	22
 
 S	19-022
 # This is 1.5 pages, but the PDF file also includes a bunch of ads
 T	The Washington Meeting of the Entomological Society of America
 P	22
-P	23
+Q	23
 
 V	19
 I	2
@@ -1657,7 +1934,10 @@ T	Book Review
 P	128
 Q	129
 
-S	23-131
+S	23-130
+# Missing from Hindawi's site; no DOI; 2nd page is just ads.
+# There are two page 131's in this volume!
+# The first is going into a file artifically called "23-130".
 T	Exchange Column
 P	131
 Q	131
@@ -1666,10 +1946,11 @@ V	23
 I	5
 
 S	23-131
-# Missing!?
+# Missing from CEC site
 T	Sarcophagid&aelig; of New England, III, <i>Sarcofahrtia ravinia,</i> New Genus and New Species
 A	R. R. Parker
 P	131
+Q	139
 
 S	23-139
 T	Taxonomic Notes on Agathin&aelig; (Hymenoptera-Braconid&aelig;)
@@ -1682,17 +1963,17 @@ A	E. P. Van Duzee
 P	141
 
 S	23-142
-T	Notes on the Brazilian Fire-and, <i>Solenopsis s&aelig;vissima</i> F. Smith
+T	Note on the Brazilian Fire-ant, <i>Solenopsis s&aelig;vissima</i> F. Smith
 A	William Morton Wheeler
 P	142
 
 S	23-143
-T	An Anomalous Blind Worker And
+T	An Anomalous Blind Worker Ant
 A	William Morton Wheeler
 P	143
 
 S	23-146
-T	A New Bracheltrous Trogositid Beetle from Colorado
+T	A New Brachelytrous Trogositid Beetle from Colorado
 A	H. F. Wickham
 P	146
 
@@ -1709,6 +1990,7 @@ P	154
 S	23-157
 T	Exchange Column
 P	157
+Q	157
 
 V	23
 I	6
@@ -3895,14 +4177,18 @@ V	33
 I	3
 
 S	33-061
+# Page 77 is a plate.
 T	New or Little-Known Australasian Cicadas of the Genus <i>Melampsalta,</i> with Notes on Songs by Iris Myers
 A	J. G. Myers
 P	61
+Q	77
 
 S	33-077
+# Printed table of contents is wrong. Shows this as starting on page 77.
 T	The Affinities of Grylloblatta indicated by a Study of the Head and its Appendages
 A	G. C. Crampton
-P	77
+P	78
+Q	85
 
 S	33-086
 T	Notes on Some Tingitid&aelig; from Cuba (Hemiptera)
@@ -4288,9 +4574,11 @@ A	W. S. Creighton
 P	51
 
 S	35-057
+# Printed table of contents is wrong, says 57.
 T	Anthemoessa abrupta
 A	Charles Robertson
-P	57
+P	56
+Q	60
 
 S	35-061
 T	Localities of Insects collected by Charles Robertson
@@ -4819,6 +5107,7 @@ A	M. F. Crowett
 P	332
 
 S	36-358
+# Hindawi's metadata is wrong.  Says '358-263'
 T	Descriptions of Five New Species of Vespoid Wasps (Hymenoptera)
 A	R. Roberts
 P	358
@@ -5031,9 +5320,11 @@ A	M. H. Swenk
 P	219
 
 S	37-223
+# Hindawi's metadata is wrong, says '223-223'
 T	New Neuropteroid Insects from the United States
 A	Nathan Banks
 P	223
+Q	233
 
 S	37-234
 T	A Key to the Biting Mosquitoes of New England
@@ -5598,8 +5889,7 @@ S	40-145
 T	Notes on the Fulgorid&aelig; with some New Species
 A	E. D. Ball
 P	145
-#Q inferred
-Q	154
+Q	150
 
 #S	40-155
 #T	Index
@@ -5793,8 +6083,7 @@ S	41-245
 T	The Sting of the Male Wasp, <i>Monobia quadridens</i>
 A	Phil Rau
 P	245
-#Q inferred
-Q	248
+Q	245
 
 #S	41-249
 #T	Index
@@ -6232,6 +6521,7 @@ S	45-165
 T	The Interrelationships and Lines of Descent of Living Insects
 A	G. C. Crampton
 P	165
+Q	181
 
 #S	45-183
 #T	Index to Volume 45
@@ -6395,13 +6685,79 @@ V	47
 I	2-3
 # Volume 47 table of contents AND scans were mostly a duplicate of volume 46!
 # The envelope had wrong contents!
+# Issue 2-3 is in the Swayne/Carpenter set, but not the Ant Room set.
+
+S	47-045
+T	Henry Clinton Fall (1862-1939)
+A	Philip J. Darlington, Jr.
+P	45
+
+S	47-055
+T	<i>Hilar granditarsis,</i> A Balloon-maker
+A	A. L. Melander
+P	57
+
+S	47-057
+T	A New Species of Haliplus
+A	Edith W. Mank
+P	57
+
+S	47-060
+T	Notes on <i>Epeira pentagona</i> Hentz
+A	Elizabeth B. Bryant
+A	Allan F. Archer
+P	60
+
+S	47-066
+T	On Some Chilopods from Barro Colorado Island
+A	Ralph V. Chamberlin
+P	66
+
+S	47-075
+T	Rare Ponerine Genera in Panama and British Guiana (Hym.: Formicidae)
+A	Neal A. Weber
+P	75
+
+S	47-085
+T	Notes on Hippoboscidae. 14. The Genus Echestypus Speiser
+A	J. Bequaert
+P	85
+Q	104
+
 
 V	47
 I	4
 
-#S	47-169
-#T	Index to Volume 46
-#P	169
+S	47-105
+T	An Experimental Study on Caste Determination in Ants
+A	L. G. Wesson, Jr.
+P	105
+
+S	47-112
+T	The Histology of the Wing Pads of the Early Instars of <i>Pteronarcys proteus</i> Newport (Plecoptera)
+A	R. P. Holdsworth, Jr.
+P	112
+
+S	47-121
+T	A Synopsis of the Genus Acerataspis (Hymenoptera, Ichneumonidae)
+A	C. D. Michener
+P	121
+
+S	47-125
+T	The Mathing Habits of the Winter Mecopteron, <i>Boreus brumalis</i> Fitch
+A	G. C. Crampton
+P	125
+
+S	47-129
+T	New Chrysopidae from Australia
+A	Nathan Banks
+P	129
+
+S	47-136
+T	New Species of North American Diplotaxis
+A	M. A. Cazier
+P	136
+Q	145
 
 
 V	48
@@ -6433,9 +6789,11 @@ A	J. Bequaert
 P	22
 
 S	48-024
+# 31 and 33 are plates. 32 is blank.
 T	The Sumatran &ldquo;Trilobite Larva&rdquo;
 A	Charles T. Brues
 P	24
+Q	33
 
 S	48-035
 T	A New Cuban Milliped, with Notes and Drawings of Other West Indian Species
@@ -7187,6 +7545,7 @@ S	54-266
 T	Some Characters in the Perlid&aelig;
 A	N. Banks
 P	266
+Q	291
 
 #S	54-293
 #T	Index to Volume 54
@@ -7470,7 +7829,7 @@ S	56-187
 T	Some american Saldid&aelig; (Hemiptera)
 A	C. J. Drake
 P	187
-P	194
+Q	194
 
 #S	56-195
 #T	Index to Volume 56
@@ -7633,6 +7992,7 @@ S	57-146
 T	A Bibliographic Note on Say's Tow Tracts of March, 1931, and January, 1932
 A	J. Bequaert
 P	146
+Q	146
 
 #S	57-147
 #T	Index to Volume 57
@@ -7925,6 +8285,7 @@ S	59-148
 T	Studies on Arizona Ants (4). <i>Camponotus (Colobopsis) papago,</i> a New Species from Southern Arizona
 A	Wm. S. Creighton
 P	148
+Q	162
 
 #S	59-163
 #T	Index to Volume 59
@@ -8093,6 +8454,7 @@ S	60-160
 T	The Indo-Australian Species of the Ant Genus Strumigenys Fr. Smith: Group of <i>doriae</i> Emery
 A	W. L. Brown, Jr.
 P	160
+Q	166
 
 #S	60-167
 #T	Index to Volume 60
@@ -8379,6 +8741,7 @@ S	62-157
 T	<i>Magicicada septemdecim</i> Linn., Brood XI, in Connecticut (Hemiptera: Cicadidae)
 A	J. A. Manter
 P	157
+Q	158
 
 #S	62-159
 #T	Index to Volume 62
@@ -8530,8 +8893,10 @@ A	W. L. Brown, Jr.
 P	146
 
 S	63-147
+# No DOI of course.  Suppress perhaps?
 T	Index to Authors
 P	147
+Q	148
 
 #S	63-148
 #T	Index to Subjects
@@ -8667,8 +9032,10 @@ A	M. C. Parsons
 P	135
 
 S	64-149
+# No DOI of course
 T	Index to authors
 P	149
+Q	150
 
 #S	64-151
 #T	Index to Subjects
@@ -8916,6 +9283,7 @@ S	67-111
 T	Australian Carabid Beetles IV. List of Localities, 1956-1958
 A	P. J. Darlington, Jr.
 P	111
+Q	126
 
 #S	67-129
 #T	Author and Subject Index for Volume 67
@@ -9011,12 +9379,11 @@ Q	144
 
 S	68-145
 # P was wrong for the following (article dir. was called '150', fixed)
+# Page 146 is missing from CEC online set, but Hindawi has it
 T	Studies on Carboniferous Insects of Commentry, France: Part III. The Caloneurodea
 A	F. M. Carpenter
 P	145
 Q	153
-
-# Volume 68 issues 3-4 missing?
 
 
 V	69
@@ -9141,6 +9508,7 @@ S	69-268
 T	The Egg-sac in the Identification of Species of <i>Latrodectus</i> (Black-Widow Spiders)
 A	J. W. Abalos
 P	268
+Q	270
 
 #S	69-271
 #T	Author and Subject Index for Volume 69
@@ -9304,6 +9672,7 @@ S	70-240
 T	Studies on Carboniferous Insects of Commentry, France: Part V. The Genus <i>Diaphanoptera</i> and the Order Diaphanopterodae
 A	F. M. Carpenter
 P	240
+Q	256
 
 #S	70-259
 #T	Author and Subject Index for Volume 70
@@ -9439,12 +9808,12 @@ A	A. M. Chickering
 P	174
 
 S	71-181
-T	West Indian Carabidae X. Three More Species from jamaica, Including a New Cave <i>Colpodes</i>
+T	West Indian Carabidae X. Three More Species from Jamaica, Including a New Cave <i>Colpodes</i>
 A	P. J. Darlington, Jr.
 P	181
 
 S	71-183
-T	The Structure of the Protelytroptera, with Description of a New Genus from Permian trata of Moravia
+T	The Structure of the Protelytroptera, with Description of a New Genus from Permian Strata of Moravia
 A	F. M. Carpenter
 A	J. Kukalov&aacute;
 P	183
@@ -9453,6 +9822,7 @@ S	71-198
 T	Control of Reproduction in Female Cockroaches with Special Reference to <i>Nauphoeta cinera</i>. II. Gestation and Postparturition
 A	L. M. Roth
 P	198
+Q	243
 
 #S	71-245
 #T	Author and Subject Index for Volume 71
@@ -9564,6 +9934,7 @@ V	72
 I	3
 
 S	72-191
+# Scan thanks to Mary Sears / Mayr library
 T	A Redefinition of <i>Ischyropalpus,</i> and Six New Species (Coleoptera: Anthicidae)
 A	Floyd G. Werner
 P	191
@@ -9594,7 +9965,7 @@ A	Carl T. Parsons
 P	241
 
 S	72-255
-# Obtained scan from Mary Sears
+# Obtained scan from Mary Sears / Mayr library
 T	The Genus <i>Neohermes</i> (Megaloptera: Corydalidae)
 A	Oliver S. Flint, Jr.
 P	255
@@ -9647,6 +10018,7 @@ S	72-307
 T	The Genus <i>Zomosemata,</i> with Notes on the Cytology of Two Species (Diptera&mdash;tephritidae)
 A	Guy L. Bush
 P	307
+Q	323
 
 #S	72-325
 #T	Author and Subject Index for Volume 72
@@ -9806,6 +10178,7 @@ S	73-284
 T	Cave Carabidae (Coleoptera) of Mammoth Cave
 A	Thomas C. Barr, Jr.
 P	284
+Q	287
 
 #S	73-289
 #T	Author and Subject Index to Volue 73
@@ -9910,6 +10283,7 @@ S	74-342
 T	Studies on the Systematics of the Berothidae, Part I: A Redescription of the Genus <i>Sphaeroberotha</i> Nav&aacute;s, with a Critique of the Taxonomic Characters Used in the Berothinae (Neuroptera)
 A	Ellis G. MacLeod
 P	342
+Q	352
 
 #S	74-353
 #T	Author and Subject Index to Volume 74
@@ -10492,7 +10866,7 @@ A	Louis M. Roth
 P	84
 
 S	78-107
-# Scan via Mary Sears
+# Scan via Mary Sears / Mayr library
 T	Studies on the Biology of the Chrysopidae 11. The Feeding Behavior of the Adult of <i>Chrysopa carnea</i> (Neuroptera)
 A	Joseph K. Sheldon
 A	Ellis G. MacLeod

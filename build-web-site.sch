@@ -341,28 +341,17 @@
 		    permalink)))
 
 	 (br)
-	 (if (article-pages article)
-	     (let* ((key (vpq->key (article-volume article)
-				   (car (article-pages article))
-				   (cadr (article-pages article))))
-		    (doi-list (table-ref dois key)))
-	       (if (pair? doi-list)
-		   (if (null? (cdr doi-list))
-		       (let ((doi (car doi-list)))
-			 (span (class= "stableurl")
-			       "At Hindawi: "
-			       (let ((doi-url (string-append "http://dx.doi.org/" doi)))
-				 (a (href= doi-url) doi-url))
-			       (br)))
-		       '())	  ;Ambiguous... normal
-		   ;; TBD: filter out "Exchange Column"
-		   (if (and (not (equal? (article-title article) "Exchange Column"))
-			    (>= (article-volume article) 17))
-		       (begin (write `(no-doi ,key))
-			      (newline)
-			      '())
-		       '())))
-	     '())
+	 (let ((doi-url (article-doi-url article)))
+	   (if doi-url
+	       (span (class= "stableurl")
+		     "At Hindawi: "
+		     (a (href= doi-url) doi-url)
+		     (br))
+	       (begin
+		 (if (and (not (equal? (article-title article) "Exchange Column"))
+			  (>= (article-volume article) 17))
+		     (begin (write `(no-doi ,(article-stem article))) (newline)))
+		 '())))
 
 	 (make-article-abstract article)
 
@@ -371,6 +360,20 @@
 	   (span (a (hlink (path-to-toc volnum) here)
 		    "Volume " volnum " table of contents")))
 	 )))))
+
+(define (article-doi-url article)
+  (if (article-pages article)
+      (let* ((key (vpq->key (article-volume article)
+			    (car (article-pages article))
+			    (cadr (article-pages article))))
+	     (doi-list (table-ref dois key)))
+	(if (pair? doi-list)
+	    (if (null? (cdr doi-list))
+		(string-append "http://dx.doi.org/" (car doi-list))
+		#f)		  ;Ambiguous... normal
+	    ;; TBD: filter out "Exchange Column"
+	    #f))
+      #f))
 
 (define (make-article-abstract article)
   (let ((fname (string-append text-files-root
@@ -582,15 +585,19 @@
 			   (div))
 
 		       ;; One line with several things
-		       (if (prepared? art)
-			   (div (class= "accesslinks") ;make smaller
-				(article-citation art)
-				" | "
-				(article-pdf-link art here)
-				" | "
-				(article-stable-link art here))
-			   (div (class= "accesslinks") ;make smaller
-				(article-citation art))))
+		       (div (class= "accesslinks") ;make smaller
+			    (article-citation art)
+			    (if (prepared? art)
+				(list " | "
+				      (article-pdf-link art here)
+				      " | "
+				      (article-stable-link art here))
+				'())
+			    (let ((doi-url (article-doi-url art)))
+			      (if doi-url
+				  (list " | "
+					(a (href= doi-url) "At Hindawi: " doi-url))
+				  '()))))
 		    (div)))
               articles)
 	 more)))
@@ -639,12 +646,11 @@
 (define (article-pdf-link art here)
   (a (href= (article-pdf-url art here))
      ;; TBD: pdf file size
-     "Full text (searchable PDF"
+     "Searchable PDF"
      (let ((size (table-ref pdf-file-sizes (article-stem art))))
        (if size
 	   (list ", " size "K")
-	   '()))
-     ")"))
+	   '()))))
 
 (define (article-pdf-url art here)
   (let* ((volnum (number->string (article-volume art)))
