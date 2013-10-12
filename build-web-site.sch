@@ -590,8 +590,8 @@
 			    (if (prepared? art)
 				(list " | "
 				      (article-pdf-link art here)
-				      " | "
-				      (article-stable-link art here))
+				      ;; " | " (article-stable-link art here)
+				      )
 				'())
 			    (let ((doi-url (article-doi-url art)))
 			      (if doi-url
