@@ -4,15 +4,11 @@ SCHEME_FILES=build-web-site.sch articles.sch journal-meta.sch \
 RESOURCE_FILES=seal150.png style.css robots.txt
 TOC_FILE=toc.txt
 
-# Where to put the derived files.  This MUST NOT be a 
-# subdirectory of the current one.  Put it under /tmp/ if you need to,
-# or directly at the deployment location.
-BUILD_DIR=../../../Scratch/Psyche/build
+# Where to put the derived files.
+BUILD_DIR=build
 
 all: $(BUILD_DIR)/index.html $(RESOURCE_FILES)
 	cp -p $(RESOURCE_FILES) $(BUILD_DIR)/
-	mkdir -p $(BUILD_DIR)/src
-	cp -p -r * $(BUILD_DIR)/src/
 	find $(BUILD_DIR) -name "*~" -exec rm {} \;
 
 $(BUILD_DIR)/index.html: $(SCHEME_FILES) $(TOC_FILE)
@@ -25,9 +21,6 @@ $(BUILD_DIR)/index.html: $(SCHEME_FILES) $(TOC_FILE)
 	 echo ,load $(SCHEME_FILES) ;\
 	 echo '(doit "$(TOC_FILE)" "$(BUILD_DIR)")' ) | scheme48
 
-web:
-	cp -r -p /copied-from/rosebud/home/jar/w7/src/web ./web
-#	cp -a ~jar/w7/src/web ./web
 
 #THERE=pluto.mumble.net
 #THEREHOST=aarau.csail.mit.edu

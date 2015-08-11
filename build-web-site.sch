@@ -852,8 +852,6 @@
 	     (td (right-gutter here))
 	     '())
 	 ))
-    (lambda (port)
-      (display (statcounter) port))
     )))
 
 ; Obsolete
@@ -868,19 +866,6 @@
 		 (reverse (volume-year-alist))))
        (br)
        ))
-
-(define (statcounter)
-"<!-- Start of StatCounter Code -->
-<script type='text/javascript' language='javascript'>
-var sc_project=1929596; 
-var sc_invisible=1; 
-var sc_partition=17; 
-var sc_security=\"42a09c97\"; 
-</script>
-
-<script type='text/javascript' language='javascript' src='http://www.statcounter.com/counter/counter.js'></script><noscript><a href='http://www.statcounter.com/' target='_blank'><img  src='http://c18.statcounter.com/counter.php?sc_project=1929596&amp;java=0&amp;security=42a09c97&amp;invisible=1' alt='web tracker' border='0'></a> </noscript>
-<!-- End of StatCounter Code -->")
-
 
 (define (editor name link)
   (p (class= "editor")
