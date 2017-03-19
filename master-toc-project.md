@@ -1,5 +1,5 @@
 
-Master Psyche table of contents
+= Master Psyche table of contents
 
 Here is what I would like to see:
 
@@ -8,6 +8,7 @@ Here is what I would like to see:
 - For each article, basic article metadata (volume, first page, last page, title,
   authors).
 - For each article, electronics 'holdings' information consisting of
+
   . Hindawi DOI (when there is one)
   . BHL link of some kind (when article is in BHL); to volume at the
      very least, ideally to specific page
