@@ -29,6 +29,10 @@ Sources of TOC information:
   Unfortunately not every record lists authors.
 - We might be able to get information directly from Hindawi but I'd
   rather not harrass them
+- I also have the metadata I use to generate the tables of contents
+  for the Ent Club's Psyche archive web site.  It's a single text file in 
+  an ad hoc but machine readable form.  The Club paid to curate most
+  of this.  But it is probably redundant with Hindawi's metadata.
 - What metadata does BHL have? I don't know.
 - Some article metadata will have to be curated for the 5% missing
   from Hindawi (approximately 250 articles).  Harvard has paper copies
