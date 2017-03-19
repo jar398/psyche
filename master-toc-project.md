@@ -22,9 +22,11 @@ are.  These need to be listed in the ToC, if they exist.
 Sources of TOC information:
 
 - I have a list of all of the Crossref DOIs with volume, issue, and first
-  and list pages (CSV format)
+  and list pages (CSV format).  Not every DOI is for a legitimate
+  article, but I don't think that matters very much.
 - Additional Hindawi metadata can be retrieved one article at a time
-  from Crossref (e.g. `curl -L -H "Accept: application/json" http://dx.doi.org/10.1155/1921/52645`)
+  from Crossref (e.g. `curl -L -H "Accept: application/json" http://dx.doi.org/10.1155/1921/52645`).
+  Unfortunately not every record lists authors.
 - We might be able to get information directly from Hindawi but I'd
   rather not harrass them
 - What metadata does BHL have? I don't know.
@@ -33,3 +35,6 @@ Sources of TOC information:
   of everything.  I have paper copies of many, but not all, of the 
   articles that Hindawi doesn't have.
 
+The TOC will fit easily into a single file.  It needs to be in some
+machine readable form (e.g. CSV or JSON), from which it can be
+rendered in any other form (e.g. as HTML, entered into a database, etc.).
