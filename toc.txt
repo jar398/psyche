@@ -1,3 +1,476 @@
+V	1
+# Present Ant Room, Swain set has issues 4 13 14 15 16 17 18 19 22 25 27 29 30 31 32
+
+V	1
+I	1
+# CEC set has files 1-008, 1-020, 1-026, 1-028, 1-032 - what are they?
+
+S	1-001
+T	Introductory
+A	H. Pickman Mann
+D	10.1155/1874/86927
+P	1
+Q	2
+
+
+V	2
+# Present Ant Room and Swain, complete.
+
+V	3
+# Present Ant Room, 15 or so issues missing from Swain
+
+V	3
+I	69
+P	7
+Q	7
+D	10.1155/1980/32646
+# From Hindawi DOI file
+# Note '1980' in DOI, which ought to be '1880'
+
+V	4
+# Present Ant Room and Swain, complete.
+
+I	126-129
+# N.b. mistake: issue 126-128 called itself "126-129".
+# Hindawi calls it "126-129" so I guess stick with that.
+
+V	5
+# Present Ant Room and Swain, complete.
+
+V	6
+# Present Ant Room, partial Swain (missing issue 208)
+
+
+V	7
+# Present Ant Room and Swain, complete.
+
+V	8
+# First issue is number 249
+# Mary Sears scanned: Baker, C.F. 1898. Athysanella, a new genus of Jassids. Psyche 8: 185-189. (missing pages)
+
+I	249
+# TBD: get 8(249) TOC from BHL
+# Missing Ant Room and Swain, present only BHL: 249 263 273 279
+# No issue TOC - volume index only
+
+T	Antennal structure of certain Diplosids (Plate I.)
+A	E. Porter Felt
+P	1
+Q	2
+# Ambiguity with article in supplement, which Hindawi also has.
+
+P	3
+Q	5
+T	Antennal structure of certain Diplosids
+A	E. Porter Felt
+# Preceded by Plate I (see BHL).  Hindawi combines article with plate??
+# This article is in issue 249, not in the supplement
+
+P	6
+Q	8
+T	Notes on New England Acrididae — III. Oedipodinae — I
+A	Albert P. Morse
+# Not supplement
+
+P	8
+Q	9
+T	Description of the bot-fly of the cotton-tail rabbit in New Mexico, Cuterebra lepusculi n. sp.
+A	C. H. Tyler Townsend
+# Not supplement
+
+S	8-010
+P	10
+Q	10
+T	Some facts in the life-history of Hypopta bertholdi
+A	J. J. Rivers
+
+S	8-010a
+# Two articles on one page
+P	10
+Q	10
+T	Description of the larva of Hypopta bertholdi
+A	Harrison G. Dyar
+
+S	8-011
+P	11
+Q	11
+T	Notes on Eggs of <i>Stagmomanis carolina</i>
+A	Samuel H. Scudder
+
+S	8-011a
+# Two articles on one page
+P	11
+Q	11
+T	<i>Leucania unipuncta</i>
+A	Caroline G. Soule
+
+S	8-012
+P	12
+Q	12
+T	Proceedings of the Club
+
+I	250
+# Issues 250-262 are present in the Ant Room collection (and Hindawi)
+
+I	263
+# TBD: get 8(263) TOC from BHL
+# Issues missing from Ant Room and Swain, present only BHL: 249 263 273 279
+# Issue 263 starts at http://www.biodiversitylibrary.org/item/44238#page/201/mode/1up
+# Plate 4 precedes first article
+# First article starts on 183
+
+I	264
+# Issues 264-272 should be present in the Ant Room collection
+
+I	273
+# TBD: get 8(273) TOC from BHL
+# Issues missing from Ant Room and Swain, present only BHL: 249 263 273 279
+
+I	274
+# Issues 274-278 should be present in the Ant Room collection
+
+I	279
+# TBD: get 8(279) TOC from BHL
+# Issues missing from Ant Room and Swain, present only BHL: 249 263 273 279
+
+I	283
+# page 421 http://www.biodiversitylibrary.org/item/44238#page/481/mode/1up
+
+I	284
+# 433 http://www.biodiversitylibrary.org/item/44238#page/493/mode/1up
+# Last article ends on page 429, followed by volume index.
+
+V	8
+I	Supplement
+# haven't found the supplement at BHL yet.
+
+T	Insect Fauna of the Giant Cactus of Arizona: Letters from the Southwest
+A	H. G. Hubbard
+P	1
+Q	8
+D	10.1155/1899/57250
+
+# Pages supplement 8-13.  How to represent ??
+T	Appendix: Description of New Species of Coleoptera
+A	E. A. Schwarz
+P	8
+Q	13
+D	10.1155/1899/14627
+
+P	13
+Q	14
+D	10.1155/1899/60914
+# From Hindawi DOI file
+
+
+V	9
+# 286 289 297 306 307 310 314 are in Swain but not in Ant Room
+# 293 305 308 in neither Swain not Ant Room; present only BHL
+
+V	9
+I	285
+# TBD: get 9(285) TOC from BHL
+
+T	On Coleoptera found with ants.	Fifth paper
+A	H. F. Wickham
+P	3
+Q	5
+
+V	9
+I	286
+# TBD: get 9(286) TOC from BHL
+# 286 289 297 306 307 310 314 are in Swain but not in Ant Room
+
+T	On the Mating instinct in Moths
+A	Alfred Goldsborough Mayer
+P	15
+Q	20
+
+# short review
+T	Entomology for the young
+P	20
+Q	20
+
+P	21
+
+P	22
+
+P	23
+
+I	287
+
+I	288
+# OK, comes from CEC/Hindawi
+
+I	289
+# TBD: get 9(289) TOC from BHL or Swain
+# 286 289 297 306 307 310 314 are in Swain but not in Ant Room
+
+I	290
+# OK, comes from CEC/Hindawi
+
+I	291
+# OK, comes from CEC/Hindawi
+
+I	292
+# OK, comes from CEC/Hindawi
+
+I	293
+# TBD: get 9(293) TOC from BHL or Swain
+# 293 305 308 in neither Swain not Ant Room; present only BHL
+
+I	294
+# OK, comes from CEC/Hindawi
+
+I	295
+# OK, comes from CEC/Hindawi
+
+I	296
+# OK, comes from CEC/Hindawi
+
+I	297
+# OK, comes from CEC/Hindawi
+
+I	298
+# OK, comes from CEC/Hindawi
+
+I	299
+# OK, comes from CEC/Hindawi
+
+I	300
+# OK, comes from CEC/Hindawi
+
+I	301
+# OK, comes from CEC/Hindawi
+
+I	302
+# OK, comes from CEC/Hindawi
+
+I	303
+# OK, comes from CEC/Hindawi
+
+I	304
+# OK, comes from CEC/Hindawi
+
+I	305
+# TBD: get 9(305) TOC from BHL
+# 293 305 308 in neither Swain not Ant Room; present only BHL
+
+I	306
+# TBD: get 9(306) TOC from BHL or Swain
+# 286 289 297 306 307 310 314 are in Swain but not in Ant Room
+
+I	307
+# TBD: get 9(307) TOC from BHL or Swain
+# 286 289 297 306 307 310 314 are in Swain but not in Ant Room
+
+I	308
+# TBD: get 9(308) TOC from BHL
+# 293 305 308 in neither Swain not Ant Room; present only BHL
+
+I	309
+# OK, comes from CEC/Hindawi
+
+I	310
+# TBD: get 9(310) TOC from BHL or Swain
+# 286 289 297 306 307 310 314 are in Swain but not in Ant Room
+
+I	311
+# OK, comes from CEC/Hindawi
+
+I	312
+# OK, comes from CEC/Hindawi
+
+I	313
+# OK, comes from CEC/Hindawi
+
+I	314
+# TBD: get 9(314) TOC from BHL or Swain
+# 286 289 297 306 307 310 314 are in Swain but not in Ant Room
+
+I	315
+# OK, comes from CEC/Hindawi
+#   as do 316-320.  volume ends with 320.
+
+
+V	10
+# Ant room set is complete.
+
+V	11
+# Ant room set is complete.
+# These are photocopies in the ant room set: 1 3 4 5
+# Entire volume missing from Swain
+
+V	12
+# Ant room set is complete.
+# These are photocopies in the ant room set: 1 2 6
+# Swain set has only issue 5 (?)
+
+V	13
+# 2 3 4 missing from Ant Room; present only BHL
+# Entire volume missing from Swain
+
+I	2
+# TBD: get 13(2) TOC from BHL or Swain
+# 2 3 4 missing from Ant Room; present only BHL
+
+I	3
+# TBD: get 13(3) TOC from BHL or Swain
+# 2 3 4 missing from Ant Room; present only BHL
+
+I	4
+# TBD: get 13(4) TOC from BHL or Swain
+# 2 3 4 missing from Ant Room; present only BHL
+
+V	14
+# Issue 6 missing from Ant Room set
+# Swain missing 3 5 6
+
+T	The Swarming of <i>Anopheles punctipennis</i> Say
+A	Frederick Knab
+V	14
+I	1
+P	1
+Q	4
+D	10.1155/1907/32434
+
+V	14
+I	6
+# TBD: get 14(6) TOC from BHL
+# Issue 6 missing from Ant Room and Swain; present only BHL
+
+V	15
+
+I	5
+# TOC is complete (from BHL)
+# 5 6 in neither Swain not Ant Room; present only BHL
+# TOC at http://www.biodiversitylibrary.org/item/45282#page/113/mode/1up
+
+T	A Peculiar Case of Parasitism with <i>Hemerocampa leucostigma</i> Smith &amp; Abbot with Description of a New Genus and Species of Pteromalidae
+A	A. Ars&egrave;ne Girault
+P	89
+
+T	<i>Gryllodes sigillatus</i> Walker (- poeyi Sauss.) in Washington, D. C.
+A	A. N. Caudell
+P	96
+Q	96
+
+T	Incidental Captures of Neuropterous Insects at Plano, Texas
+A	E. S. Tucker
+P	97
+
+T	Western Lepidoptera - II
+A	Karl R. Coolidge
+P	101
+
+T	Notes on Geographic Distribution
+P	104
+Q	104
+
+I	6
+# TOC is complete (from BHL)
+# 5 6 in neither Swain not Ant Room; present only BHL
+# TOC at http://www.biodiversitylibrary.org/item/45282#page/131/mode/1up
+
+T	New Species of the Genus Oribata. Plate III
+A	H. E. Ewing
+P	105
+
+T	A List of the North American Pseudoscopionida
+A	Karl R. Coolidge
+P	108
+Q	114
+
+T	New England Federation of Natural History Societies
+A	J. H. Emerton
+P	114
+Q	114
+
+T	Description of three new North American Chalcidoidea of the subfamilies Mymarinae and Aphelininae
+A	A. Arsene Girault
+P	115
+Q	121
+
+T	Autumn Flights of Spiders
+A	J. H. Emerton
+P	121
+Q	121
+
+T	The Sun-dance of Melissodes
+A	C. H. Turner
+P	122
+Q	124
+
+V	16
+
+I	4
+# TOC is complete (from BHL)
+# 4 6 in neither Swain not Ant Room; present only BHL
+# TOC at http://www.biodiversitylibrary.org/item/43796#page/125/mode/1up
+
+T	Some experiments on Flacherie in the Gypsy Moth
+A	William Reiff
+P	99
+
+T	<i>Oligosita americana</i> Ashmead species nove, a new Chalcidoid of the family Trichogrammidae from Illinois
+A	A. A. Girault
+P	106
+
+T	Notes on the early stages of Deilephila intermedia
+A	Allyn Cox
+P	110
+
+T	The Arachnida of the galapagos Islands
+A	Karl R. Coolidge
+P	112
+
+T	Notes on the distrabution of some Trypetidae with description of a new species
+A	Charles W. Johnson
+P	113
+Q	114
+
+T	Convocation Week Meetings in Boston
+P	114
+Q	114
+
+I	5
+# present in Ant Room set
+
+I	6
+# TOC is complete (from BHL)
+# 4 6 in neither Swain not Ant Room; present only BHL
+# TOC at http://www.biodiversitylibrary.org/item/43796#page/143/mode/1up
+
+T	The Relation of Sex to Heliotropism in the Brown-tail Moth
+A	William Reiff
+P	115
+
+T	The Chalcidoid Parasites of the Common House or Typhoid Fly (Musca domestica Linnaeus) and its Allies
+A	A. A. Girault
+A	George E. Sanders
+P	119
+
+T	The Rediscovery of Glutops singularis Burgess
+A	C. W. Johnson
+P	132
+
+T	A New Platyholeus
+A	H. C. Fall
+P	133
+
+T	Notes on a few of the rarer New England Lepidoptera
+A	Wm. T. M. Forbes
+P	134
+
+T	Chermes of Maine Spruces
+A	Edith M. Patch
+P	136
+
+T	Spiders in Winter Flood
+A	J. H. Emerton
+P	137
+Q	138
+
 V	17
 I	1
 
@@ -63,7 +536,7 @@ S	17-069
 T	On the Resistance of Gypsy Moth Eggs (<i>Liparis dispar</i> L.) to Cold and Other Conditions
 A	William Reiff
 P	69
-Q	72
+Q	71
 
 S	17-072
 T	Review of "The green bug and its natural enemies, a study in insect parasitism" by S. J. Hunter
@@ -153,6 +626,7 @@ P	118
 S	17-122
 T	Reviews
 P	122
+Q	124
 
 V	17
 I	4
@@ -227,6 +701,8 @@ Q	169
 S	17-169
 T	Reviews
 P	169
+# Hindawi has last page = 176 but I think that's wrong.
+Q	171
 
 V	17
 I	5
@@ -261,6 +737,8 @@ S	17-210
 T	Synonymical and Other Notes on Diptera
 A	W. R. Thompson
 P	210
+# Hindawi has last page = 218 but I think that's wrong.
+Q	213
 
 V	17
 I	6
@@ -315,8 +793,9 @@ P	258
 Q	258
 
 
-# Need: v. 18 issues 1, 2, 4, 5, 6
-
+# Missing Ant Room, present Swain: issues 1, 2, 4, 5, 6
+# Double Swain check issue 3
+# TOC from May Library ?
 V	18
 I	1
 
@@ -722,6 +1201,7 @@ T	A New Species of Emesid&aelig; from Vermont
 A	Nathan Banks
 P	97
 Q	97
+D	10.1155/1912/45893
 
 S	19-097
 # Half-page
@@ -729,6 +1209,7 @@ T	<i>Melanetaerius infernalis</i> Fall, 1907
 A	H. Bickhardt
 P	97
 Q	97
+D	10.1155/1912/92180
 
 S	19-098
 T	Note on a Guest of <i>Eciton hamatum</i>
@@ -935,12 +1416,21 @@ T	The Male of <i>Eciton vagans</i> Olivier
 A	W. M. Wheeler
 P	206
 
+T	Correction
+P	208
+Q	208
+D	10.1155/1912/82863
+# Hindawi's metadata says 10.1155/1912/82863 is
+# volume 19, issue 6, 'Correction'.  That page also has 'Note on ...'.
+
 S	19-208
-# The PDF file contains a bunch of ads
-T	Note on <i>Tricrania sanguinipennis</i> Say (Coleoptena)
+T	Note on Tricranis Sanguinipennis Say (Coleoptera)
 A	C. A. Frost
 P	208
 Q	208
+D	10.1155/1912/36486
+# Hindawi's metadata says 10.1155/1912/82863 is
+# volume 19, issue 6, 'Note on ...'.
 
 
 V	20
@@ -1155,13 +1645,15 @@ T	<i>Merope tuber</i> in Massachusetts
 A	C. W. Johnson
 P	170
 Q	170
+D	10.1155/1913/25924
 
-S	20-170
+S	20-170a
 # 1/3 page
 T	<i>Mantispa interrupta</i> in New England
 A	C. W. Johnson
 P	170
 Q	170
+D	10.1155/1913/72309
 
 S	20-170
 # 1/3 page
@@ -1169,6 +1661,7 @@ T	A Question of Authorship
 A	F. Knab
 P	170
 Q	170
+D	10.1155/1913/29495
 
 S	20-171
 # ads
@@ -1214,17 +1707,20 @@ P	202
 Q	205
 
 S	20-205
-# very short
 T	Note on Two Preoccupied Muscid Names
 A	A. L. Melander
 P	205
 Q	205
+D	10.1155/1913/87691
+# very short, partial page
 
-S	20-205
+S	20-205a
 T	Book Review: <i>The Macrolepidoptera of the World</i> by Adalbert Seitz
-A	C. T. B.
+A	Charles T. Brues
 P	205
 Q	205
+D	10.1155/1913/46076
+# partial page
 
 S	20-206
 T	Exchange Column
@@ -2082,6 +2578,7 @@ S	23-088
 T	Table of Males of the North American Species of the Genus Asyndetus with Descriptions of Six New Species
 A	M. C. Van Duzee
 P	88
+# Goes partway through page 94 - I checked
 Q	94
 
 S	23-094
@@ -2507,11 +3004,12 @@ T	Exchange Column
 P	197
 Q	198
 
-#S	24-199
-# Q based on scanned page count
-#T	Index to Volume XXIV
-#P	199
-#Q	205
+# Flush
+S	24-index
+# Q based on scanned page count ?
+T	Index to Volume XXIV
+P	199
+Q	205
 
 
 V	25
@@ -3181,9 +3679,11 @@ A	H. M. Parshley
 P	139
 
 S	27-144
+# Missing from CEC scans, present in Hindawi
 T	A New Genus in the Chilopod Family Megistocephalid&aelig;
 A	R. V. Chamberlin
 P	144
+D	10.1155/1920/62604
 
 S	27-146
 T	A 1919 Collection of Cicadellid&aelig; in the Environs of Boston
@@ -3225,12 +3725,14 @@ T	A New Ptinid for New England
 A	C. W. Johnson
 P	7
 Q	7
+D	10.1155/1921/52645
 
-S	28-007
+S	28-007a
 T	<i>Sympetrum corruptum</i> in Massachusetts
 A	A. P. Morse
 P	7
 Q	7
+D	10.1155/1921/98931
 
 S	28-008
 T	Distributional Notes on Hemiptera, with the Description of a New Gerris
@@ -4221,13 +4723,15 @@ T	Note on Panurgid&aelig; (Bees)
 A	Charles Robertson
 P	113
 Q	113
+D	10.1155/1925/48089
 
-S	32-113
+S	32-113a
 # half page
 T	Another Instance of the Northward Migration of Odonata in the Spring
 A	R. H. Howe, Jr.
 P	113
 Q	113
+D	10.1155/1925/94375
 
 S	32-114
 T	The North American Varieties of <i>Volucella bombylans</i> Linn
@@ -4275,10 +4779,10 @@ A	S. W. Bromley
 P	190
 Q	194
 
-# ISSUE 4-5 MISSING FROM ANT ROOM SET
 
+# ISSUE 4-5 MISSING FROM ANT ROOM SET
 V	32
-I	6
+I	4-5
 
 S	32-195
 T	The External Anatomy of the Head and Abdomen of the Roach, <i>Periplaneta americana</i>
@@ -4738,13 +5242,15 @@ T	Another Vagrant Grasshopper
 A	A. P. Morse
 P	134
 Q	134
+D	10.1155/1927/48041
 
-S	34-134
+S	34-134a
 # half page
 T	The Bowditch Collection of Chrysomelid&aelig;
 A	N. Banks
 P	134
 Q	134
+D	10.1155/1927/94318
 
 V	34
 I	3-4
@@ -5218,13 +5724,16 @@ S	36-059
 T	Proceedings of the Cambridge Entomological Club
 P	59
 Q	59
+D	10.1155/1929/91634
 
-S	36-059
+S	36-059a
 # half page
 T	The Unexpected Acid Test
 A	C. A. Front
 P	59
 Q	59
+D	10.1155/1929/48919
+
 
 V	36
 I	2
@@ -5325,11 +5834,20 @@ P	147
 Q	148
 
 S	36-148
-# Hindawi has given this two DOIs for some reason
-T	Book Notices
+# 'S' is ambiguous (Book Notices)
+T	A handbook of the Dragonflies of North America, by J. G. Needham and H. B. Heywood
+A	C. T. Brues
+P	148
+Q	148
+D	10.1155/1929/89216
+
+S	36-148
+# 'S' is ambiguous (Book Notices)
+T	The problems of Applied Antomology, by R. A. Wardle
 A	C. T. Brues
 P	148
 Q	149
+D	10.1155/1929/46503
 
 S	36-150
 T	New Forms of <i>Odontoponera transversa</i>
@@ -5462,7 +5980,7 @@ A	M. F. Crowett
 P	332
 
 S	36-358
-# Hindawi's metadata is wrong.  Says '358-263'
+# Hindawi's metadata is wrong.	Says '358-263'
 T	Descriptions of Five New Species of Vespoid Wasps (Hymenoptera)
 A	R. Roberts
 P	358
@@ -5624,6 +6142,7 @@ P	176
 Q	176
 
 S	37-176
+# N.b. 'S' is ambiguous
 T	<i>Paratenetus crinitus</i> Fall
 A	C. A. Frost
 P	176
@@ -5684,6 +6203,7 @@ T	New Neuropteroid Insects from the United States
 A	Nathan Banks
 P	223
 Q	233
+D	10.1155/1930/12828
 
 S	37-234
 T	A Key to the Biting Mosquitoes of New England
@@ -5767,6 +6287,9 @@ A	S. G. Bruner
 P	395
 Q	424
 
+
+V	38
+# Volume 38 is missing from BHL
 
 V	38
 I	1
@@ -5883,11 +6406,6 @@ T	Notes on the Tick, <i>Ornithodoros talaje</i> (Guer.), Infesting a House in th
 A	L. H. Dunn
 P	170
 
-S	38-184
-T	<i>Neopanorpa hirsutal</i> (Crampton)
-A	F. M. Carpenter
-P	184
-
 S	38-174
 T	A New Species of Chrysopa
 A	N. Banks
@@ -5897,6 +6415,12 @@ S	38-175
 T	New Ants of the Genus Macromiseha
 A	C. A. Aguayo
 P	175
+Q	183
+
+S	38-184
+T	<i>Neopanorpa hirsutal</i> (Crampton)
+A	F. M. Carpenter
+P	184
 
 S	38-186
 T	Notes on the Hippoboscid&aelig;. 3. Hippoboseid&aelig; of Yucatan
@@ -5910,10 +6434,14 @@ T	500th Meeting of the Cambridge Entomological Club
 P	194
 Q	195
 
-#S	38-197
-#T	Index to Volume 38
-#P	197
+# Flush
+S	38-index
+T	Index to Volume 38
+P	197
 
+
+V	39
+# Volume 39 is missing from BHL
 
 V	39
 I	1-2
@@ -6127,10 +6655,14 @@ A	Charles H. Hicks
 P	150
 Q	154
 
-#S	39-157
-#T	Index to Volume XXXIX
-#P	157
+# Flush
+S	39-index
+T	Index to Volume XXXIX
+P	157
 
+
+V	40
+# Volume 40 is missing from BHL
 
 V	40
 I	1
@@ -6915,9 +7447,10 @@ A	G. C. Crampton
 P	165
 Q	181
 
-#S	45-183
-#T	Index to Volume 45
-#P	183
+# Flush
+S	45-index
+T	Index to Volume 45
+P	183
 
 
 V	46
@@ -6966,7 +7499,6 @@ S	46-043
 T	Notes on Butterflies from Hispaniola
 A	M. Bates
 P	43
-o
 S	46-052
 T	Notes and Descriptions of Oriental &OElig;stropsychin&aelig; (Trichoptera)
 A	N. Banks
@@ -7032,10 +7564,17 @@ A	Nathan Banks
 P	167
 Q	168
 
-#S	46-169
-#T	Index to Volume 46
-#P	169
+# Flush
+S	46-index
+T	Index to Volume 46
+P	169
 
+
+V	47
+# Hindawi seems to only have issue 1 of volume 47 on its site.
+# Ant Room set had wrong contents in envelope for volume 47,
+# only issue 1 was correct.
+# 2-3 and 4 are in the Swain set.
 
 V	47
 I	1
@@ -7073,11 +7612,12 @@ A	F. M. Carpenter
 P	44
 Q	44
 
-V	47
-I	2-3
 # Volume 47 table of contents AND scans were mostly a duplicate of volume 46!
 # The envelope had wrong contents!
-# Issue 2-3 is in the Swayne/Carpenter set, but not the Ant Room set.
+# Issue 2-3 is in the Swain/Carpenter set, but not the Ant Room set.
+# TOC from Mayr Library
+V	47
+I	2-3
 
 S	47-045
 T	Henry Clinton Fall (1862-1939)
@@ -7087,7 +7627,7 @@ P	45
 S	47-055
 T	<i>Hilar granditarsis,</i> A Balloon-maker
 A	A. L. Melander
-P	57
+P	55
 
 S	47-057
 T	A New Species of Haliplus
@@ -7117,6 +7657,7 @@ P	85
 Q	104
 
 
+# Missing Ant Room (?), present Swain, TOC from Mayr
 V	47
 I	4
 
@@ -7131,6 +7672,8 @@ A	R. P. Holdsworth, Jr.
 P	112
 
 S	47-121
+# Missing from CEC web site.
+# Scanned by Mary Sears.
 T	A Synopsis of the Genus Acerataspis (Hymenoptera, Ichneumonidae)
 A	C. D. Michener
 P	121
@@ -7376,9 +7919,10 @@ A	J. Bequaert
 P	108
 Q	117
 
-#S	49-119
-#T	Index to Volume 49
-#P	119
+# Flush
+S	49-index
+T	Index to Volume 49
+P	119
 
 
 V	50
@@ -7497,9 +8041,10 @@ A	C. T. Brues
 P	116
 Q	118
 
-#S	50-119
-#T	Index to Volume 50
-#P	119
+# Flush
+S	50-index
+T	Index to Volume 50
+P	119
 
 
 V	51
@@ -7606,9 +8151,10 @@ A	G. C. Steyskal
 P	183
 Q	184
 
-#S	51-187
-#T	Index to Volume 51
-#P	187
+# Flush
+S	51-index
+T	Index to Volume 51
+P	187
 
 
 V	52
@@ -7688,9 +8234,10 @@ A	V. Nabokov
 P	193
 Q	193
 
-#S	52-194
-#T	Index to Volume 52
-#P	194
+# Flush
+S	52-index
+T	Index to Volume 52
+P	194
 
 
 V	53
@@ -7800,9 +8347,10 @@ A	K. A. Christiansen
 P	89
 Q	89
 
-#S	53-090
-#T	Index to Volume 53
-#P	90
+# Flush
+S	53-index
+T	Index to Volume 53
+P	90
 
 
 V	54
@@ -7954,9 +8502,10 @@ A	N. Banks
 P	266
 Q	291
 
-#S	54-293
-#T	Index to Volume 54
-#P	293
+# Flush
+S	54-index
+T	Index to Volume 54
+P	293
 
 
 V	55
@@ -7968,7 +8517,7 @@ A	D. Elmo Hardy
 P	1
 
 S	55-016
-T	New and Little Known Species of Nearctie Trichoptera
+T	New and Little Known Species of Nearctic Trichoptera
 A	D. G. Denning
 P	16
 
@@ -8174,7 +8723,7 @@ A	W. L. Brown, Jr.
 P	81
 
 S	56-089
-T	North American Menoponid&aelig; (Mallophaga). III; Notes on Some of Kellogg�s Types
+T	North American Menoponid&aelig; (Mallophaga). III; Notes on Some of Kelloggs Types
 A	K. C. Emerson
 P	89
 
@@ -8247,9 +8796,10 @@ A	C. J. Drake
 P	187
 Q	194
 
-#S	56-195
-#T	Index to Volume 56
-#P	195
+# Flush
+S	56-index
+T	Index to Volume 56
+P	195
 
 
 V	57
@@ -8415,9 +8965,10 @@ A	J. Bequaert
 P	146
 Q	146
 
-#S	57-147
-#T	Index to Volume 57
-#P	147
+# Flush
+S	57-index
+T	Index to Volume 57
+P	147
 
 
 V	58
@@ -8565,9 +9116,10 @@ A	R. M. DeCoursey
 P	158
 Q	158
 
-#S	58-159
-#T	Index to Volume 58
-#P	159
+# Flush
+S	58-index
+T	Index to Volume 58
+P	159
 
 
 V	59
@@ -8718,9 +9270,10 @@ A	Wm. S. Creighton
 P	148
 Q	162
 
-#S	59-163
-#T	Index to Volume 59
-#P	163
+# Flush
+S	59-index
+T	Index to Volume 59
+P	163
 
 
 V	60
@@ -8892,9 +9445,10 @@ A	W. L. Brown, Jr.
 P	160
 Q	166
 
-#S	60-167
-#T	Index to Volume 60
-#P	167
+# Flush
+S	60-index
+T	Index to Volume 60
+P	167
 
 
 V	61
@@ -8998,9 +9552,10 @@ A	N. W. Gillham
 P	162
 Q	162
 
-#S	61-index
-#T	Index to Volume 61
-#P	163
+# Flush
+S	61-index
+T	Index to Volume 61
+P	163
 
 
 V	62
@@ -9187,9 +9742,10 @@ A	J. A. Manter
 P	157
 Q	158
 
-#S	62-159
-#T	Index to Volume 62
-#P	159
+# Flush
+S	62-index
+T	Index to Volume 62
+P	159
 
 
 V	63
@@ -9417,11 +9973,13 @@ P	70
 Q	75
 
 # wrong file name, should be 64-076
+# Oddly, Hindawi has the wrong page (75) in its PDF for this article.
 S	64-075
 T	Sympatry of the Ants <i>Conomyrma bicolor</i> (Wheeler) and <i>C. pyramica</i> (Roger)
 A	E. O. Wilson
 P	76
 Q	76
+D	10.1155/1957/75654
 
 V	64
 I	3
@@ -9625,7 +10183,7 @@ P	36
 Q	36
 
 S	66-038
-# TOC is wrong?  Says article starts on 38.  Verified 37-52
+# TOC is wrong?	 Says article starts on 38.  Verified 37-52
 T	The Neotropical Species of the Ant Genus <i>Strumigenys</i> Fr. Smith: Group of <i>gundlachi</i> (Rogers)
 A	W. L. Brown, Jr.
 P	37
@@ -10392,8 +10950,8 @@ A	F. M. Carpenter
 P	175
 Q	190
 
-# N.b. volume 72 (3) is missing.
-
+# N.b. volume 72 (3) is missing from Ant Room set, present in Swain
+# TOC from Mayr library
 V	72
 I	3
 
@@ -10414,7 +10972,7 @@ A	Jonathan Reiskind
 P	218
 
 S	72-225
-T 	Second African Species of the Dacetine Ant Genus <i>Codiomyrmex</i>
+T	Second African Species of the Dacetine Ant Genus <i>Codiomyrmex</i>
 A	Robert W. Taylor
 P	225
 
@@ -10647,9 +11205,10 @@ A	Thomas C. Barr, Jr.
 P	284
 Q	287
 
-#S	73-289
-#T	Author and Subject Index to Volue 73
-#P	289
+# Flush
+S	73-index
+T	Author and Subject Index to Volue 73
+P	289
 
 
 V	74
@@ -10697,7 +11256,84 @@ A	F. M. Carpenter
 P	58
 Q	84
 
-# Missing: Volume 74 numbers 2 and 3 (or 2-3)
+V	74
+I	2
+# Missing from both Ant Room and Swain: Volume 74 numbers 2 and 3
+
+T	The Evolutionary Significance of Rotation of the O&ouml;theca in the Blattaria
+A	Louis M. Roth
+P	85
+
+P	104
+
+P	107
+
+P	118
+
+P	166
+
+T	Attack behavior of diguetid spiders and the origin of prey wrapping in spiders
+A	William Eberhard
+P	173
+Q	181
+# Scanned by Mary Sears
+
+V	74
+I	3
+# Missing from both Ant Room and Swain: Volume 74 numbers 2 and 3
+# TOC = http://biodiversitylibrary.org/page/50887692
+
+P	183
+
+P	191
+
+P	203
+
+P	208
+
+P	212
+
+P	218
+
+P	224
+
+P	228
+
+P	234
+
+T	A Review of the Taxonomy and Morphology of the Berothidae, with the Description of a New Subfamily from Chile (Neuroptera)
+A	Ellis G. MacLeod
+A	Philip A. Adams
+P	237
+Q	265
+
+V	74
+I	3
+# TOC = http://biodiversitylibrary.org/page/50887780
+
+P	267
+T	Cretaceous Insects from Labrador 1. Geologic Occurrence
+A	Erling Dorf
+
+P	270
+
+P	276
+
+P	290
+
+P	299
+
+P	314
+
+P	320
+
+P	331
+
+P	340
+
+P	342
+Q	352
+
 
 V	74
 I	4
@@ -10753,10 +11389,11 @@ A	Ellis G. MacLeod
 P	342
 Q	352
 
-#S	74-353
-#T	Author and Subject Index to Volume 74
-#P	353
-#Q	357
+# Flush
+S	74-index
+T	Author and Subject Index to Volume 74
+P	353
+Q	357
 
 
 V	75
@@ -10894,7 +11531,37 @@ A	Janice R. Matthews
 P	285
 Q	293
 
-# Missing: v 75 #4
+# Missing from Ant Room collection: v 75 #4
+# ?? Partial issue in Swain collection: v 75 #4
+# TOC at BHL: http://biodiversitylibrary.org/page/50906097
+V	75
+I	4
+
+T	Megasecopterous Nymphs in pennsylvanian Concretions from Illinois
+A	F. M. Carpenter
+A	Eugene S. Richardson, Jr.
+P	295
+
+T	Permian Mayfly Nymphs
+A	Jarmila Kukalov&aaigu;
+P	310
+
+T	The First Wingless Stonefly from Australia
+A	Joachim Illies
+P	328
+
+T	Recruitment to Food in the Ant <i>Crematogaster asmeadi</i>
+A	R. H. Leuthold
+P	334
+
+T	The genus <i>Triaeris</i> Simon (Araneae, Oonopidae) in Central America and the West Indies
+A	Arthur M. Chickering
+P	351
+
+T	Demetrida (Coleoptera: Carabidae) in the Moluccas
+A	P. J. Darlington, Jr.
+P	360
+Q	362
 
 
 V	76
@@ -11086,9 +11753,10 @@ A	Olga Turner
 P	487
 Q	501
 
-#S	76-505
-#T	Author and Subject Index to Volume 7
-#P	505
+# Flush
+S	76-index
+T	Author and Subject Index to Volume 7
+P	505
 
 
 V	77
@@ -11288,12 +11956,14 @@ A	Arthur M. Chickering
 P	487
 Q	512
 
-#S	77-515
-#T	Index to Volume 77
-#P	515
+# Flush
+S	77-index
+T	Index to Volume 77
+P	515
 
 
-# Missing from ant room set: v 78 #1-2
+# Missing from ant room set: v 78 issues 1 2
+# TOC obtained from Mayr Library
 V	78
 I	1-2
 
@@ -11438,9 +12108,10 @@ A	Ruth L. Willey
 P	330
 Q	349
 
-#S	78-351
-#T	Index to Volume 78
-#P	351
+# Flush
+S	78-index
+T	Index to Volume 78
+P	351
 
 
 V	79
@@ -11635,6 +12306,7 @@ Q	378
 #P	379
 
 
+# N.b. the Swain set ends at the end of volume 79.
 V	80
 I	1-2
 
@@ -12046,9 +12718,10 @@ P	534
 #Q inferred
 Q	536
 
-#S	81-537
-#T	Author and Subject Index to Volume 81
-#P	537
+# Flush
+S	81-index
+T	Author and Subject Index to Volume 81
+P	537
 
 
 V	82
@@ -12252,9 +12925,10 @@ A	Elizabetwh Aldorf
 P	359
 Q	365
 
-#S	82-369
-#T	Author and Subject Index to Volume 82
-#P	369
+# Flush
+S	82-index
+T	Author and Subject Index to Volume 82
+P	369
 
 
 V	83
@@ -12369,7 +13043,7 @@ A	Charles Kugler
 P	216
 Q	221
 
-# Missing issue 3-4
+# Issue 3-4 missing from ant room set
 # This TOC page prepared by JAR based on a scan made at the Mayr library...
 #Vol. 83 September-December, 1976 No. 3-4
 V	83
@@ -12622,9 +13296,10 @@ A	Sandy B. Fiance
 P	308
 Q	316
 
-#S	84-001
-#T	Author and Subject Index to Volume 84
-#P	319
+# Flush
+S	84-index
+T	Author and Subject Index to Volume 84
+P	319
 
 
 V	85
@@ -13184,12 +13859,12 @@ S	87-349
 T	Predation by <i>Argyrodes</i> (Theridiidae) on Solitary and Communal Spiders
 A	Deborah Smith Trail
 P	349
-#Q inferred
-Q	356
+Q	355
 
-#S	87-357
-#T	Author and Subject Index to Volume 87
-#P	357
+# Flush
+S	87-index
+T	Author and Subject Index to Volume 87
+P	357
 
 
 V	88
@@ -13341,9 +14016,10 @@ A	John Sivinski
 P	383
 Q	390
 
-#S	88-391
-#T	Index to Volume 88
-#P	391
+# Flush
+S	88-index
+T	Index to Volume 88
+P	391
 
 
 V	89
@@ -13718,9 +14394,10 @@ A	Maria Guadalupe Del Rio Pesado
 P	425
 Q	436
 
-#S	90-449
-#T	Index to volume 90
-#P	449
+# Flush
+S	90-index
+T	Index to volume 90
+P	449
 
 
 V	91
@@ -13842,11 +14519,12 @@ S	91-333
 T	The identity of <i>Hadena hausta</i> (Noctuidae, Lepidoptera)
 A	Dale F. Schweitzer
 P	333
-Q	336
+Q	335
 
-#S	91-339
-#T	Index to volume 91
-#P	339
+# Flush
+S	91-index
+T	Index to volume 91
+P	339
 
 
 V	92
@@ -14114,9 +14792,10 @@ A	Frank M. Carpenter
 P	575
 Q	582
 
-#S	92-583
-#T	Index to Volume 92
-#P	583
+# Flush
+S	92-index
+T	Index to Volume 92
+P	583
 
 
 V	93
@@ -14300,9 +14979,10 @@ A	Frank M. Carpenter
 P	375
 Q	376
 
-#S	93-377
-#T	Index to Volume 93
-#P	377
+# Flush
+S	93-index
+T	Index to Volume 93
+P	377
 
 
 V	94
@@ -14426,14 +15106,15 @@ V	94
 I	3-4
 
 S	94-215
+# Color photo !!!
 T	A mordellid-meloid mimicry
 A	M. Deyrup
 A	T. Eisner
 P	215
-Q	217
+Q	218
 
 S	94-219
-# This article possesses an extra page.  Investigate.
+# This article possesses an extra page.	 Investigate.
 T	Patterns of mating and fecundity in several common green lacewings (Neuroptera: Chrysopidae) of eastern North America
 A	Charles S. Henry
 A	Christine Busher
@@ -14465,7 +15146,7 @@ A	Lynn Siri Kimsey
 P	271
 
 S	94-275
-T	New species of African  Chrysis (Hymenoptera: Chrysididae)
+T	New species of African	Chrysis (Hymenoptera: Chrysididae)
 A	Richard M. Bohart
 P	275
 
@@ -14724,9 +15405,10 @@ A	G. William Wolfe
 P	327
 Q	344
 
-#S	95-347
-#T	Index to volume 95
-#P	347
+# Flush
+S	95-index
+T	Index to volume 95
+P	347
 
 
 V	96
@@ -14911,9 +15593,10 @@ A	Frank N. Young
 P	307
 Q	309
 
-#S	96-313
-#T	Index to volume 96
-#P	313
+# Flush
+S	96-index
+T	Index to volume 96
+P	313
 
 
 V	97
@@ -15085,9 +15768,10 @@ A	Robert W. Taylor
 P	281
 Q	296
 
-#S	97-299
-#T	Index to Volume 97
-#P	299
+# Flush
+S	97-index
+T	Index to Volume 97
+P	299
 
 
 V	98
@@ -15480,9 +16164,10 @@ A	Guy L. Bush
 P	335
 Q	357
 
-#S	99-359
-#T	Index to Volume 99
-#P	359
+# Flush
+S	99-index
+T	Index to Volume 99
+P	359
 
 
 V	100
@@ -15952,3 +16637,4 @@ A	Robert A. Johnson
 A	John W. Martin
 P	95
 Q	101
+
