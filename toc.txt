@@ -44,12 +44,17 @@ V	6
 V	7
 # Present Ant Room and Swain, complete.
 
+I	Supplement I
+
+I	Supplement II
+
+
 V	8
 # First issue is number 249
 # Mary Sears scanned: Baker, C.F. 1898. Athysanella, a new genus of Jassids. Psyche 8: 185-189. (missing pages)
 
 I	249
-# TBD: get 8(249) TOC from BHL
+# Got 8(249) TOC from BHL!
 # Missing Ant Room and Swain, present only BHL: 249 263 273 279
 # No issue TOC - volume index only
 
@@ -113,36 +118,114 @@ I	250
 # Issues 250-262 are present in the Ant Room collection (and Hindawi)
 
 I	263
-# TBD: get 8(263) TOC from BHL
+# Got 8(263) TOC from BHL
 # Issues missing from Ant Room and Swain, present only BHL: 249 263 273 279
 # Issue 263 starts at http://www.biodiversitylibrary.org/item/44238#page/201/mode/1up
 # Plate 4 precedes first article
 # First article starts on 183
 
+T	Descriptions of species of Machilis and Seira from Mexico
+A	Justus Watson Folsom
+P	183
+
+T	Athysanella, a new genus of Jassids
+A	Carl F. Baker
+P	185
+Q	189
+
+T	Description of a new species of Arctiidae with a table of the species of idalus
+A	Harrison G. Dyar
+P	189
+
+T	Two new scale-insects quarantined at San Francisco
+A	T. D. A. Cockerell
+P	190
+Q	191
+
 I	264
 # Issues 264-272 should be present in the Ant Room collection
 
 I	273
-# TBD: get 8(273) TOC from BHL
+# Got 8(273) TOC from BHL
+# TOC is on page 301 
+# http://www.biodiversitylibrary.org/item/44238#page/333/mode/1up
 # Issues missing from Ant Room and Swain, present only BHL: 249 263 273 279
+
+T	The mouth parts of the nematocerous Diptera — I
+A	Vernon L. Kellogg
+P	303
+Q	306
+
+T	An unknown tract on American Insects by Thomas Say
+A	Samuel H. Scudder
+P	306
+Q	308
+
+T	Early stages of Triptogon modesta
+A	Caroline G. Sonic
+P	308
+Q	310
+
+T	Life histories of North American Geometridae — I
+A	Harrison G. Dyar
+P	310
+
+T	Some synonymy
+A	T. D. A. Cockerell
+P	311
+Q	312
+
+T	China asters infested by a Coccid
+A	George B. King
+P	312
+Q	312
+
 
 I	274
 # Issues 274-278 should be present in the Ant Room collection
 
 I	279
-# TBD: get 8(279) TOC from BHL
+# Got 8(279) TOC from BHL
 # Issues missing from Ant Room and Swain, present only BHL: 249 263 273 279
+# July, 1899.
+
+T	Mosquitoes considered as transmitters of yellow fever and malaria
+A	Charles J. Finlay
+P	379
+Q	384
+
+T	The Commotion in Kansas and Missouri upon the appearance of Dissosteira in Colorado
+A	S. J. Hunter
+P	384
+Q	386
+
+T	Life histories of North American Geometridae - II
+A	Harrison G. Dyar
+P	386
+Q	387
+
+T	Description of the type of Polydontoscelis Ashm.
+A	William H. Ashmead
+P	387
+Q	388
+
+T	Proceedings of the Cambridge Entomological Club (Cryplorhynchiis lafathi in Massachusetts; southern butterflies in New England; some injurious insects; a parthenogenetic Phasmid; Periplaiietu amerirana) 
+P	388
+Q	388
+
 
 I	283
+# In Hindawi set
 # page 421 http://www.biodiversitylibrary.org/item/44238#page/481/mode/1up
 
 I	284
+# In Hindawi set
 # 433 http://www.biodiversitylibrary.org/item/44238#page/493/mode/1up
 # Last article ends on page 429, followed by volume index.
 
 V	8
-I	Supplement
-# haven't found the supplement at BHL yet.
+I	Supplement II
+# In BHL: http://www.biodiversitylibrary.org/item/44238#page/397/mode/1up
 
 T	Insect Fauna of the Giant Cactus of Arizona: Letters from the Southwest
 A	H. G. Hubbard
@@ -162,6 +245,10 @@ Q	14
 D	10.1155/1899/60914
 # From Hindawi DOI file
 
+I	Supplement I
+
+I	Supplement II
+
 
 V	9
 # 286 289 297 306 307 310 314 are in Swain but not in Ant Room
@@ -169,16 +256,49 @@ V	9
 
 V	9
 I	285
-# TBD: get 9(285) TOC from BHL
+# Got 9(285) TOC from BHL
+# http://www.biodiversitylibrary.org/item/42922#page/15/mode/1up
 
 T	On Coleoptera found with ants.	Fifth paper
 A	H. F. Wickham
 P	3
 Q	5
 
+T	Synopsis of subfamilies and genera of North American Tettigidae
+A	J. L. Hancock
+P	6
+Q	7
+
+T	The "cocoons" or "cases" of some burrowing caterpillars
+A	Caroline G. Soule
+P	7
+Q	8
+
+T	Life histories of North American Geometridae - VIII
+A	Harrison G. Dyar
+P	9
+Q	10
+
+T	Life histories of North American Geometridae - IX
+A	Harrison G. Dyar
+P	10
+Q	11
+
+T	The name Leonia
+A	T. D. A. Cockerell
+P	11
+Q	11
+
+T	Correction of an error
+A	Harrison G. Dyar
+P	11
+Q	11
+
+
 V	9
 I	286
-# TBD: get 9(286) TOC from BHL
+# Got 9(286) TOC from BHL
+# http://www.biodiversitylibrary.org/item/42922#page/27/mode/1up
 # 286 289 297 306 307 310 314 are in Swain but not in Ant Room
 
 T	On the Mating instinct in Moths
@@ -188,23 +308,52 @@ Q	20
 
 # short review
 T	Entomology for the young
+A	None
 P	20
 Q	20
 
+T	Life histories of North American Geomtridae - X
+A	Harrison G. Dyar
 P	21
+Q	22
 
+# (Illustrated)
+T	The fifth species of Kermis from Massachusetts
+A	George B. King
 P	22
+Q	22
 
+T	Proceedings of the Cambridge Entomological Club
 P	23
+Q	23
 
 I	287
 
 I	288
 # OK, comes from CEC/Hindawi
+# Ends on page 48
+
 
 I	289
-# TBD: get 9(289) TOC from BHL or Swain
+# Got 9(289) TOC from BHL or Swain
+# http://www.biodiversitylibrary.org/item/42922#page/63/mode/1up
 # 286 289 297 306 307 310 314 are in Swain but not in Ant Room
+
+T	On the species of Nemobius known to occur in Indiana
+A	W. S. Blatchley
+P	51
+Q	54
+
+T	On some American species of Macropsis (Jassidae)
+A	C. F. Baker
+P	55
+Q	59
+
+T	Life Histories of North American Geometridae — XI
+A	Harrison G. Dyar 
+P	59
+Q	60
+
 
 I	290
 # OK, comes from CEC/Hindawi
@@ -214,10 +363,28 @@ I	291
 
 I	292
 # OK, comes from CEC/Hindawi
+# Starts on page 85, ends around 96
 
 I	293
-# TBD: get 9(293) TOC from BHL or Swain
+# Got 9(293) TOC from BHL or Swain
+# http://www.biodiversitylibrary.org/item/42922#page/111/mode/1up
 # 293 305 308 in neither Swain not Ant Room; present only BHL
+
+T	A list of the Orthoptera of New England
+A	Samuel H. Scudder
+P	99
+Q	106
+
+T	Life histories of North American Geometridae — XIV
+A	Harrison G. Dyar
+P	106
+Q	107
+
+T	Occurrence of Machilis variabilis in Maine
+A	A. S. Packard
+P	107
+Q	107
+
 
 I	294
 # OK, comes from CEC/Hindawi
@@ -251,21 +418,84 @@ I	303
 
 I	304
 # OK, comes from CEC/Hindawi
+# Ends around page 340
+
+# Hindawi gets this wrong - page 240, not 340
+T	A new use for an ovipositor
+A	Caroline G. Soule
+V	9
+I	304
+P	240
+Q	240
+D	10.1155/1901/78586
+
 
 I	305
-# TBD: get 9(305) TOC from BHL
+# Got 9(305) TOC from BHL
+# http://www.biodiversitylibrary.org/item/42922#page/259/mode/1up
 # 293 305 308 in neither Swain not Ant Room; present only BHL
+
+T	Sketch of the habits of North American ants — II
+A	Auguste Forel
+A	Chigny Pr&eaigu;s Morges
+P	243
+Q	245
+
+T	Studies for students. — II. The histoblasts (imaginal buds) of the wings and legs of the giant crane-fly (Holorusia rubiginosa) (Illustrated)
+A	Vernon L. Kellogg
+P	246
+Q	250
+
+T	Life histories of North American Geometridae — XXV
+A	Harrison G. Dyar
+P	250
+Q	251
+
+T	Willem on Apterygota 
+A	None
+P	252
+Q	252
+
+T	The inner cocoon of Attacine moths
+A	Caroline G. Soule
+P	252
+Q	252
 
 I	306
 # TBD: get 9(306) TOC from BHL or Swain
+# http://www.biodiversitylibrary.org/item/42922#page/271/mode/1up
 # 286 289 297 306 307 310 314 are in Swain but not in Ant Room
 
 I	307
-# TBD: get 9(307) TOC from BHL or Swain
+# Got 9(307) TOC from BHL
+# http://www.biodiversitylibrary.org/item/42922#page/283/mode/1up
 # 286 289 297 306 307 310 314 are in Swain but not in Ant Room
+
+T	The species of Gryllus on the Pacific coast
+A	Samuel H. Scudder
+P	267 
+Q	270
+
+T	Some new records of the New England Formicidae
+A	George B. King
+P	270
+Q	271
+
+T	Some insects of the Hudsonian zone in New Mexico
+A	T. D. A. Cockerell
+A	A. Busck
+A	Henry L. Viereck
+P	272
+Q	273
+
+T	Life histories of North American Geometridae — XXVII
+A	Harrison G. Dyar
+P	273 
+Q	275
 
 I	308
 # TBD: get 9(308) TOC from BHL
+# http://www.biodiversitylibrary.org/item/42922#page/295/mode/1up
 # 293 305 308 in neither Swain not Ant Room; present only BHL
 
 I	309
@@ -273,7 +503,9 @@ I	309
 
 I	310
 # TBD: get 9(310) TOC from BHL or Swain
+# http://www.biodiversitylibrary.org/item/42922#page/319/mode/1up
 # 286 289 297 306 307 310 314 are in Swain but not in Ant Room
+# starts on page 399, no TOC
 
 I	311
 # OK, comes from CEC/Hindawi
@@ -286,6 +518,7 @@ I	313
 
 I	314
 # TBD: get 9(314) TOC from BHL or Swain
+# http://www.biodiversitylibrary.org/item/42922#page/371/mode/1up
 # 286 289 297 306 307 310 314 are in Swain but not in Ant Room
 
 I	315
@@ -307,20 +540,118 @@ V	12
 # Swain set has only issue 5 (?)
 
 V	13
-# 2 3 4 missing from Ant Room; present only BHL
+# 2-3 4 missing from Ant Room; present only BHL
 # Entire volume missing from Swain
 
-I	2
-# TBD: get 13(2) TOC from BHL or Swain
-# 2 3 4 missing from Ant Room; present only BHL
+I	2-3
+# Got 13(2-3) TOC from BHL
+# http://www.biodiversitylibrary.org/item/43369#page/197/mode/1up
+# 2-3 4 missing from Ant Room; present only BHL
 
-I	3
-# TBD: get 13(3) TOC from BHL or Swain
-# 2 3 4 missing from Ant Room; present only BHL
+# Plate III follows last page (32)
+T	Further breeding experiments with Haploas
+A	F. H. Foster
+P	29
+Q	32
+
+T	North American bees of the genera Andrena and Melitta in the British Museum
+A	T. D. A. Cockerell
+P	33
+Q	37
+
+# Plate IV follows page 40
+T	New Ants from New England
+A	William Morton Wheeler
+P	38
+Q	41
+
+T	The bedbug, Cimex lectularius
+A	A. Arsene Girault
+P	42
+Q	58
+
+T	Descriptions of two new Diptera of the family Dolichopodidae
+A	Charles W. Johnson
+P	59
+Q	60
+
+T	Life histories of North American Geometridae - LXV
+A	Harrison G. Dyar
+P	61
+Q	62
+
+T	Two new species of Telonomus
+A	A. Arsene Girault
+P	63
+Q	66
+
+# Plate
+T	New Lepidoptera from Venezuela
+A	Andrew Gray Weeks
+P	67
+Q	73
+
+T	Cocoons and young of Conipteryx vicina
+A	J. H. Emerton
+P	74
+Q	75
+
+# This is a letter; 'notes on' is only in the TOC
+T	Notes on the maxilla in Rhynchophorous Coleoptera
+A	James G. Needham
+P	76
+Q	76
+
+T	A note from Stanford University
+A	Vernon L. Kellogg
+P	76
+Q	76
+
 
 I	4
-# TBD: get 13(4) TOC from BHL or Swain
-# 2 3 4 missing from Ant Room; present only BHL
+# Got 13(4) TOC from BHL or Swain
+# http://www.biodiversitylibrary.org/item/43369#page/255/mode/1up
+# 2-3 4 missing from Ant Room; present only BHL
+
+T	A review of the North American species of Notiophilus
+A	H. C. Fall
+P	79
+Q	92
+
+# BHL page 96 is actually Plate V - not sure which article it belongs to
+T	Life histories of North American Geometridae. LXVL
+A	Harrison G. Dyar
+P	93
+Q	94
+
+# Includes Plate VI
+T	Notes on Deinocerites cancer Theobald
+A	Frederick Knab
+P	95
+Q	97
+
+T	Three new species of Neuroptera
+A	Nathan Banks
+P	98
+Q	100
+
+# Includes Plate VII (preceding)
+T	Roland Hayward
+A	Samuel Henshaw
+P	101
+Q	103
+
+# Review of ...
+T	Recent entomological literature
+A	O. A. Johanssen
+P	104
+Q	104
+
+T	Proceedings of the Club
+A	None
+P	105
+Q	105
+
 
 V	14
 # Issue 6 missing from Ant Room set
@@ -336,8 +667,51 @@ D	10.1155/1907/32434
 
 V	14
 I	6
-# TBD: get 14(6) TOC from BHL
+# Bot 14(6) TOC from BHL
+# http://www.biodiversitylibrary.org/item/43369#page/481/mode/1up
 # Issue 6 missing from Ant Room and Swain; present only BHL
+# Issue 5 ends around page 110
+
+T	New Oribatidae
+A	H. E. Ewing
+P	111
+Q	115
+
+T	Some experiments with hybrids
+A	Caroline Gray Soule
+P	116
+Q	117
+
+T	A review of the genus Chrysophanus
+A	Karl R. Coolidge
+P	118
+Q	120
+
+T	A new Locustid from Nantucket
+A	H. T. Fernald
+P	120
+Q	120
+
+T	Geometridae notes - On Mesoleuca caesiata
+A	L. W. Swett
+P	121
+Q	121
+
+T	The Mallophagan parasites of the kea
+A	Vernon L. Kellogg
+P	122
+Q	123
+
+T	The Hemiptera of Jamaica
+A	C. W. Johnson
+P	123
+Q	123
+
+T	Errata
+A	None
+P	123
+Q	123
+
 
 V	15
 
@@ -404,9 +778,46 @@ Q	124
 V	16
 
 I	4
-# TOC is complete (from BHL)
+# http://www.biodiversitylibrary.org/item/43796#page/93/mode/1up
 # 4 6 in neither Swain not Ant Room; present only BHL
-# TOC at http://www.biodiversitylibrary.org/item/43796#page/125/mode/1up
+# TOC for number 4 shows pages 69-96
+
+T	On certain Pieris Caterpillars — 
+A	Wm. T. M. Forbes
+P	69
+Q	75
+
+T	The Chalcidoid Parasites of the Coccid Eulecanium nigrofasciatum (Pergande), with tlescriptions of three new North American species of the subfamilies Encyrtinae and Aphelininae from Illinois
+A	A. A. Girault
+P	75
+Q	86
+
+T	Some new Chrysidid Wasps from western United States
+A	S. A. Rohwer
+P	87
+Q	92
+
+T	The Environment of Callicista ines, Edwards (Dyar), in southern California
+A	Fordyce Grinnell, Jr.
+P	92
+Q	94
+
+T	The Decticinean Genus Rehnia Caud. (Orthoptera)
+A	A. N. Caudell
+P	94
+Q	95
+
+T	Spiders in Winter Floods
+A	J. H. Emerton
+P	95
+Q	96
+
+T	A new Variety of the Geometrid Moth Therina fiscellaria Gn.
+A	L. W. Swett
+P	96
+Q	97
+
+I	5
 
 T	Some experiments on Flacherie in the Gypsy Moth
 A	William Reiff
@@ -1139,6 +1550,7 @@ S	19-041
 T	New Bees from Brazil
 A	T. D. A. Cockerell
 P	41
+Q	61
 
 S	19-062
 # Cut off
@@ -1151,6 +1563,7 @@ S	19-063
 T	A Peculiar New Crane-fly from Porto Rico
 A	C. P. Alexander
 P	63
+Q	66
 
 S	19-066
 T	Observations on <i>Micoutalis calva</i> Say
@@ -1162,6 +1575,7 @@ S	19-069
 T	The Period of Incubation of Eggs of <i>Samia cecropia</i>
 A	Phil Rau
 P	69
+Q	70
 
 V	19
 I	3
@@ -1795,6 +2209,7 @@ P	50
 S	21-052
 T	Exchange Column
 P	52
+Q	52
 
 V	21
 I	2
@@ -1845,6 +2260,7 @@ P	83
 S	21-084
 T	Exchange Column
 P	84
+Q	84
 
 V	21
 I	3
@@ -1890,6 +2306,7 @@ Q	114
 S	21-114
 T	Exchange Column
 P	114
+Q	114
 
 V	21
 I	4
@@ -2008,6 +2425,7 @@ P	166
 S	21-169
 T	Exchange Column
 P	169
+Q	169
 
 V	21
 I	6
@@ -2185,6 +2603,8 @@ P	64
 S	22-065
 T	Exchange Column
 P	65
+Q	65
+
 
 V	22
 I	3
@@ -2240,6 +2660,7 @@ P	105
 S	22-107
 T	Exchange Column
 P	107
+Q	107
 
 V	22
 I	4
@@ -2300,6 +2721,7 @@ P	144
 S	22-146
 T	Exchange Column
 P	146
+Q	146
 
 V	22
 I	5
@@ -2352,6 +2774,8 @@ P	178
 S	22-181
 T	Exchange Column
 P	181
+Q	181
+
 
 V	22
 I	6
@@ -2585,9 +3009,11 @@ S	23-094
 T	Cora H. Clarke [Obituary]
 P	94
 
+# BHL is missing pages 95-96
 S	23-096
 T	Exchange Column
 P	96
+R	96
 
 V	23
 I	4
@@ -2779,6 +3205,7 @@ P	30
 S	24-031
 T	Exchange Column
 P	31
+Q	31
 
 V	24
 I	2
@@ -2858,7 +3285,7 @@ S	24-091
 T	New Miscellaneous Chalcid-Flies from North America
 A	A. A. Girault
 P	91
-P	99
+Q	99
 
 S	24-099
 T	A New Species of the Genus Mymar from the Woods of Maryland with an Important Deseriptive Note
@@ -4892,14 +5319,16 @@ T	Proceedings of the Cambridge Entomological Club
 P	319
 Q	320
 
-#S	32-323
-# Q based on scanned page count
-#T	Index
-#P	323
-#Q	331
+S	32-323
+T	Index
+P	323
+Q	328
+
+I	folder
 
 S	32-folder
-# TBD: Get Q for this article
+P	1
+Q	1
 T	Folder, Pictorial Key to Dragon-fly Larv&aelig;
 A	R. H. Howe
 
@@ -4942,9 +5371,6 @@ A	C. T. Brues
 P	18
 Q	19
 
-V	33
-I	2
-
 S	33-020
 T	The Distribution of <i>Muscina pascuorum</i> Meigen in America
 A	Charles W. Johnson
@@ -4963,6 +5389,9 @@ T	Review of <i>Manual of Injurious Insects</i> By Glenn W. Herrick
 A	C. T. Brues
 P	27
 Q	28
+
+V	33
+I	2
 
 S	33-029
 T	Social Habits of some Canary Island Spiders
@@ -7702,6 +8131,7 @@ S	48-001
 T	The General Morphology of the Female Reproductive System of a Viviparous Roach, <i>Diploptera dytiscoides</i>
 A	Harold R. Hagan
 P	1
+Q	9
 
 S	48-010
 T	West Indian Carabid&aelig; VI. The Jamaican Species and their Wings
@@ -11280,25 +11710,46 @@ Q	181
 
 V	74
 I	3
+# TBD: Get TOC from BHL
 # Missing from both Ant Room and Swain: Volume 74 numbers 2 and 3
 # TOC = http://biodiversitylibrary.org/page/50887692
 
+T	Tatuidris, A Remarkable New Genus of Formicidae (Hymenoptera)
+A	William L. Brown, Jr.
+A	Walter W. Kempf 
 P	183
 
+T	Notes on the Biology of Two Central American Ptinus (Coleoptera: Ptinidae) With a Description of a New Species
+A	Robin M. Andrews
 P	191
 
+T	Two New Species of the Genus Otiothops (Araneae, Palpimanidae) from the Virgin Islands
+A	Arthur M. Chickering
 P	203
 
+T	Notes on Neotropical Tabanidae (Diptera). XI. Stenotabanus staryi n. sp. from Cuba
+A	G. B. Fairchild
 P	208
 
+T	Biochemical Differentiation of the Sibling Black Widow Spiders, Latrodectus mactans and L. variolus
+A	John D. McCrone
 P	212
 
+T	A New Genus of the Trachysphyrus Group from Southern Brazil (Hymenoptera, Ichneumonidae)
+A	Charles C. Porter
 P	218
 
+T	The Structure and Relationships of Stefanomioptera Guthorl (Miomoptera-Palaeomanteidae)
+A	F. M. Carpenter
 P	224
 
+T	Effects of Army Ant Queens on Longevity of Their Workers (Formicidae: Dorylinae)
+A	Julian F. Watkins II
+A	Carl W. Rettenmeyer
 P	228
 
+T	The Female Sex of the Mutillidae Subfamily Eotillinae (Hymenoptera)
+A	Clarence E. Mickel 
 P	234
 
 T	A Review of the Taxonomy and Morphology of the Berothidae, with the Description of a New Subfamily from Chile (Neuroptera)
@@ -11308,35 +11759,8 @@ P	237
 Q	265
 
 V	74
-I	3
-# TOC = http://biodiversitylibrary.org/page/50887780
-
-P	267
-T	Cretaceous Insects from Labrador 1. Geologic Occurrence
-A	Erling Dorf
-
-P	270
-
-P	276
-
-P	290
-
-P	299
-
-P	314
-
-P	320
-
-P	331
-
-P	340
-
-P	342
-Q	352
-
-
-V	74
 I	4
+# TOC = http://biodiversitylibrary.org/page/50887780
 
 S	74-267
 T	Cretaceous Insects from Labrador 1. Geologic Occurrence

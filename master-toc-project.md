@@ -56,3 +56,5 @@ Possible applications:
   on Ent Club web site)
 * useful for any kind of corpus analysis anyone might want to do
   (species or genus index, species descriptions, localities, etc.)
+
+It appears HathiTrust has full text on line, hmm...

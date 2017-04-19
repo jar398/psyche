@@ -304,12 +304,75 @@ def field_sort_key(field):
     if verb == 'S': return 90
     else: return 100
 
+def check_continuity(dictified):
+    previous_volume = None
+    previous_issue = None
+    previous_page = None
+    previous_d = None
+    for d in dictified:
+        if d['V'] != previous_volume:
+            previous_page = 0
+            previous_issue = None
+        if 'P' in d:
+            page = int(d['P'])
+            qage = get_last_page(d)
+            if qage == None:
+                if d['T'].startswith('Exchange'):
+                    True
+                elif 'Index' in d['T']:
+                    True
+                else:
+                    print '* missing last page %s' % brief(d)
+                continue
+            qage = int(qage)
+            if qage < page:
+                print '* backwards page range %s' % brief(d)
+                continue
+            if page == previous_page:
+                True
+            elif page == previous_page + 1:
+                True
+            elif page == previous_page + 2 and ((page % 2) == 1):
+                # Common pattern in e.g. volume 97
+                True
+            elif page < previous_page:
+                print '* going backwards: %s -> %s' % (brief(previous_d), brief(d))
+            elif (d.get('I') != previous_issue and
+                  page < previous_page + 10):
+                # Allow 10 pages between issues
+                True
+            else:
+                print '* gap [%s]: %s -> %s' % \
+                  (page-previous_page-1, brief(previous_d), brief(d))
+            previous_page = qage
+            previous_d = d
+            previous_volume = d['V']
+            previous_issue = d.get('I')
+        
+def brief(d):
+    return '%s(%s):%s-%s' % (d.get('V'), d.get('I'), d.get('P'), get_last_page(d))
+
+def count_things(dictified):
+    volumes = {}
+    issues = {}
+    articles = 0
+    for d in dictified:
+        if 'P' in d or 'T' in d:
+            articles += 1
+        v = d.get('V')
+        if not v in volumes: volumes[v] = True
+        i = d.get('I')
+        if not (v, i) in issues: issues[(v, i)] = True
+    print 'Volumes:  %s' % len(volumes)
+    print 'Issues:   %s' % len(issues)
+    print 'Articles: %s' % articles
+        
+
 # path to toc/ directory
 
 def write_toc(dictified, ambiguous_dois, path):
     if not os.path.isdir(path):
         os.makedirs(path)
-    dictified = sorted(dictified, key=object_sort_key)
     with open(os.path.join(path, 'processed-toc.txt'), 'w') as outfile:
         for d in dictified:
             obj = d['object']
@@ -339,4 +402,8 @@ dictified = dictify(toc)
 ambiguous_dois = load_dois(dictified, 'dois.csv')
 load_more_dois(dictified, 'doi-metadata.csv')
 add_cec_holdings(dictified, 'articles.csv')
+
+dictified = sorted(dictified, key=object_sort_key)
+check_continuity(dictified)
+count_things(dictified)
 write_toc(dictified, ambiguous_dois, sys.argv[2])

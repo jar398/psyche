@@ -38,18 +38,18 @@
 10.1155/1875/51484,1,16,94,96,Bibliographical Record,B. Pickman Mann
 10.1155/1875/97671,1,16,96,96,Proceedings of the Club,
 10.1155/1875/56057,1,17,97,99,Bleaching the Wings of Lepidoptera,Geo Dimmock
-10.1155/1875/13434,1,17,99,100,On the Insect Founa of the White Mountains,A. R. Grote
+10.1155/1875/13434,1,17,99,100,On the Insect Fauna of the White Mountains,A. R. Grote
 10.1155/1875/59620,1,17,100,104,Bibliographical Record,B. Pickman Mann
 10.1155/1875/17017,1,18,105,106,The Chirp of the Mole-Cricket,Samuel H. Scudder
-10.1155/1875/63293,1,18,106,107,Hibernation of Amphipyra Pramidoides,Roland Thaxter
+10.1155/1875/63293,1,18,106,107,Hibernation of Amphipyra pramidoides,Roland Thaxter
 10.1155/1875/20679,1,18,107,112,Bibliographical Record,B. Pickman Mann
 10.1155/1875/67956,1,19,113,115,On a Supposed Case of Seasonal Dimorphism Among Diptera,C. R. Osten Sacken
 10.1155/1875/25252,1,19,115,120,Bibliographical Record,B. Pickman Mann
 10.1155/1875/71628,1,19,120,120,Proceedings of the Club,
-10.1155/1874/38232,1,2,5,6,Notes on the Habits of Magdalinus armicpllis Say,H. G. Hubbard
+10.1155/1874/38232,1,2,5,6,Notes on the Habits of Magdalinus armicollis Say,H. G. Hubbard
 10.1155/1874/95171,1,2,7,7,Collecting in the White Mountains,Samuel H. Scudder
 10.1155/1874/83658,1,2,7,8,Bibliographical Record,B. Pickman Mann
-10.1155/1875/28915,1,20,121,125,On an Lmmense Flight of Small Butterflies (Terias Lisa) in the Bermudas,J. Matthew Jones
+10.1155/1875/28915,1,20,121,125,On an Immense Flight of Small Butterflies (Terias Lisa) in the Bermudas,J. Matthew Jones
 10.1155/1875/75202,1,20,125,128,Bibliographical Record,B. Pickman Mann
 10.1155/1876/32587,1,21,129,131,Spiders Common to New England and Europe,J. H. Emerton
 10.1155/1876/79764,1,21,131,131,Arctic Lepidoptera in the White Mountains,A. R. Grote
@@ -75,8 +75,8 @@
 10.1155/1909/83120,16,3,58,64,"Incidental Captures of Lepidoptera at Plano, Texas",E. S. Tucker
 10.1155/1909/86782,16,3,67,68,Coleoptera Taken at Framingham,C. A. Frost
 10.1155/1909/90198,16,1,1,4,North American Henicocephalidae,O. A. Johannsen
-10.1155/1909/91454,16,5,106,110,"Oligosita AmeriganaAshmead Species Nova, a New Chalcidoid of the Fabily Trichogrammidae From Illinois",A. A. Girault
-10.1155/1909/93761,16,1,12,12,Melanoplus Harrisii N. Sp.,A. P. Morse
+10.1155/1909/91454,16,5,106,110,"Oligosita amerigana Ashmead Species Nova, a New Chalcidoid of the Fabily Trichogrammidae From Illinois",A. A. Girault
+10.1155/1909/93761,16,1,12,12,Melanoplus harrisii N. Sp.,A. P. Morse
 10.1155/1909/95028,16,5,112,112,The Arachnida of the Galapagos Islands,Karl R. Coolidge
 10.1155/1909/97343,16,1,13,16,"The Food Plant of Enarmonia Tristrigana, Clemens",C. A. Frost
 10.1155/1909/98590,16,5,114,114,Convocation Week Meetings in Boston,
@@ -294,7 +294,7 @@
 10.1155/1904/60136,11,3,47,53,Earwigs (Anisolabia maritima Bon.),Charles Barrows Bennett
 10.1155/1904/61381,11,5,106,106,Black Backgrounds for Butterflies,W. L. W. Field
 10.1155/1904/62453,11,1,1,6,Problems in the Genus Basilarchia,W. L. W. Field
-10.1155/1904/63697,11,3,61,63,Proceedings of the Club,W. L. W. Field
+10.1155/1904/63697,11,3,63,63,Proceedings of the Club,W. L. W. Field
 10.1155/1904/64945,11,5,108,112,Recent Entomological Literature,
 10.1155/1904/67026,11,1,14,14,An Abnormal Specimen of Bembidium scudderi,Roland Hayward
 10.1155/1904/68270,11,3,64,64,Life Histories of North American Geometridae.–LIV,Harrison G. Dyar
@@ -1004,7 +1004,7 @@
 10.1155/1899/52678,8,277,360,360,Aleurodicus Mirabilis,T. D. A. Cockerell
 10.1155/1899/53923,8,282,417,418,A New Pulvinaria From Massachusetts,G. B. King
 10.1155/1899/58495,8,282,419,420,The Panurgine Bees,T. D. A. Cockerell
-10.1155/1899/60914,8,Supplement,13,14,Classified List of Species Observed by H. G. Hubbard on the Giant Cactus,E. A. Schwarz
+10.1155/1899/60914,8,Supplement II,13,14,Classified List of Species Observed by H. G. Hubbard on the Giant Cactus,E. A. Schwarz
 10.1155/1899/62169,8,283,428,428,Personal Notes,
 10.1155/1899/63240,8,275,327,330,"The Mouthparts of the Nematocerous Diptera, II",Vernon L. Kellogg
 10.1155/1899/64585,8,278,366,371,Arkansas Melanopli —III,Jerome McNeill
@@ -1028,3 +1028,680 @@
 10.1155/1899/95292,8,277,359,360,A New Lithosian,Harrison G. Dyar
 10.1155/1899/96538,8,282,416,417,A New Meloid Beetle Parasitic on Anthophora,T. D. A. Cockerell
 10.1155/1899/98954,8,277,360,360,Proceedings of the Club,
+10.1155/1889/87872,5,157-159,214,221,Notes on Certain Cynipidae With Descriptions of New Species,C. P. Gillette
+10.1155/1889/90238,5,160-164,282,284,Proceedings of Societies,
+10.1155/1889/91298,5,154-155,168,168,Lac Insects,Hermann August Hagen
+10.1155/1889/92545,5,157-159,228,228,Variation of Color in the Larvae of Sphinx Gordius,Ida M. Eliot;Caroline G. Soule
+10.1155/1889/94861,5,154-155,168,169,Duration of Life in an Ephemera,Alpheus Spring Packard
+10.1155/1889/98434,5,154-155,169,169,Trox at Electric Light,Charles William Woodworth
+10.1155/1890/10963,5,172-174,403,403,The Supposed Bot-Fly Parasite of the Box-Turtle,William M. Wheeler
+10.1155/1890/15636,5,172-174,405,406,Entomological Notes,
+10.1155/1890/16707,5,166,303,308,Synopsis of the Odonata of North America No. 2. The Genus Anax,Hermann August Hagen
+10.1155/1890/17952,5,170,351,353,The Life-History of Seirarctia echo,Alpheus Spring Packard
+10.1155/1890/19209,5,175-176,409,414,Notes on Some Aphid Structures,John B. Smith
+10.1155/1890/20380,5,166,317,317,Insects of Bermuda,
+10.1155/1890/21626,5,170,355,362,Descriptions of Some New North American Dolichopodidae,William M. Wheeler
+10.1155/1890/23871,5,175-176,420,422,The Number of Molts of Lepidopterous Larvae,Harrison G. Dyar
+10.1155/1890/24942,5,166,318,318,Observation on Saturnia 10,Holmes Hinkley
+10.1155/1890/26197,5,170,363,364,Entomological Notes,
+10.1155/1890/27453,5,175-176,431,442,Some Genera of Oedipodidae Rescued From the Tryxalidae,Samuel Hubbard Scudder
+10.1155/1890/28515,5,167-168,321,324,"The Corn Delphacid, Delphax Maidis",William Harris Ashmead
+10.1155/1890/29760,5,171,367,373,Descriptions of Some North American Cordulina,Hermann August Hagen
+10.1155/1890/32187,5,167-168,328,329,The Argynnides of North America,J. J. Rivers
+10.1155/1890/34290,5,175-176,454,454,Corrections,
+10.1155/1890/34534,5,171,379,380,Entomological Notes,
+10.1155/1890/36851,5,167-168,332,332,Palaearctic Lepidoptera,
+10.1155/1890/38107,5,172-174,383,387,Notes and Descriptions of Some North American Libellulina— Synopsis of Neuroptera Second Edition,Hermann August Hagen
+10.1155/1890/41769,5,172-174,392,393,A New Cecidomyiid Infesting Box-Elder (Negundo aceroides),C. P. Gillett
+10.1155/1890/45096,5,167-168,334,334,Notes on Colias eurytheme and C. philodice,Elison A. Smyth
+10.1155/1890/46351,5,172-174,396,401,Notes on the Early Stages of Two Sphingidae,Alpheus Spring Packard
+10.1155/1890/48659,5,169,337,343,Descriptions of Some New North American Dolichopodidae,William M. Wheeler
+10.1155/1890/51085,5,165,295,299,The American Plum Borer ‘Euzophera Semi-Funeralis’ Walk,Stephen Alfred Forbes
+10.1155/1890/52431,5,169,347,348,Notes on the Southern Distribution of Some Common Butterflies,Ellison A. Smyth
+10.1155/1890/53686,5,172-174,402,403,Do Flies Migrate?,Samuel Hubbard Scudder
+10.1155/1890/54748,5,165,300,300,Entomological Society of London,
+10.1155/1890/57014,5,169,348,348,Habit of Vespa,T. D. A. Cockerell
+10.1155/1890/58259,5,172-174,404,404,An Internal Dipterous Parasite of Spiders,James Henry Emerton
+10.1155/1890/62983,5,166,308,317,The Argynnides of North America,Henry John Elwes
+10.1155/1890/64249,5,170,353,355,Two Species of Aeschna,Hermann August Hagen
+10.1155/1890/65494,5,175-176,414,420,Notes on Two Species of Datana With Descriptions of Their Larval Stages,Harrison G. Dyar
+10.1155/1890/67567,5,166,317,318,"Describtion of the Larva of Megalodacne Fasciata, Fabr.—Color.",William Beutenmüller
+10.1155/1890/68912,5,170,363,363,The Fossil Insect Localities in the Rocky Mountain Region,Samuel Hubbard Scudder
+10.1155/1890/70268,5,175-176,423,431,Descriptions of New West African Lycaenidae,W. J. Holland
+10.1155/1890/73830,5,175-176,442,442,Lowe's Anatomy of the Blow-Fly,
+10.1155/1890/74903,5,167-168,325,327,"The Partial Life-History of Pseudohazis eglanterina, With Remarks on the Larvae of Allied Genera",Alpheus Spring Packard
+10.1155/1890/76158,5,171,373,379,Descriptions of Some New North American Dolichopodidae,William M. Wheeler
+10.1155/1890/78404,5,175-176,442,442,"Hydrocyanic Acid Secreted by Polydesmus virginiensis, Drury",William M. Wheeler
+10.1155/1890/79475,5,167-168,330,332,Diary of a Hibernating Butterfly,Samuel Hubbard Scudder
+10.1155/1890/83148,5,167-168,333,333,New Trap-Door Nests of Spiders,J. H. Emerton
+10.1155/1890/84393,5,172-174,387,391,"Synonymy of the Homoptera Described by Say, Harris and Fitch",E. P. Van Duze
+10.1155/1890/86812,5,167-168,333,334,Otiorhynchus Sulcatus injurious to Plants in Greenhouses in Massachusetts,H. A. Hagen
+10.1155/1890/89065,5,172-174,393,395,"Preparatory Stages of Cerura Multiscripta, Riley",Harrison G. Dyar
+10.1155/1890/92729,5,172-174,401,401,Note on Two Species of Datana,William Beutenmüller
+10.1155/1890/93801,5,165,287,295,"The Work of a Decade Upon Fossil Insects, 1880–1889",Samuel Hubbard Scudder
+10.1155/1890/95056,5,169,343,347,Notes on the Structure and History of Haematobia serrata,John B. Smith
+10.1155/1890/96302,5,172-174,401,402,Edwards's Bibliography of Transformations,
+10.1155/1890/97372,5,165,299,300,Description of Some New North American Moths,William Beutenmüller
+10.1155/1890/98618,5,169,348,348,The Genus Argynnis,
+10.1155/1891/10276,6,187,180,181,Clouds of Insects,J. Lawton Williams
+10.1155/1891/12349,6,182,100,101,Notes,
+10.1155/1891/13410,6,178,21,27,A List of the Orthoptera of Illinois.—II,Jerome McNeill
+10.1155/1891/13593,6,185,137,141,"Some Old Correspondence Between Harris, Say, and Pickering.—III",
+10.1155/1891/14656,6,180,67,67,Protection by Conspicuous Colors,Lord Walsingham
+10.1155/1891/14840,6,187,182,182,Proceedings of the Cambridge Entomological Club,
+10.1155/1891/15914,6,183,105,105,On a Singular Gland Possessed by the Male Hadenoecus Subterraneus,H. Garman
+10.1155/1891/16973,6,178,28,30,On the Life-History of Diabrotica 12-Punctata Oliv,H. Garman
+10.1155/1891/17167,6,185,145,147,Notes on Bombycid Larvae.—II,Harrison G. Dyar
+10.1155/1891/18239,6,180,68,68,Forel on the Habits of Brachytrypus,
+10.1155/1891/18414,6,188,187,188,A Tachinid Parasite of the Oak Unicorn Prominent,C. H. Tyler Townsend
+10.1155/1891/19484,6,183,108,109,Two New Lepidopterous Borers,Otto Lugger
+10.1155/1891/20646,6,178,31,31,Smerinthus Astylus,Ida M. Eliot;Caroline G. Soule
+10.1155/1891/21902,6,180,69,69,The Abbé Provancher's Work in Canada,
+10.1155/1891/23085,6,188,193,194,Heteropacha Rileyana,Caroline G. Soule
+10.1155/1891/24157,6,183,112,115,The Germ-Band of Insects,W. H. Wheeler
+10.1155/1891/25219,6,178,32,32,A Hint From Entomology,
+10.1155/1891/25403,6,185,149,150,Some Abnormal Larvae; Another Deidamia Inscripta,Caroline G. Soule
+10.1155/1891/26473,6,181,73,78,A List of the Orthoptera of Illinois.-IV,Jerome McNeill
+10.1155/1891/26748,6,188,196,196,Temperature Experiments,F. Merrifield
+10.1155/1891/27819,6,183,116,117,Full Grown Larva and Pupa of Deidamia inscripta,Caroline G. Soule
+10.1155/1891/28791,6,178,33,34,Proceedings of the Cambridge Entomological Club,
+10.1155/1891/29074,6,185,150,150,Proceedings of the Cambridge Entomological Club,
+10.1155/1891/31491,6,183,117,118,Recent Literature,
+10.1155/1891/32564,6,179,44,49,On the Life History of Diabrotica 12-Punctata Oliv—(Concluded from p. 30.),H. Garman
+10.1155/1891/32738,6,186,158,160,Halisidota caryae,Caroline G. Soule
+10.1155/1891/34809,6,181,83,85,Two New Tachinids,C. H. Tyler Townsend
+10.1155/1891/34983,6,188,197,197,A Correction,Harrison G. Dyar
+10.1155/1891/35871,6,177,3,9,A List of the Orthoptera of Illinois.—I,Jerome McNeill
+10.1155/1891/36064,6,183,118,118,Proceedings of the Cambridge Entomological Club,
+10.1155/1891/37137,6,179,53,53,"On an Important Character, Hitherto Little Noticed, in the Family Buprestidae",Frederick Blanchard
+10.1155/1891/37310,6,186,162,166,"On the Specific Distinctness of Halisidota harrisii, With Notes on the Preparatory Stages of the Species of Halisidota Inhabiting New York",Harrison G. Dyar
+10.1155/1891/38382,6,181,86,86,Packard's Forest-Insects,
+10.1155/1891/38567,6,188,198,198,Proceedings of the Cambridge Entomological Club,
+10.1155/1891/39454,6,177,11,13,A Novel Diagrammatic Representation of the Orders of Insects,Alpheus Hyatt;J. M. Arms
+10.1155/1891/39628,6,184,124,126,Some of the Early Stages of Zerene Catenaria,Samuel H. Scudder
+10.1155/1891/40973,6,186,166,166,Literary Note,
+10.1155/1891/42056,6,181,86,86,Proceedings of the Cambridge Entomological Club,
+10.1155/1891/43127,6,177,14,14,A New Introduction to Entomology,
+10.1155/1891/43401,6,184,129,130,Experiments With Alpine Butterflies,Samuel H. Scudder
+10.1155/1891/45372,6,179,54,54,Proceedings of the Cambridge Entomological Club,
+10.1155/1891/45646,6,187,169,172,"Some Old Correspondence Between Harris, Say and Pickering.—IV",
+10.1155/1891/46718,6,182,93,93,Personal Notes,
+10.1155/1891/47691,6,177,15,15,The March of Hyperchiria 10,Caroline G. Soule
+10.1155/1891/47963,6,184,131,132,The London Insectary,
+10.1155/1891/49046,6,180,60,60,Personal Notes,
+10.1155/1891/49230,6,187,176,177,A Parasite of the Fall Web-Worm,C. H. Tyler Townsend
+10.1155/1891/50390,6,182,95,96,Preparatory Stages of Heterocampa Unicolor Pack,Harrison G. Dyar
+10.1155/1891/51462,6,177,16,16,Miscellaneous Notes,
+10.1155/1891/51636,6,184,133,133,A Moulting-Habit of Larvae of Platysamia Ceanothi,Caroline G. Soule
+10.1155/1891/52708,6,180,62,66,A List of the Orthoptera of Illinois.—III,Jerome McNeill
+10.1155/1891/52892,6,187,180,180,"Bibliographical Notes.—I. Biologia Centrali Americana, Diptera",Samuel Henshaw
+10.1155/1891/53952,6,182,99,100,Oeneis and its Early Stages,Samuel H. Scudder
+10.1155/1891/56034,6,178,19,21,On the Relation Between Scientific and Economic Entomology,Charles W. Woodworth
+10.1155/1891/56207,6,184,134,134,Proceedings of the Cambridge Entomological Club,
+10.1155/1891/57279,6,180,66,67,Hemidiptera haeckelii,W. M. Wheeler
+10.1155/1891/57463,6,187,181,182,Notes,
+10.1155/1891/58526,6,182,101,102,Proceedings of the Cambridge Entomological Club,
+10.1155/1891/59596,6,178,27,27,Notes (Marine Insects; Dr. Weed's Appointment),
+10.1155/1891/59780,6,185,142,145,Hemaris Diffinis: From Larvae Sent From Missouri,Ida M. Eliot;Caroline G. Soule
+10.1155/1891/60942,6,180,68,68,Green Butterflies,W. Doherty
+10.1155/1891/61237,6,188,185,187,"Some Old Correspondence Between Harris, Say, and Pickering.—V",
+10.1155/1891/62197,6,183,106,107,A New Simulius From Southern New Mexico,C. H. Tyler Townsend
+10.1155/1891/63270,6,178,30,31,The Partial Preparatory Stages of Heteropacha Rileyana Harvey,G. H. French
+10.1155/1891/63543,6,185,147,148,The New Catalogue of European Coleoptera,John Hamilton
+10.1155/1891/64616,6,180,68,69,Bugnion on Alpine Faunas,
+10.1155/1891/64798,6,188,188,193,A List of Some of the Catalogues and Local Lists of North American Coleoptera.—II (H.-P.),John Hamilton;Samuel Henshaw
+10.1155/1891/65861,6,183,110,112,Notes on Bombycid Larvae.—I,Harrison G. Dyar
+10.1155/1891/67932,6,178,31,32,Brongniart on Prothoracic Wings in Carboniferous Insects,
+10.1155/1891/68126,6,185,148,149,Temperature Experiments With Moths,Frederic Merrifield
+10.1155/1891/69187,6,180,69,70,Proceedings of the Cambridge Entomological Club,
+10.1155/1891/69372,6,188,194,196,Preparatory Stages of Pheosia dimidiata H. S.,Harrison G. Dyar
+10.1155/1891/70534,6,183,115,116,Bibliography,
+10.1155/1891/71605,6,178,32,33,Notes (Kolbe's Introduction; the Oldest Phryganid; Eggs of Lycaenidae.),
+10.1155/1891/71787,6,185,150,150,Miscellaneous Notes,
+10.1155/1891/72850,6,181,78,80,A Supplementary Note on Diabrotica 12-Punctata,H. Garman
+10.1155/1891/73045,6,188,196,196,Choice of Food,Harrison G. Dyar
+10.1155/1891/74106,6,183,117,117,On the Food-Habit of Telea polyphemus,Caroline G. Soule
+10.1155/1891/75178,6,179,37,44,A General Survey of the Modes of Development in Insects and Their Meaning,Alpheus Hyatt;Jennie M. Arms
+10.1155/1891/75361,6,186,153,158,Caddis-Worms of Stony Brook,Cora H. Clarke
+10.1155/1891/76424,6,181,80,83,Descriptions of the Preparatory Stages of Two Forms of Cerura Cinerea Walk,Harrison G. Dyar
+10.1155/1891/76708,6,188,197,197,Nadata gibbosa,Caroline G. Soule
+10.1155/1891/78679,6,183,118,118,Personal Notes,
+10.1155/1891/79741,6,179,50,53,Descriptions of New West African Lycaenidae; Paper II,W. J. Holland
+10.1155/1891/80135,6,186,160,162,A List of Some of the Catalogues and Local Lists of North American Coleoptera.—I (A.-G.),John Hamilton;Samuel Henshaw
+10.1155/1891/81096,6,181,85,86,Edwards's Butterflies of N. America,
+10.1155/1891/81381,6,188,197,198,Notes,
+10.1155/1891/82169,6,177,10,11,Notes on Three Species of Hylotoma,John George Jack
+10.1155/1891/82452,6,184,121,124,"Some Old Correspondence Between Harris, Say, and Pickering.—II",
+10.1155/1891/83515,6,179,53,54,Harrisimemna trisignata,Caroline G. Soule
+10.1155/1891/83697,6,186,166,166,Food Plants; Choice of Food,Caroline G. Soule
+10.1155/1891/84759,6,181,86,86,Personal Notes,
+10.1155/1891/85831,6,177,13,14,Descriptions of the Larva and Pupa of Scotobates calcaratus Fabr,Wm. Beutenmüller
+10.1155/1891/86025,6,184,126,129,"A List of the Bombyces Found in the Electric Light Globes at Poughkeepsie, N. Y.",Harrison G. Dyar
+10.1155/1891/87086,6,179,54,54,Miscellaneous Notes; L'Abeille,
+10.1155/1891/87270,6,186,166,166,Proceedings of the Cambridge Entomological Club,
+10.1155/1891/89342,6,182,89,93,A Decade of Monstrous Beetles,Samuel H. Scudder
+10.1155/1891/90504,6,177,14,15,Recent English Publications,
+10.1155/1891/90686,6,184,131,131,Edward Burgess,
+10.1155/1891/91750,6,180,57,60,"Some Old Correspondence Between Harris, Say, and Pickering.—I",
+10.1155/1891/91932,6,187,173,175,The Early Stages of Three Coleoptera,Samuel H. Scudder
+10.1155/1891/93015,6,182,94,94,Description of the Preparatory Stages of Callosamia Promethea Drurky,Wm. Beutenmüller
+10.1155/1891/94076,6,177,15,16,More Damage by White Ants in New England,S. H. Scudder
+10.1155/1891/94260,6,184,132,133,Recent Entomological Literature,
+10.1155/1891/95323,6,180,61,61,Oebalus Pugnax an Enemy of Grasses,H. Garman
+10.1155/1891/95606,6,187,177,179,Notes on Bombycid Larvae.—III,Harrison G. Dyar
+10.1155/1891/96576,6,182,97,99,The Embryology of a Common Fly,W. M. Wheeler
+10.1155/1891/97639,6,177,16,16,Proceedings of the Cambridge Entomological Club,
+10.1155/1891/97923,6,184,133,134,Miscellaneous Notes,
+10.1155/1891/98984,6,180,66,66,Lestes Eurinus Say,Samuel H. Scudder
+10.1155/1892/10461,6,196,305,310,The North American Jassidae Allied to Thamnotettix,E. P. Van Duzee
+10.1155/1892/12524,6,190,220,221,Description of a Sarcophaga Bred From Helix,C. H. Tyler Townsend
+10.1155/1892/12707,6,200,366,366,Proceedings of the Cambridge Entomological Club,
+10.1155/1892/13768,6,193,261,262,Proceedings of the Cambridge Entomological Club,
+10.1155/1892/16095,6,190,222,222,Dryocampa Riversii Behr,Harrison G. Dyar
+10.1155/1892/17351,6,194,275,276,An Aporia Bred From Limacodes SP.,C. H. Tyler Townsend
+10.1155/1892/18596,6,197,317,320,The Orthopteran Genus Hippiscus.—IV (Continued From Page 304),Samuel H. Scudder
+10.1155/1892/19659,6,191,225,233,Experiments for the Destruction of Chinch Bugs by Infection,Francis H. Snow
+10.1155/1892/23270,6,197,323,326,Additional Notes on Bombycid Larvae,Harrison G. Dyar
+10.1155/1892/24341,6,191,236,237,A New Genus and Species of Tabanidae,J. M. Aldrich
+10.1155/1892/25685,6,195,281,282,"The Bombycine Genus Lagoa, Type of a New Family",A. S. Packard
+10.1155/1892/26932,6,198,333,236,The Orthopteran Genus Hippiscus.—V (Continued From Page 320),Samuel H. Scudder
+10.1155/1892/28014,6,191,238,238,Proceedings of the Cambridge Entomological Club,
+10.1155/1892/29258,6,195,285,288,The Orthopteran Genus Hippiscus.—II (Continued From Page 274),Samuel H. Scudder
+10.1155/1892/31675,6,192,246,246,Notes,
+10.1155/1892/32921,6,195,290,292,"Notes on Cerura, With Descriptions of New Species",Harrison G. Dyar
+10.1155/1892/35178,6,198,341,342,Entomological Items,
+10.1155/1892/36249,6,192,248,249,The Larva of Nola Minuscula,Harrison G. Dyar
+10.1155/1892/37494,6,195,293,293,Bibliographical Notes.—II,Samuel Henshaw
+10.1155/1892/38740,6,199,347,350,The Orthopteran Genus Hippiscus.—VI (Continued From Page 336),Samuel H. Scudder
+10.1155/1892/39813,6,192,249,250,Henry Walter Bates,
+10.1155/1892/41268,6,195,294,294,General Note,
+10.1155/1892/42329,6,189,203,205,Life History of Orgyia Cana Hy. Edw.,Harrison G. Dyar
+10.1155/1892/42514,6,199,353,354,Oviposition of a Homopterous Insect in Yucca,
+10.1155/1892/43584,6,192,250,250,Proceedings of the Cambridge Entomological Club,
+10.1155/1892/45830,6,196,297,298,"Some Old Correspondence Between Harris, Say and Pickering.—VI",
+10.1155/1892/46903,6,189,209,209,Miscellaneous Notes,
+10.1155/1892/47085,6,200,359,363,The Orthopteran Genus Hippiscus.—VII—(Concluded from page 350.),Samuel H. Scudder
+10.1155/1892/48157,6,193,258,259,"Tachinid Parasite of Eucaterva Variaria Grote, and other Notes",
+10.1155/1892/49403,6,196,300,300,Dohrn and Burmeister,
+10.1155/1892/51819,6,193,260,260,Notes (A Study of California Butterflies),
+10.1155/1892/53074,6,196,301,304,The Orthopteran Genus Hippiscus.—III (Continued From Page 288),Samuel H. Scudder
+10.1155/1892/54147,6,190,216,220,Concerning the “Blood-Tissue” of the Insecta.—I,William Morton Wheeler
+10.1155/1892/54320,6,200,365,366,Entomological Notes,
+10.1155/1892/56391,6,193,261,261,Entomological Notes,
+10.1155/1892/57638,6,197,313,316,Introduction to Brauer and von Bergenstamm's Vorarbeiten zu einer Monographie der Muscaria Schizometopa.—I,C. H. Tyler Townsend
+10.1155/1892/58709,6,190,221,222,Edwards's North American Butterflies,
+10.1155/1892/60164,6,194,265,274,The Orthopteran Genus Hippiscus,Samuel H. Scudder
+10.1155/1892/61412,6,197,316,317,John Witt Randall,
+10.1155/1892/62482,6,190,222,222,Recent Literature,
+10.1155/1892/63727,6,194,276,277,The Early Stages of Nerice bidentata,Caroline G. Soule
+10.1155/1892/64973,6,197,321,323,Notes on Some Myrmecophilous Coleoptera,Henry Frederick Wickham
+10.1155/1892/67054,6,191,233,236,Concerning the “Blood-Tissue ” of the Insecta.—II,William Morton Wheeler
+10.1155/1892/68301,6,194,277,278,Miscellaneous Notes,
+10.1155/1892/69546,6,198,329,332,Introduction to Brauer and von Bergenstamm's Vorarbeiten zu einer Monographie der Muscaria Schizometopa.—II,C. H. Tyler Townsend
+10.1155/1892/70718,6,191,237,238,Miscellaneous Notes,
+10.1155/1892/71962,6,195,283,285,The Leptidae and Bombylidae of the White Mountains,Lewis E. Hood
+10.1155/1892/73218,6,198,337,340,The Number of Larval Stages in the Genus Nadata,Harrison G. Dyar
+10.1155/1892/74290,6,192,241,246,American Phytoptocecidii,H. Garman
+10.1155/1892/75636,6,195,289,290,Three New Pambolids From the United States,Wm. H. Ashmead
+10.1155/1892/76891,6,198,340,341,Notes on the Nesting Habits of Certain Bees,A. S. Packard
+10.1155/1892/78953,6,192,247,247,A New Genus of Tachinidae,C. H. Tyler Townsend
+10.1155/1892/80309,6,195,292,293,Personal Notes,
+10.1155/1892/81564,6,199,345,346,"Some Old Correspondence Between Harris, Say and Pickering.—VII",
+10.1155/1892/82626,6,192,249,249,A Dipterous Parasite of the Toad,
+10.1155/1892/83871,6,195,293,293,Cerura modesta,Harrison G. Dyar
+10.1155/1892/84943,6,189,201,203,The Life History of Spalgis S-Signata Holl,W. J. Holland
+10.1155/1892/85138,6,199,351,353,Preparatory Stages of Pheosia Portlandia Hy. Edw.,Harrison G. Dyar
+10.1155/1892/86198,6,192,250,250,Experiments With Chinch-Bugs,S. A. Forbes
+10.1155/1892/87454,6,195,294,294,Proceedings of the Cambridge Entomological Club,
+10.1155/1892/89518,6,189,205,209,A List of Some of the Catalogues and Local Lists of North American Coleoptera.—III (R.-Z.),John Hamilton;Samuel Henshaw
+10.1155/1892/89701,6,200,357,358,"Some old Correspondence Between Harris, Say and Pickering.—VIII",
+10.1155/1892/90861,6,193,253,258,Concerning the “Blood-Tissue” of the Insecta.—III,William Morton Wheeler
+10.1155/1892/92127,6,196,298,300,Descriptions of Oestrid Larvae Taken From the Jack-Rabbit and Cotton-Tail,C. H. Tyler Townsend
+10.1155/1892/93189,6,189,210,210,Proceedings of the Cambridge Entoiological Club,
+10.1155/1892/93472,6,200,364,365,Preparatory Stages of Clisiocampa erosa Stretch,Harrison G. Dyar
+10.1155/1892/94534,6,193,259,260,The Larva of Sarrothripa reveyana,Harrison G. Dyar
+10.1155/1892/95789,6,196,300,300,Proceedings of the Cambridge Entomological Club,
+10.1155/1892/96851,6,190,213,216,Notes Upon the Transformations of Some African Lepidoptera,W. J. Holland
+10.1155/1892/97045,6,200,365,365,A Lower Silurian Insect From Sweden,
+10.1155/1892/98106,6,193,261,261,Synonymy of Butterfly Parasites,Wm. Hampton Patton
+10.1155/1893/10635,6,205,461,461,Note on Atropharista Jurinoldes Towns,C. H. Tyler Townsend
+10.1155/1893/12890,6,208,504,505,A Cocks-Comb Gall on Rhus microphylla,C. H. Tyler Townsend
+10.1155/1893/13951,6,203,410,410,Foreign Notes,
+10.1155/1893/16280,6,201,372,372,Heraclides cresphontes,Lewis E. Hood
+10.1155/1893/16463,6,208,505,506,Entomological Notes,
+10.1155/1893/17525,6,203,419,421,"Orgyia Badia and Other Notes, With a Table to Separate the Larvae of Orgyia",Harrison G. Dyar
+10.1155/1893/17808,6,211,557,557,Bibliographical Notes.—IV. Garden and Forest,Samuel Henshaw
+10.1155/1893/18780,6,206,465,466,An Unusual Appearance of Schistocerca Americana,W. S. Blatchley
+10.1155/1893/19842,6,201,372,372,Proceedings of the Cambridge Entomological Club,
+10.1155/1893/21296,6,203,422,422,Miscellaneous Notes,
+10.1155/1893/21480,6,212,561,564,The Primitive Number of Malpighian Vessels in Insects.—VIII,William Morton Wheeler
+10.1155/1893/23543,6,206,469,476,Descriptions of New Species and Genera of West African Lepidoptera.—VI (Continued From Page 454.),W. J. Holland
+10.1155/1893/24617,6,201,377,379,On the Species of the Genus Mirax Found in North America,William H. Ashmead
+10.1155/1893/24798,6,209,512,512,Local Notes,
+10.1155/1893/25860,6,204,429,430,"Description of a New and Interesting Phasiid-Like Genus of Tachinidae, S. STR.",C. H. Tyler Townsend
+10.1155/1893/26053,6,212,569,571,The Dolichopodid Genus Liancalus Loew,J. M. Aldrich
+10.1155/1893/27126,6,206,479,480,Additions to the List of Bombyces at Poughkeepsie,Harrison G. Dyar
+10.1155/1893/28187,6,201,381,381,A Monograph of the North American Tachinidae,
+10.1155/1893/28371,6,209,521,522,Notes on Gluphisia and Other Notodontidae.—II,A. S. Packard
+10.1155/1893/29432,6,204,435,437,"Some Notes on the Early Stages, Especially the Chrysalis, of a Few American Sphingidae",Samuel H. Scudder
+10.1155/1893/29616,6,212,573,574,A Note on the Larva of Datana Floridana Graef,Harrison G. Dyar
+10.1155/1893/30787,6,207,485,486,The Primitive Number of Malpighian Vessels in Insects.—II,William Morton Wheeler
+10.1155/1893/31850,6,202,385,391,Communal Cocoons and the Moths Which Weave them,W. J. Holland
+10.1155/1893/32043,6,209,523,524,Arctia Yarrowi in Canada,Thomas E. Bean
+10.1155/1893/34106,6,204,440,441,Bibliographical Notes.—III,Samuel Henshaw
+10.1155/1893/35361,6,207,491,491,A Cabbage-Like Cecidomyiidous Gall on Bigelovia,C. H. Tyler Townsend
+10.1155/1893/36423,6,202,392,392,Lepidopterological Notes,
+10.1155/1893/36706,6,209,525,526,Proceedings of the Cambridge Entomological Club,
+10.1155/1893/37678,6,204,441,442,Entomological Notes,
+10.1155/1893/39034,6,207,491,492,Early Appearance of Anosia plexippus,Samuel H. Scudder
+10.1155/1893/40195,6,202,401,402,A Melanistic Locust,A. P. Morse
+10.1155/1893/40379,6,210,530,530,Notes,Caroline G. Soule
+10.1155/1893/41451,6,205,449,449,Hymenoptera of Madagascar,
+10.1155/1893/42696,6,207,492,492,Note on Dr. Williston's Criticisms,C. H. Tyler Townsend
+10.1155/1893/43758,6,202,403,404,The Larval Stages of Ichthyura Multnoma Dyar,Harrison G. Dyar
+10.1155/1893/43941,6,210,539,541,The Primitive Number of Malpighian Vessels in Insects.—V,William Morton Wheeler
+10.1155/1893/46024,6,205,450,450,Brief Notes on Two Jamaica Papilionidae,T. D. A. Cockerell
+10.1155/1893/47269,6,207,494,494,Proceedings of the Cambridge Entomological Club,
+10.1155/1893/48341,6,202,405,405,Westwood and Stainton,
+10.1155/1893/48515,6,211,545,547,The Primitive Number of Malpighian Vessels in Insects.—VI,William Morton Wheeler
+10.1155/1893/49585,6,205,455,457,Description of the Pupa of Toxophora Virgata O. S.,C. H. Tyler Townsend
+10.1155/1893/52014,6,202,406,406,Proceedings of the Cambridge Entomological Club,
+10.1155/1893/52186,6,211,548,548,A New Entomological Journal,
+10.1155/1893/53258,6,205,460,460,Brief Notes,
+10.1155/1893/54604,6,208,503,504,A Description of the Larva of a Species of the Lintneri Group of Gluphisia,Harrison G. Dyar
+10.1155/1893/56574,6,203,410,410,Proceedings of the Cambridge Entomological Club,
+10.1155/1893/56848,6,211,553,556,Descriptions of New Aculeate Hymenoptera,William J. Fox
+10.1155/1893/57921,6,205,461,461,Mould in Cabinets,D. Sharp
+10.1155/1893/58983,6,201,369,371,An Interesting Blood-Sucking Gnat of the Family Chironomidae,C. H. Tyler Townsend
+10.1155/1893/59176,6,208,505,505,Tardy Wing-Expansion in Callosamia,Caroline G. Soule
+10.1155/1893/60348,6,203,411,418,Descriptions of New Species and Genera of West African Lepidoptera.—III (Continued From Page 400.),W. J. Holland
+10.1155/1893/60521,6,211,556,556,A correction,Harrison G. Dyar
+10.1155/1893/61594,6,205,461,462,Proceedings Of the Cambridge Entomological Club,
+10.1155/1893/62656,6,201,372,372,Ants Breeding in and in,
+10.1155/1893/62840,6,209,509,510,The Primitive Number of Malpighian Vessels in Insects.—IV,William Morton Wheeler
+10.1155/1893/63912,6,203,421,422,Synopsis of the North American Species of Megacilissa Smith,Wm. J. Fox
+10.1155/1893/64094,6,211,557,558,Miscellaneous Notes,
+10.1155/1893/65167,6,206,466,468,"Hosts of North American Tachinidae, Etc., I",C. H. Tyler Townsend
+10.1155/1893/67239,6,201,373,376,Descriptions of New Species and Genera of West African Lepidoptera.—I,W. J. Holland
+10.1155/1893/67413,6,209,511,512,On Variation in the Venation of an Arctian With Notes on Other Allied Genera,Harrison G. Dyar
+10.1155/1893/68483,6,204,425,429,A Preliminary Synopsis of the Harvest-Spiders (Phalangiidae) of Mississippi,Clarence M. Weed
+10.1155/1893/68657,6,212,565,568,Descriptions of New Species and Genera of West African Lepidoptera.—XI—(Continued From page 552.),W. J. Holland
+10.1155/1893/69729,6,206,477,479,"A New Species of Stenobothrus From Connecticut, With Remarks on Other New England Species",A. P. Morse
+10.1155/1893/70902,6,201,379,381,Notes on the Larval Stages of Arctia Blakei Grote,Harrison G. Dyar
+10.1155/1893/71084,6,209,513,520,Descriptions of New Species and Genera of West African Lepidoptera.—VIII (Continued From Page 490.),W. J. Holland
+10.1155/1893/72156,6,204,431,434,Descriptions of New Species and Genera of West African Lepidoptera.—IV (Continued From Page 418.),W. J. Holland
+10.1155/1893/72429,6,212,571,573,Two New Forms of Diaspinae,T. D. A. Cockerell
+10.1155/1893/73503,6,206,481,482,Early Stages of Two Jamaica Nymphalidae,T. D. A. Cockerell
+10.1155/1893/74573,6,201,381,382,Entomological Notes,
+10.1155/1893/74747,6,209,523,523,On a Fleshy Leaf-Gall on Scrub-Oak,C. H. Tyler Townsend
+10.1155/1893/75819,6,204,438,440,Life History of Orgyia Gulosa HY. EDW.,Harrison G. Dyar
+10.1155/1893/78074,6,207,487,490,Descriptions of New Species and Genera of West African Lepidoptera.—VII (Continued From Page 476.),W. J. Holland
+10.1155/1893/79147,6,202,391,392,On the Attraction of Light for the Two Sexes of Coleoptera,Henry Frederick Wickham
+10.1155/1893/79320,6,209,524,525,Entomological Notes,
+10.1155/1893/80492,6,204,441,441,"Vanessa Milberti, a Correction",J. W. Tutt
+10.1155/1893/81738,6,207,491,491,The Click of Ageronia,G. F. Hampson
+10.1155/1893/82810,6,202,393,400,Descriptions of New Species and Genera of West African Lepidoptera.—II (Continued From Page 376.),W. J. Holland
+10.1155/1893/82983,6,210,529,530,Notes on Gluphisia,Harrison G. Dyar
+10.1155/1893/84065,6,205,445,449,Notes From the Cornell Insectary.III.—Some Observations Upon Two Species of Bruchus,M. V. Slingerland
+10.1155/1893/85312,6,207,492,492,Atropharista jurinoides,S. W. Williston
+10.1155/1893/86382,6,202,402,403,A New American Lacinius,Nathan Banks
+10.1155/1893/86565,6,210,531,538,Descriptions of New Species and Genera of West African Lepidoptera.—IX (Continued From Page 520.),W. J. Holland
+10.1155/1893/87628,6,205,450,450,An Undescribed Species of Vespa,J. W. Shipp
+10.1155/1893/89873,6,207,492,493,Entomological Notes,
+10.1155/1893/91054,6,202,404,405,The Morphology and Phylogeny of Insects,N. Cholodkowsky
+10.1155/1893/91340,6,210,541,542,Entomological Notes,
+10.1155/1893/92401,6,205,451,454,Descriptions of New Species and Genera of West African Lepidoptera.—V (Continued From Page 434.),W. J. Holland
+10.1155/1893/93646,6,208,497,498,The Primitive Number of Malpighian Vessels in Insects.—III,W. M. Wheeler
+10.1155/1893/94718,6,202,405,406,Entomological Notes,
+10.1155/1893/94902,6,211,547,548,Note on a Scutellerid on Native Tobacco in Arizona,C. H. Tyler Townsend
+10.1155/1893/95962,6,205,457,460,The Primitive Number of Malpighian Vessels in Insects.—I,William Morton Wheeler
+10.1155/1893/97218,6,208,499,502,Notes on Gluphisia and Other Notodontidae.—I,A. S. Packard
+10.1155/1893/98290,6,203,409,410,Notes on Tachinidae,S. Wendell Williston
+10.1155/1893/98473,6,211,549,552,Descriptions of New Species and Genera of West African Lepidoptera.—X (Continued From Page 538.),W. J. Holland
+10.1155/1894/16731,7,218-221,135,138,Notes on Bombycid Larvae,Harrison G. Dyar
+10.1155/1894/19059,7,215,47,50,New and Undescribed Genera and Species of West African Noctuidae.—II (Illustrated): (Continued From Page 34.),W. J. Holland
+10.1155/1894/23721,7,215,53,55,Wing-Length in Some New England Acrididae.—II,Albert P. Morse
+10.1155/1894/23906,7,230,251,252,On the Validity of the Tachinid Genus Celatoria,D. W. Coquillett
+10.1155/1894/24967,7,218-221,141,144,"Supplement to Psyche, Nos. 218 – 221: (Concluded From Page 128.)",
+10.1155/1894/27294,7,216,59,66,The Habits of the Aculeate Hymenoptera.—III,William H. Ashmead
+10.1155/1894/28539,7,222,155,155,Polygamy of Moths,Caroline G. Soule;Ida M. Eliot
+10.1155/1894/30957,7,216,71,72,Early Stages of Spilosoma Latipennis,
+10.1155/1894/32313,7,222,155,155,Papilio philenor,Caroline G. Soule
+10.1155/1894/34283,7,213,5,6,Bibliographical Notes.—V,Samuel Henshaw
+10.1155/1894/35629,7,217,79,81,Further Notes on Coleoptera Found With Ants,Henry Frederick Wickham
+10.1155/1894/36875,7,223,162,162,A New Family of Fossil Beetles,
+10.1155/1894/37947,7,213,11,12,The Nemastomatidae and Trogulidae of the United States.—I,Nathan Banks
+10.1155/1894/39203,7,217,83,90,New and Undescribed Genera and Species of West African Noctuidae.—IV: (Continued From Page 70.),W. J. Holland
+10.1155/1894/40548,7,223,167,167,Polygamy of Actias Luna and Callosamia Promethea,Caroline G. Soule
+10.1155/1894/41619,7,213,14,14,Proceedings of the Cambridge Entomological Club,
+10.1155/1894/42864,7,218-221,95,100,"On the Pigeon Mite, Hypodectes Filippi",Henry B. Ward
+10.1155/1894/45131,7,224,171,175,Convergence and Poecilogony Among Insects,Alfred Giard
+10.1155/1894/46192,7,213,15,15,Entomological Notes,
+10.1155/1894/47438,7,218-221,102,107,A Preliminary List of the Acrididae of New England,Albert P. Morse
+10.1155/1894/48693,7,224,176,176,A Cone-Like Cecidomyiid Gall on Bigelovia,C. H. Tyler Townsend
+10.1155/1894/49754,7,214,27,34,New and Undescribed Genera and Species of West African Noctuidae.—II: (Continued From Page 10),W. J. Holland
+10.1155/1894/52465,7,224,178,178,A Check-List of African Coccidae,T. D. A. Cockerell
+10.1155/1894/53527,7,214,36,36,Wilhelm Jülich,
+10.1155/1894/54782,7,218-221,131,133,Notes on the Rearing of Platysamia cecropia,Katharine W. Huston
+10.1155/1894/57038,7,224,179,180,Notes on the Orthoptera of Penikese and Cuttyhunk,A. P. Morse
+10.1155/1894/58101,7,214,36,36,Explanation of Plate I,
+10.1155/1894/59354,7,218-221,134,135,Bibliographical Notes.—VI,Samuel Henshaw
+10.1155/1894/60702,7,224,180,180,Entomological Notes,
+10.1155/1894/61762,7,215,39,46,The Habits of the Aculeate Hymenoptera.—II,William H. Ashmead
+10.1155/1894/63028,7,218-221,138,138,Entomological Notes,
+10.1155/1894/65346,7,215,51,52,The Nemastomatidae and Trogulidae of the United States.—II,Nathan Banks
+10.1155/1894/67590,7,218-221,139,139,Proceedings of the Cambridge Entomological Club,
+10.1155/1894/70108,7,215,55,55,Proceedings of the Cambridge Entomological Club,
+10.1155/1894/71363,7,222,147,154,Notes on the Acrididae of New England.—I,Albert P. Morse
+10.1155/1894/73680,7,216,67,70,"New and Undescribed Genera and Species of West African Noctuidae,—III: (Continued From Page 50.)",W. J. Holland
+10.1155/1894/74927,7,222,155,155,Entomological Notes,
+10.1155/1894/75987,7,213,3,5,Biological Notes on American Gryllidae,Samuel H. Scudder
+10.1155/1894/78253,7,217,75,79,The Habits of the Aculeate Hymenoptera.—IV,William H. Ashmead
+10.1155/1894/79498,7,223,159,162,The American Species of the Thysanouran Genus Seira,F. L. Harvey
+10.1155/1894/80671,7,213,7,10,New and Undescribed Genera and Species of West African Noctuidae.—I,W. J. Holland
+10.1155/1894/81917,7,217,81,82,Two Cave Beetles Not Before Recorded,H. Garman
+10.1155/1894/83172,7,223,163,167,Notes on the Acrididae of New England.—I: (Continued From Page 154.),Albert P. Morse
+10.1155/1894/84243,7,213,13,14,Wing-Length in Some New England Acrididae.—I,Albert P. Morse
+10.1155/1894/85489,7,217,91,92,Preparatory Stages of Pseudohazis shastaensis Behrens,Harrison G. Dyar
+10.1155/1894/86836,7,223,168,168,Proceedings of the Cambridge Entomological Club,
+10.1155/1894/87907,7,213,15,15,Edwards's Butterflies of North America,
+10.1155/1894/90262,7,218-221,100,102,"Notes on Some Meloids, or Blister Beetles, of New Mexico and Arizona",C. H. Tyler Townsend
+10.1155/1894/91508,7,224,175,175,The Butterfly Hunters in the Carribees,
+10.1155/1894/92579,7,214,19,26,The Habits of the Aculeate Hymenoptera.—I,William H. Ashmead
+10.1155/1894/93825,7,218-221,109,128,New and Undescribed Genera and Species of West African Noctuidae.—V: (Continued From Page 90.),W. J. Holland
+10.1155/1894/95080,7,224,177,177,Preparatory Stages of Sphinx vashti Strecker,Harrison G. Dyar
+10.1155/1894/96151,7,214,35,35,Hermann August Hagen,
+10.1155/1894/97396,7,218-221,129,131,A Preliminary List of the Butterflies of Northeastern Mississippi,Howard Evarts Weed
+10.1155/1894/98642,7,224,178,179,Notes Upon Toxoneuron,William Hampton Patton
+10.1155/1895/10986,7,228,231,231,Entomological Notes,
+10.1155/1895/14597,7,236,318,318,Schistocerca americana in New England,Frank H. Sprague
+10.1155/1895/15670,7,229,241,244,The Genus Oxyptila,Nathan Banks
+10.1155/1895/16916,7,233,279,281,"Notes on the Winter Insect Fauna of Vigo County, Indiana.—III",W. S. Blatchley
+10.1155/1895/17976,7,225,183,187,On the Rhopalomeridae,S. W. Williston
+10.1155/1895/18171,7,236,319,320,Proceedings of the Cambridge Entomological Club,
+10.1155/1895/19243,7,230,247,250,"Notes on the Winter Insect Fauna of Vigo County, Indiana,—I",W. S. Blatchley
+10.1155/1895/20587,7,Supplement II,6,7,III. A Mutillid Which Resembles Thistle-Down,T. D. A. Cockerell
+10.1155/1895/21650,7,225,188,189,Phthiria sulphurea Loew,T. D. A. Cockerell
+10.1155/1895/21834,7,Supplement I,15,17,VIII. Some New Insects,T. D. A. Cockerell
+10.1155/1895/25160,7,234,287,299,Revision of the Species of Spharagemon,Albert P. Morse
+10.1155/1895/26232,7,225,191,191,Uncertainty of the Duration of Any Stage in the Life History of Moths,Caroline G. Soule
+10.1155/1895/27478,7,230,254,255,Two New Western Coccidae,T. D. A. Cockerell
+10.1155/1895/28724,7,234,299,299,Proceedings of the Cambridge Entomological Club,
+10.1155/1895/29794,7,226,196,199,Two New Species of Entomobrya,F. L. Harvey
+10.1155/1895/32495,7,235,306,307,The Larva of Harrisina Coracina Clemens,Harrison G. Dyar
+10.1155/1895/34568,7,226,202,203,Gall of Eurytoma sp. on the Cat's-Claw Thorn,C. H. Tyler Townsend
+10.1155/1895/35814,7,231,261,262,On the Tachinid Genus Acroglossa Williston,D. W. Coquillett
+10.1155/1895/37069,7,235,307,307,Rhodites tumidus,C. H. Tyler Townsend
+10.1155/1895/38141,7,227,207,211,New North American Odonata,Albert P. Morse
+10.1155/1895/39385,7,231,263,263,Local Butterfly Notes,Shelley W. Denton
+10.1155/1895/41804,7,227,213,213,"Rhopalomera Xanthops, Sp. Nov.",S. W. Williston
+10.1155/1895/43059,7,Supplement II,4,6,II. New North American Bees,T. D. A. Cockerell
+10.1155/1895/45305,7,Supplement II,9,11,V. New Species of Bees,T. D. A. Cockerell
+10.1155/1895/46375,7,227,214,215,Proceedings of the Cambridge Entomological Club,
+10.1155/1895/47621,7,232,271,272,Habits and Parasites of Stigmus inordinatus Fox,A. Davidson
+10.1155/1895/48967,7,Supplement I,12,14,VI. New Homoptera Received From the New Mexico Agricultural Experiment Station.—I,Carl F. Baker
+10.1155/1895/51393,7,232,273,273,The Bombylid Genus Acreotrichus in America,D. W. Coquillett
+10.1155/1895/52639,7,236,315,316,On the Nest and Parasites of Prosopis varifrons Cresson,A. Davidson
+10.1155/1895/53710,7,228,231,231,Failure to Emerge of Actias luna,Caroline G. Soule
+10.1155/1895/54956,7,232,275,275,Notes on Moths,Caroline G. Soule
+10.1155/1895/57212,7,236,317,318,Deidamia Inscripta,Caroline G. Soule
+10.1155/1895/58283,7,229,235,241,"On a Rational Nomenclature of the Veins of Insects, Especially Those of Lepidoptera",A. S. Packard
+10.1155/1895/59529,7,232,275,275,Proceedings of the Cambridge Entomological Club,
+10.1155/1895/60874,7,236,318,319,The Insect Collection of the U. S. National Museum,
+10.1155/1895/61947,7,229,244,244,Colias hecla,Henry Skinner
+10.1155/1895/63202,7,233,281,283,"Some Habits of Formica obscuripes Forel, With Notes on Some Insects Found Associated With it",George B. King
+10.1155/1895/64273,7,225,187,188,"A Psyllid Leaf-Gall on Celtis, Probably Pachypsylla celtidis-pubescens Riley",C. H. Tyler Townsend
+10.1155/1895/64547,7,Supplement I,14,15,"VII. The Grape-Vine Typhlocybids of the Mesilla Valley, N. M.",T. D. A. Cockerell;C. P. Gillette
+10.1155/1895/65619,7,230,250,251,"Eggs of the Long-Nosed Ox-Louse, Haematopinus vitula L",F. L. Harvey
+10.1155/1895/67864,7,Supplement II,7,8,IV. New Species of Coccidae,T. D. A. Cockerell
+10.1155/1895/68936,7,225,189,191,Life History of Clisiocampa Fragilis Stretch,Harrison G. Dyar
+10.1155/1895/70292,7,230,252,253,The Larva of Butalis Basilaris Zell: The Relations of its Setae,Harrison G. Dyar
+10.1155/1895/71537,7,234,299,299,Comstock's Insect Anatomy,
+10.1155/1895/72608,7,226,195,196,Rehabilitation of Podisma Latreille,Samuel H. Scudder
+10.1155/1895/73854,7,230,256,256,Comstock's Manual,
+10.1155/1895/75120,7,235,303,306,Notes on the Habits of Trypoxyllon Rubrocinctum and Trypoxyllon Albopilosum,George W. Peckham;Elizabeth G. Peckham
+10.1155/1895/76181,7,226,200,202,The Tipulid Genera Bittacomorpha and Pedicia,J. M. Aldrich
+10.1155/1895/78427,7,231,259,260,Life History of Clisiocampa pluvialis Dyar,Harrison G. Dyar
+10.1155/1895/79683,7,235,307,307,Enallagma pictum Morse,A. P. Morse
+10.1155/1895/80845,7,226,203,204,Entomological Notes,C. G. Soule
+10.1155/1895/82101,7,231,262,263,Woolly Leaf-Gall Made by a Species of Callirhytis on Scrub Oak,C. H. Tyler Townsend
+10.1155/1895/83456,7,235,307,307,Edwards's Butterflies of North America,
+10.1155/1895/84518,7,227,212,213,Description of Some of the Larval Stages of Amphion nessus,Caroline G. Soule
+10.1155/1895/85763,7,Supplement II,1,4,Contributions From the New Mexico Agricultural Experiment Station: I. New North American Coccidae,T. D. A. Cockerell
+10.1155/1895/87029,7,235,308,308,Charles Valentine Riley,
+10.1155/1895/89090,7,227,213,214,Entomological Notes,
+10.1155/1895/90436,7,232,267,270,"Note on the Winter Insect Fauna of Vigo County, Indiana.—II",W. S. Blatchley
+10.1155/1895/91691,7,Supplement I,11,11,Doryphora (Mycocoryna) Lineolata Stål,T. D. A. Cockerell
+10.1155/1895/92752,7,228,219,229,A Comparison of Colias Hecla With C. Meadii and C. Elis,Thomas E. Bean
+10.1155/1895/94018,7,232,272,273,Prickly Leaf-Gall of Rhodites Tumidus on Rosa Fendleri,C. H. Tyler Townsend
+10.1155/1895/95263,7,236,311,315,The Ephemeridae and Venation Nomenclature,Vernon L. Kellogg
+10.1155/1895/96326,7,228,229,231,"Western Pediciae, Bittacomorphae and Trichocerae",C. R. Osten Sacken
+10.1155/1895/97580,7,232,274,275,New North American Odonata.—II,Albert P. Morse
+10.1155/1895/98926,7,236,316,317,The Number of Stages in Apatelodes Torrefacta,Harrison G. Dyar
+10.1155/1896/10209,7,247,452,452,Tutt's British Butterflies,
+10.1155/1896/12181,7,239,363,363,Notes,
+10.1155/1896/13526,7,243,403,403,Notes on the Oviposition of Thanaos Icelus (?),Justus Watson Folsom
+10.1155/1896/14782,7,248,458,460,Life History of Deilephila lineata,Caroline G. Soule
+10.1155/1896/15843,7,Supplement I,24,26,XII. New Homoptera Received From the New Mexico Agricultural Experiment Station.—II,Carl F. Baker
+10.1155/1896/17098,7,244,407,411,Notes on the Acrididae of New England.—II.—Tryxalinae.—V,Albert P. Morse
+10.1155/1896/19417,7,240,370,372,On Coleoptera Found With Ants. Third Paper,H. F. Wickham
+10.1155/1896/20761,7,244,414,415,Preparatory Stages of Cosmosoma auge Linn,Harrison G. Dyar
+10.1155/1896/24089,7,Supplement I,26,32,XIII. New Species of Prosapis,T. D. A. Cockerell
+10.1155/1896/25345,7,244,416,416,Recent Publications,
+10.1155/1896/26406,7,237,328,329,"The Arctic Lymantriid Larva From Mt. Washington, N. H. (Dasychira Rossii Curt.?)",Harrison G. Dyar
+10.1155/1896/27651,7,241,379,381,"Notes on the Winter Insect Fauna of Vigo County, Indiana.—V",W. S. Blatchley
+10.1155/1896/29017,7,245,422,423,A Thysanuran of the Genus Anoura,F. L. Harvey
+10.1155/1896/30178,7,237,331,332,Notes on Smerinthus Cerysii Kirby,F. L. Harvey
+10.1155/1896/31424,7,241,384,385,Notes on the Types of Papirius texensis Pack. And Description of a New Smynthurus,Justus Watson Folsom
+10.1155/1896/32680,7,245,425,426,Bibliographical Notes.—VII,Samuel Henshaw
+10.1155/1896/34741,7,238,336,340,"Notes on the Winter Insect Fauna of Vigo County, Indiana.—IV",W. S. Blatchley
+10.1155/1896/35986,7,241,386,387,The New Catalogue of Bees,T. D. A. Cockerell
+10.1155/1896/37252,7,246,431,434,The Species of Nemobius Found in North America,Samuel H. Scudder
+10.1155/1896/38315,7,238,342,344,Notes on the Acrididae of New England.—II.Tryxalinae.—II,Albert P. Morse
+10.1155/1896/39570,7,241,388,388,Tutt's British Moths,
+10.1155/1896/41976,7,238,346,346,The Cambridge Natural History: Insects,
+10.1155/1896/43242,7,242,391,392,"Neelus Murinus, Representing a New Thysanuran Family",Justus Watson Folsom
+10.1155/1896/45487,7,246,439,439,Captures of Orthoptera,
+10.1155/1896/46560,7,Supplement I,17,18,IX. A Ceroplastes and its Parasite,T. D. A. Cockerell;L. O. Haward
+10.1155/1896/47905,7,Supplement I,1,11,List of Mt. Washington Coleoptera,F. C. Bowditch
+10.1155/1896/49160,7,247,446,450,"New Smynthuri, Including Myrmecophilous and Aquatic Species",Justus Watson Folsom
+10.1155/1896/51576,7,243,398,398,Notes on Butterflies,Caroline G. Soule
+10.1155/1896/52823,7,247,451,451,Notes on Lepidoptera,Caroline G. Soule
+10.1155/1896/53894,7,239,362,363,Oviposition and Hatching of Thanaos juvenalis,Justus W. Folsom
+10.1155/1896/56149,7,243,402,403,Notes on the Acrididae of New England.—II.— Tryxalinae.—IV,Albert P. Morse
+10.1155/1896/57395,7,248,455,458,"Notes on the Winter Insect Fauna of Vigo County, Indiana.—VIII",W. S. Blatchley
+10.1155/1896/58467,7,Supplement I,21,23,XI. Some Species of Oxybelus Found in New Mexico,T. D. A. Cockerell;C. F. Baker
+10.1155/1896/59713,7,243,403,403,Calephelis borealis,Ellison A. Smyth
+10.1155/1896/62140,7,240,367,370,The New England Melanopli,Samuel H. Scudder
+10.1155/1896/63485,7,244,411,414,The Condition of Apatela,A. Radcliffe Grote
+10.1155/1896/65803,7,240,372,372,Insect-Vision: Plateau's Experiments,
+10.1155/1896/68058,7,244,415,416,Notes on Dionychopus,Harrison G. Dyar
+10.1155/1896/69130,7,237,323,327,Notes on the Acrididae of New England.—II. Tryxalinae.—I,Albert P. Morse
+10.1155/1896/70475,7,241,375,379,The Mallophaga,Vernon L. Kellogg
+10.1155/1896/71720,7,245,419,422,Notes on the Acrididae of New England.—II.— Tryxalinae.—VI,Albert P. Morse
+10.1155/1896/72792,7,237,329,331,Notes on the Species of Exorista of Temperate North America,C. H. Tyler Townsend
+10.1155/1896/74048,7,241,382,384,Notes on the Acrididae of New England.—II.—Tryxalinae.—III,Albert P. Morse
+10.1155/1896/75293,7,245,424,425,Life History of Ichthyura strigosa Grote,Harrison G. Dyar
+10.1155/1896/76365,7,238,335,336,Habits and Parasites of a New Californian Wasp,A. Davidson
+10.1155/1896/78612,7,241,385,386,The Larva of Cautethia grotei Hy. Edw,Harrison G. Dyar
+10.1155/1896/79857,7,245,426,427,Proceedings of the Cambridges Entomological Club,
+10.1155/1896/81038,7,238,340,342,Final Notes on Orgyia,Harrison G. Dyar
+10.1155/1896/82383,7,241,387,388,Chrysobothris Femorata and Clerus 4-Guttatus,F. C. Bowditch
+10.1155/1896/83630,7,246,434,437,"Notes on the Winter Insect Fauna of Vigo County, Indiana.—VII",W. S. Blatchley
+10.1155/1896/84702,7,238,344,345,New Species of Papirius,Justus Watson Folsom
+10.1155/1896/85947,7,241,388,388,Notes,
+10.1155/1896/87203,7,246,437,439,Some Additional Species of Prosapis,T. D. A. Cockerell
+10.1155/1896/89273,7,238,346,347,Proceedings of the Cambridge Entomological Club,
+10.1155/1896/90619,7,Supplement I,32,32,Proposed Biological Station,T. D. A. Cockerell
+10.1155/1896/91864,7,247,443,445,Notes on the Acrididae of New England.—II.—Tryxalinae.—VII,Albert P. Morse
+10.1155/1896/92937,7,Supplement I,18,21,X. Preliminary Diagnoses of New Coccidae,T. D. A. Cockerell
+10.1155/1896/94191,7,243,395,398,A New Structural Character in Insects,R. A. Cooley
+10.1155/1896/95437,7,247,450,451,Partial Life-History of Halisidota cinctipes Grote,Harrison G. Dyar
+10.1155/1896/96509,7,239,351,362,The Hibernation of Aphides,Clarence M. Weed
+10.1155/1896/97853,7,243,399,401,"Notes on the Winter Insect Fauna of Vigo County, Indiana.—VI",W. S. Blatchley
+10.1155/1900/10248,9,295,126,130,Notes on The Specles of Marcropsis and Agallia of North America,E. D. Ball
+10.1155/1900/13564,9,292,87,87,Notes on Two Canadian Butterflies,Napier N. Durand
+10.1155/1900/14812,9,296,135,141,"The Species of Circotettix, A North American Genus of Oedipodinae",Samuel H. Scudder
+10.1155/1900/17138,9,292,90,93,The Clear-Winged Species of the Oedipodine Genus Mestobregma,Samuel H. Scudder
+10.1155/1900/18383,9,296,143,144,Supplementary Notes on Orgyia,Harrison G. Dyar
+10.1155/1900/23057,9,296,144,144,Stanford University's Collection of Japanese Scale Insects,Vernon L. Kellogg
+10.1155/1900/25372,9,292,95,95,Localities for Western Tryxalinae,Samuel H. Scudder
+10.1155/1900/27690,9,288,39,41,A New Blepharocerid,Vernon L. Kellogg
+10.1155/1900/29045,9,292,95,96,Proceeding of the Cambridge Entomological Club,
+10.1155/1900/31462,9,288,42,43,A New Tettigian Genus and Species From South America,J. L. Hancock
+10.1155/1900/32708,9,294,116,116,The Distribution of Leptysma marginicollis,Samuel H. Scudder
+10.1155/1900/36036,9,288,45,47,"The Species of the Oedipodine Genus heliastus Sauss., Occurring in the United States",Samuel H. Scudder
+10.1155/1900/37281,9,294,118,119,Life Historical of North American Geometridae—XV,Harrison G. Dyar
+10.1155/1900/39597,9,290,63,64,The Melanopli of Kansas,S. J. Hunter;W. S. Sutton
+10.1155/1900/43271,9,290,67,69,"The Species of Hadrotettix, A Genus of Oedipodinae",Samuel H. Scudder
+10.1155/1900/47934,9,290,70,71,Some Coccidae Quarantined at San Francisco,T. D. A. Cockerell
+10.1155/1900/49189,9,294,119,119,New England Orthoptera,Samuel Henshaw
+10.1155/1900/51606,9,291,75,76,Notes on the Orthopteran Genus Leprus Saussure,Samuel H. Scudder
+10.1155/1900/52851,9,295,123,126,Some Insects of The Hundsonnian Zone in New Mexico. —I,T. D. A. Cockerell
+10.1155/1900/56178,9,291,78,84,The Genus Kermes in North America,Geo. B. King
+10.1155/1900/57425,9,295,130,132,Life Histories of North American Geometridae—XVI,Harrison G. Dyar
+10.1155/1900/59741,9,292,88,90,The Melanopli of Kansas—III,S. J. Hunter;W. S. Sutton
+10.1155/1900/61097,9,296,142,143,Life Histories of North American Geometridae—XVII,Harrison G. Dyar
+10.1155/1900/63514,9,292,93,94,Life Histories of North American Geometrida—XIII,Harrison G. Dyar
+10.1155/1900/64760,9,296,144,144,Jordan and Kellogg's Animal Life,N. Y. Appleton
+10.1155/1900/68086,9,292,94,95,Notes on the Nesting of Anthidium paroselae Cockerell,Minnie Newberry;T. D. A. Cockerell
+10.1155/1900/71749,9,292,95,95,Occurrence of Myrmeleon immaculatum Degeer in Maine,A. S. Packard
+10.1155/1900/74076,9,288,41,41,Proceedings of the Cambridge Entomological Club,
+10.1155/1900/75323,9,294,111,115,The Habits of Myrmecophila nebrascensis Bruner,William Morton Wheeler
+10.1155/1900/78639,9,288,44,45,"Table of North America Kermes, Based on External Characters",T. D. A. Cockerell
+10.1155/1900/79895,9,294,116,118,Miscellaneous Notes on Coccidae From Western Massachusetts,GEO. B. King
+10.1155/1900/82413,9,288,47,48,Insect Neuration,
+10.1155/1900/85975,9,290,64,67,American Fossil Coleoptera Referred to the Scolytidae,A. D. Hopkins
+10.1155/1900/90648,9,290,69,70,Life Histories of North American Geometridae—XII,Harrison G. Dyar
+10.1155/1900/94230,9,290,72,72,Some Mating Notes,Caroline G. Soule
+10.1155/1900/95475,9,294,119,119,Mantis Religiosa in America,Samuel H. Scudder
+10.1155/1900/97892,9,291,76,78,The Melanopli of Kansas—II,S. J. Hunter;W. S. Sutton
+10.1155/1901/12157,9,302,207,213,The Anatomy of the Larva of the Giant Crane Fly(Holorusia rubiginosa),Vernon L. Kellogg
+10.1155/1901/12493,9,299,179,179,The Katydid's Call in Relation to Temperature,Roland Hayward
+10.1155/1901/15819,9,302,215,215,A New Coccid on Roots of Rubus,T. D. A. Cockerell
+10.1155/1901/16067,9,300,183,183,The Habits and Notes of the New England Species of Oecanthus,Walter Faxon
+10.1155/1901/19392,9,303,219,222,Review of the Collembolan Genus Neelus and Description of N. Minutus N. Sp.,Justus Watson Folsom
+10.1155/1901/24064,9,303,224,226,Notes on the Mating of Attacus cecropia and Others,Caroline G. Soule
+10.1155/1901/26719,9,297,151,153,Notes on Macropsis and Agallia (Jassidae),C. F. Baker
+10.1155/1901/27627,9,303,227,227,Hemiptera on Verbascum,T. D. A. Cockerell
+10.1155/1901/30391,9,297,155,156,Life Histories of North American Geometridae—XVIII,Harrison G. Dyar
+10.1155/1901/31398,9,304,239,240,Life Histories of North American Geometridae—XXIV,Harrison G. Dyar
+10.1155/1901/34717,9,300,184,185,On the Protective Coloration and Attitude of Libythea celtis ESP.,Nicholas Kusnezow
+10.1155/1901/34954,9,298,163,164,Some Insects of the Hudsonian Zone in New Mexico—III,T. D. A. Cockerell;H. G. Dyar;Herbert Obsorn
+10.1155/1901/38290,9,300,187,189,The Species of Diapheromera (Phasmidae) Found in the United States and Canada,Samuel H. Scudder
+10.1155/1901/38527,9,298,166,167,Food of Larvae of Simulium and Blepharocera,Vernon L. Kellogg
+10.1155/1901/41952,9,300,191,191,Occurrence of Melanoplus Extremus in Northern Labrador,A. S. Packard
+10.1155/1901/46526,9,300,191,191,Correction,
+10.1155/1901/46862,9,299,171,173,"Identification of Two of Fitch's Species VIZ., Delatocephalus melsheimerii and Chlorotettix unicolor",C. P. Gillette
+10.1155/1901/50297,9,301,197,199,Variation in Tridactylus,A. P. Morse
+10.1155/1901/53860,9,301,203,204,Life Histories of North American Geometridae—XXII,Harrison G. Dyar
+10.1155/1901/54107,9,299,177,179,Life Histories of North American Geometridae—XX,Harrison G. Dyar
+10.1155/1901/58434,9,302,213,215,Gynandromorphism in a New Species of Hilara,Axel Leonard Melander
+10.1155/1901/58680,9,299,179,179,Proceedings of the Cambridge Entomological Club,
+10.1155/1901/62106,9,302,215,216,A New Species of Chrysopa From Texas,Jesse F. McClendon
+10.1155/1901/65769,9,303,222,224,Microdon Larvae in Pseudomyrma Nests,William Morton Wheeler
+10.1155/1901/69342,9,297,147,151,Some Insects of the Hudsonian Zone in New Mexico—II,William H. Ashmead
+10.1155/1901/70451,9,303,226,227,Life Histories of North American Geometridae—XXIII,Harrison G. Dyar
+10.1155/1901/73015,9,297,153,154,Coccidae of the Harvard Botanical Gardens,GEO. B. King
+10.1155/1901/74024,9,304,231,239,Sketsh of the Habits of North American Ants—I,Auguste Forel
+10.1155/1901/76578,9,298,159,162,The Distribution of Holarctic Collembola,Justus Watson Folsom
+10.1155/1901/81015,9,300,185,186,Some Insects of the Hudsonian Zone in New Mexico—IV,William H. Ashmead;T. D. A. Cockerell
+10.1155/1901/81351,9,298,165,166,Life Histories of North American Geometridae—XIX,Harriso G. Dyar
+10.1155/1901/84676,9,300,189,191,Life Histories of North American Geometridae—XXI,Harrison G. Dyar
+10.1155/1901/84915,9,298,167,167,The Triangle Spider in Calefornia,Vernon L. Kellogg
+10.1155/1901/89250,9,300,191,191,Occurrence of Anopheles Quadrimaculatus in Maine,A. S. Packard
+10.1155/1901/89486,9,298,167,167,Proceedings of the Cambridge Entomological Club,
+10.1155/1901/92913,9,301,195,197,"A Couragrous Butterfly, Oeneis Semidea",Samuel H. Scudder
+10.1155/1901/93159,9,299,173,175,Insects and Spiders of the Galapagos Islands,Vernon L. Kellogg
+10.1155/1901/96484,9,301,199,203,Pulvinaria innumerabilis Rathv,GEO. B. King
+10.1155/1901/96821,9,299,175,177,Notes on Crypticerya townsendi Cockerell,T. D. A. Cockerell;George B. king
+10.1155/1902/12373,9,313,347,348,Cephalic Morphology,
+10.1155/1902/13502,9,312,330,335,Some New Genera and Species of Attidae From South Africa,George W. Peckham;Elizabeth G. Peckham
+10.1155/1902/16395,9,320,427,428,A Simplified Spreading Board,James G. Needham
+10.1155/1902/17074,9,312,335,335,Correction,
+10.1155/1902/17804,9,319,413,419,Group Characteristics of Some North American Butterflies—V,Samuel H. Scudder
+10.1155/1902/20168,9,320,429,430,Coccidae and Aleurodidae,Vernon L. Kellogg
+10.1155/1902/20737,9,313,339,343,Are the Mallophaga Degenerate Poscids?,Vernon L. Kellogg
+10.1155/1902/21475,9,320,423,427,Group Characteristics of Some North American Butterflies—VI,Samuel H. Scudder
+10.1155/1902/24731,9,320,431,432,Notes,
+10.1155/1902/28365,9,315,370,371,Group Characteristics of Some North American Butterflies—I,Samuel H. Scudder
+10.1155/1902/32038,9,316,375,378,A Probable New Type of Hypermetamorphosis,James G. Needham
+10.1155/1902/35962,9,309,291,296,The Species of Gryllus Found in the United States East of the Sierra Nevadas,Samuel H. Scudder
+10.1155/1902/36702,9,316,380,381,Dichopetala Brevicauda—A Correction,A. P. Morse
+10.1155/1902/38712,9,313,345,345,A New Catolaccus on Sitotroga cerealella Oliv,William H. Ashmead
+10.1155/1902/39536,9,309,298,299,Life Histories of North American Geometridae—XXIX,Harrison G. Dyar
+10.1155/1902/40374,9,316,383,384,Life Histories of North American Geometridae—XXXIV,Harrison G. Dyar
+10.1155/1902/42417,9,315,363,367,Collection of the Grave,Justus Watson Folsom
+10.1155/1902/43208,9,309,300,300,Literature,
+10.1155/1902/43937,9,317,393,393,Notes,
+10.1155/1902/47871,9,311,315,321,The Identity of the Snow—Flea (Achorutes nivicola Fitch),Justus Watson Folsom
+10.1155/1902/48509,9,317,396,396,Life Histories of North American Geometridae—XXXV,Harrison G. Dyar
+10.1155/1902/51543,9,311,324,324,A New Bruchophagus From Mexico,William H. Ashmead
+10.1155/1902/52181,9,318,401,404,The Association of Coccidae,GEO. B. King
+10.1155/1902/56126,9,312,328,329,A New Silphid Beetle From A simple Insect—Trap,A. Leonard Melander
+10.1155/1902/56843,9,318,407,408,Life Histories of North American Geometridae—XXXVI,Harrison G. Dyar
+10.1155/1902/58549,9,313,346,347,Some Insects of the Hudsonian Zone in New Mexico—VIII,T. D. A. Cockerell
+10.1155/1902/59687,9,312,335,335,Notes,
+10.1155/1902/60517,9,319,411,413,Notes on Hybrids of Samia cynthia and Attacus Promethea,Caroline G. Soule
+10.1155/1902/62782,9,320,428,429,Life Histories of North American Geometridae—XXXVIII,Harrison G. Dyar
+10.1155/1902/63461,9,312,336,336,Life Histories of North American Geometridae—XXXI,Harrison G. Dyar
+10.1155/1902/64089,9,319,419,420,Life Histories of North American Geometridae—XXXVII,Harrison G. Dyar
+10.1155/1902/67354,9,320,430,431,The Pupa of Mermiria Texana Bruner,T. D. A. Cockerell
+10.1155/1902/71080,9,315,368,370,The So-Called Mandibles of Spiders,William A. Riley
+10.1155/1902/74742,9,315,371,372,Life Histories of North American Geometridae—XXXIII,Harrison G. Dyar
+10.1155/1902/75902,9,313,344,345,Life Histories of North American Geometridae—XXXII,Harrison G. Dyar
+10.1155/1902/79316,9,316,378,380,Records of the Habits of New Mexican Coleoptera,T. D. A. Cockerell
+10.1155/1902/82360,9,309,296,298,A New Species of the Genus Saissetia (Coccidae) With Notes on Some of the Species of the Genus not Well Understood,George B. King
+10.1155/1902/82978,9,316,381,383,Group Characteristics of Some North American Butterflies—II,Samuel H. Scudder
+10.1155/1902/83263,9,313,348,348,Another Note on Deltocephalus melsheimerii,C. F. Baker
+10.1155/1902/85041,9,315,367,368,Further Notes on New England Formicidae,GEO. B. King
+10.1155/1902/85923,9,309,299,300,The Hatching of Eacles imperialis,Caroline G. Soule
+10.1155/1902/86561,9,317,387,393,New Agriculture Ants From Texas,William Morton Wheeler
+10.1155/1902/90594,9,309,300,300,Correction,
+10.1155/1902/91324,9,317,394,395,Group Characteristics of Some North American Butterflies—III,Samuel H. Scudder
+10.1155/1902/94168,9,311,321,323,"On the Limits of the Family Saturniidae, With a Note on the Genus Rothschildia",A. S. Packard
+10.1155/1902/94895,9,318,399,400,The Inverted Hypopygium of Dasyllis and Laphria,Robert E. Snodgrass
+10.1155/1902/97830,9,312,327,327,An Interesting Case of Mimicry,Herbert Obsorn
+10.1155/1902/98468,9,318,405,407,Group Characteristics of Some North American Butterflies—IV,Samuel H. Scudder
+10.1155/1903/14573,10,325-326,188,189,"The Tipulid Hypopygium, A Study in Specific Adaptations",Robert E. Snodgrass
+10.1155/1903/16891,10,322,78,79,Life Histories of North American Geometridae.—XL,Harrison G. Dyar
+10.1155/1903/18147,10,325-326,201,204,Two New Species of Sphex,H. T. Fernald
+10.1155/1903/20563,10,322,85,92,The Hemiptera Described by Philip Reese Uhler. II,Samuel Henshaw
+10.1155/1903/21809,10,325-326,210,216,"Classification of the Gall-Wasps and the Parasitic Cynipoids, or the Superfamily Cynipoidea IV",William H. Ashmead
+10.1155/1903/25137,10,323,111,114,A New Genus and Four New Species of Asilidae,Charles W. Johnson
+10.1155/1903/26381,10,325-326,218,220,Appearance of the 17–Year Cicada in Rhode Island in 1903,Alpheus S. Packard
+10.1155/1903/28698,10,323,116,117,Life Histories of North American Geometridae.—XLI,Harrison G. Dyar
+10.1155/1903/32472,10,323,122,125,The Hemiptera Described by Philip Reese Uhler. III,Samuel Henshaw
+10.1155/1903/35789,10,321,1,6,A Contribution Toward A Knowledge of the Life History of Culex Sollicitans,John B. Smith
+10.1155/1903/37045,10,324,134,139,Some Hitherto Unknown Nymphs of Odonata From New Mexico,James G. Needham;T. D. A. Cockerell
+10.1155/1903/39362,10,321,13,14,Life Histories of North American Geometridae.—XXXIX,Harrison G. Dyar
+10.1155/1903/43035,10,321,19,22,Some Species of Eulecanium (Coccidae) From France,T. D. A. Cockerell
+10.1155/1903/45280,10,324,164,168,The North American Ants of the Genus Stenamma Sensu Stricto,William Morton Wheeler
+10.1155/1903/47596,10,321,31,42,The Hemiptera Described by Philip Reese Uhler,Samuel Henshaw
+10.1155/1903/48943,10,325-326,171,183,A Review of the North American Species of Nemotelus,Axel Leonard Melander
+10.1155/1903/51369,10,322,47,58,The Diffusion of Insects in North America,F. M. Webster
+10.1155/1903/52616,10,325-326,186,187,The Re-Discovery of Philorus (Blepharocera) Yosemite Osten Sacken,Vernon L. Kellogg
+10.1155/1903/54931,10,322,73,73,"A New Oryssid From Chatham Islands, Bismarck Archipelago",William H. Ashmead
+10.1155/1903/57186,10,325-326,187,187,Amory Leland Babcock,Albert P. Morse
+10.1155/1903/59505,10,322,74,77,A Catalogue of the Bees of California,T. D. A. Cockerell
+10.1155/1903/60850,10,325-326,190,200,Life Histories of North American Geometridae.—XLII,Harrison G. Dyar
+10.1155/1903/63178,10,322,80,85,"Notes on Some Aleyrodes From Massachusetts, With Descriptions of New Species",Austin W. Morrill
+10.1155/1903/64524,10,325-326,205,209,Some Notes on the Habits of Cerapachs Augustae,William Morton Wheeler
+10.1155/1903/67840,10,323,93,111,A Decade of Texan Formicidae,William Morton Wheeler
+10.1155/1903/69095,10,325-326,216,218,Some Aphids Associated With Ants,Wilmatte Porter Cockerell
+10.1155/1903/71513,10,323,115,116,New Orthoptera From Nevada,Albert P. Morse
+10.1155/1903/72758,10,325-326,221,223,Notes on Acanthothrips,H. J. Franklin
+10.1155/1903/75085,10,323,118,122,Studies for Students.—III Elementary Studies in Insect Histology,Vernon L. Kellogg
+10.1155/1903/76341,10,325-326,224,230,The Hemiptera Described by Philip Reese Uhler. IV,Samuel Henshaw
+10.1155/1903/79649,10,324,127,134,Notes on the Immature Stages of Some Tingitids of the Genus Corythuca,Austin W. Morril
+10.1155/1903/82075,10,321,7,12,"Classification of the Gall-Wasps and the Parasitic Cynipoids, or the Superfamily Cynipoidea",William H. Ashmead
+10.1155/1903/83423,10,324,140,155,"Classification of the Gall-Wasps and the Parasitic Cynipoids, or the Superfamily Cynipoidea III",William H. Ashmead
+10.1155/1903/85739,10,321,15,18,Insect Psychology,Justus Watson Folsom
+10.1155/1903/86984,10,324,156,164,Synopsis of the North American Species of Ammophila,A. L. Melander
+10.1155/1903/90412,10,321,22,31,Button-Bush Insects,James G. Needham
+10.1155/1926/51582,33,1,20,21,The Distribution of Muscina Pascuorum Meigen in America,Charles W. Johnson
+10.1155/1926/56154,33,1,27,28,Book Review,
+10.1155/1926/97859,33,1,22,27,Recent Work by Gabritschevsky on the Inheritance of Color Varieties in Volucella Bombylans,Clyde E. Keeler
+10.1155/1954/46042,61,2,74,80,Tabanidae of New Hampshire,R. L. Blickle
+10.1155/1981/97878,88,1-2,197,198,Robert Elliot Silberglied,Frank M. Carpenter
+10.1155/1992/51296,99,2-3,241,244,Dedication: Frank Morton Carpenter,Edward O. Wilson
