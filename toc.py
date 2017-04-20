@@ -268,7 +268,7 @@ def add_cec_holdings(dictified, path):
     print 'added %s CEC holdings' % count
     print '%s listed in %s but missing from TOC' % (len(losers), path)
     print losers[0:10]
-    print 'ambiguous (volume, page): %s' % len(ambiguous_s)
+    print 'ambiguous CEC (volume, page): %s' % len(ambiguous_s)
     print ambiguous_s[0:10]
     count = 0
     for d in dictified:
@@ -280,6 +280,74 @@ def add_cec_holdings(dictified, path):
                 count += 1
     print 'Removed %s S fields' % count
 
+# Assumes dictified is sorted
+
+def infer_years(dictified):
+    last_issue = {}    # maps volume to (issue, last_article)
+    for d in dictified:
+        if 'P' in d:
+            i = issue_number(d)
+            if i != None:
+                l = last_issue.get(d['V'])
+                if l == None:
+                    last_issue[d['V']] = (i, d)
+                else: 
+                    (z, last_d) = l
+                    if issue_number(last_d) <= i:
+                        last_issue[d['V']] = (i, d)
+    if False:
+        # for debugging
+        for v in sorted(last_issue.keys()):
+            (z, last_d) = last_issue[v]
+            if z > 6:
+                print 'v. %s: last issue was %s, last page %s' % (v, z, get_last_page(last_d))
+    year = None
+    volume = None
+    for d in dictified:
+        # If starting a new volume, advance the year
+        if d['V'] != volume:
+            volume = d['V']
+            y = get_year(d)
+            year = str(y)
+            # Advice already carried out
+            if False:
+                # Number of issues in this volume
+                (z, last_d) = last_issue[d['V']]
+                if z > 6:
+                    q = int(get_last_page(last_d))
+                    print ('v. %s: check for %s near %s and %s near %s' % 
+                           (d['V'], y+1, (q / 3), y+2, (2 * q / 3)))
+        if 'Y' in d:
+            year = d['Y']
+        if 'P' in d:
+            # usually, just repeat year of previous article
+            proclaim(d, 'Y', year)
+
+def issue_number(d):
+    i = d.get('I')
+    if i != None:
+        if '-' in i:
+            i = i.split('-',1)[1]
+        if i.isdigit():
+            return int(i)
+    return None
+
+# One year per volume starting with volume 10 in 1903
+
+def get_year(d):
+    v = int(d['V'])
+    if v < 11:
+        year = 1871 + (v * 3)
+        # Two year gap from volume 3 to volume 4
+        if v > 4:
+            year += 2
+        return year
+    elif v == 103:
+        return 2000
+    else:
+        return v + (1903 - 10)
+
+# Reporting
 
 def object_sort_key(d):
     v = d.get('V')
@@ -300,6 +368,7 @@ def field_sort_key(field):
     if verb == 'P': return 40
     if verb == 'Q': return 50
     if verb == 'R': return 60
+    if verb == 'Y': return 65
     if verb == 'D': return 70
     if verb == 'S': return 90
     else: return 100
@@ -317,11 +386,7 @@ def check_continuity(dictified):
             page = int(d['P'])
             qage = get_last_page(d)
             if qage == None:
-                if d['T'].startswith('Exchange'):
-                    True
-                elif 'Index' in d['T']:
-                    True
-                else:
+                if real_article(d):
                     print '* missing last page %s' % brief(d)
                 continue
             qage = int(qage)
@@ -352,13 +417,30 @@ def check_continuity(dictified):
 def brief(d):
     return '%s(%s):%s-%s' % (d.get('V'), d.get('I'), d.get('P'), get_last_page(d))
 
+def real_article(d):
+    if d.get('A') == 'None':
+        return False
+    t = d.get('T')
+    if t == None: return False
+    if t.startswith('Exchange'):
+        return False
+    if t.startswith('Proceedings'):
+        return False
+    if t.startswith('Bibliographical'):
+        return False
+    if 'Index' in t:
+        return False
+    return True
+
 def count_things(dictified):
     volumes = {}
     issues = {}
     articles = 0
+    dois = 0
     for d in dictified:
-        if 'P' in d or 'T' in d:
+        if real_article(d):
             articles += 1
+            if 'D' in d: dois += 1
         v = d.get('V')
         if not v in volumes: volumes[v] = True
         i = d.get('I')
@@ -366,6 +448,8 @@ def count_things(dictified):
     print 'Volumes:  %s' % len(volumes)
     print 'Issues:   %s' % len(issues)
     print 'Articles: %s' % articles
+    print 'DOIs:     %s' % dois
+    print 'No DOI:   %s' % (articles - dois)
         
 
 # path to toc/ directory
@@ -404,6 +488,7 @@ load_more_dois(dictified, 'doi-metadata.csv')
 add_cec_holdings(dictified, 'articles.csv')
 
 dictified = sorted(dictified, key=object_sort_key)
+infer_years(dictified)
 check_continuity(dictified)
 count_things(dictified)
 write_toc(dictified, ambiguous_dois, sys.argv[2])

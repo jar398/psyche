@@ -3,6 +3,7 @@ V	1
 
 V	1
 I	1
+Y	1874
 # CEC set has files 1-008, 1-020, 1-026, 1-028, 1-032 - what are they?
 
 S	1-001
@@ -11,10 +12,22 @@ A	H. Pickman Mann
 D	10.1155/1874/86927
 P	1
 Q	2
+# http://biodiversitylibrary.org/page/12551631
 
+I	9
+Y	1875
+
+I	21
+Y	1876
 
 V	2
 # Present Ant Room and Swain, complete.
+
+I	45-46
+Y	1878
+
+I	57
+Y	1879
 
 V	3
 # Present Ant Room, 15 or so issues missing from Swain
@@ -27,31 +40,64 @@ D	10.1155/1980/32646
 # From Hindawi DOI file
 # Note '1980' in DOI, which ought to be '1880'
 
+I	80
+Y	1881
+
+I	93
+Y	1882
+
 V	4
 # Present Ant Room and Swain, complete.
+
+I	117-118
+Y	1884
 
 I	126-129
 # N.b. mistake: issue 126-128 called itself "126-129".
 # Hindawi calls it "126-129" so I guess stick with that.
 
+I	129-131
+Y	1885
+
 V	5
 # Present Ant Room and Swain, complete.
+
+I	153
+Y	1889
+
+I	165
+Y	1890
+# http://biodiversitylibrary.org/page/13762289
 
 V	6
 # Present Ant Room, partial Swain (missing issue 208)
 
+I	189
+Y	1892
+
+I	201
+Y	1893
 
 V	7
 # Present Ant Room and Swain, complete.
 
-I	Supplement I
+I	225
+Y	1895
 
+I	237
+Y	1896
+
+# http://biodiversitylibrary.org/page/11640101
+I	Supplement I
+Y	1896
+
+# http://biodiversitylibrary.org/page/11640267
 I	Supplement II
+Y	1896
 
 
 V	8
 # First issue is number 249
-# Mary Sears scanned: Baker, C.F. 1898. Athysanella, a new genus of Jassids. Psyche 8: 185-189. (missing pages)
 
 I	249
 # Got 8(249) TOC from BHL!
@@ -117,6 +163,9 @@ T	Proceedings of the Club
 I	250
 # Issues 250-262 are present in the Ant Room collection (and Hindawi)
 
+I	261
+Y	1898
+
 I	263
 # Got 8(263) TOC from BHL
 # Issues missing from Ant Room and Swain, present only BHL: 249 263 273 279
@@ -128,6 +177,7 @@ T	Descriptions of species of Machilis and Seira from Mexico
 A	Justus Watson Folsom
 P	183
 
+# Mary Sears scanned: Baker, C.F. 1898. Athysanella, a new genus of Jassids. Psyche 8(263): 185-189. (Ant Room copy is missing some pages)
 T	Athysanella, a new genus of Jassids
 A	Carl F. Baker
 P	185
@@ -146,6 +196,7 @@ I	264
 # Issues 264-272 should be present in the Ant Room collection
 
 I	273
+Y	1899
 # Got 8(273) TOC from BHL
 # TOC is on page 301 
 # http://www.biodiversitylibrary.org/item/44238#page/333/mode/1up
@@ -224,7 +275,12 @@ I	284
 # Last article ends on page 429, followed by volume index.
 
 V	8
+I	Supplement I
+Y	1899
+
+V	8
 I	Supplement II
+Y	1899
 # In BHL: http://www.biodiversitylibrary.org/item/44238#page/397/mode/1up
 
 T	Insect Fauna of the Giant Cactus of Arizona: Letters from the Southwest
@@ -327,7 +383,13 @@ T	Proceedings of the Cambridge Entomological Club
 P	23
 Q	23
 
+# Got TOC from http://biodiversitylibrary.org/page/11642177
 I	287
+
+T	The orthopteran genus Trimerotropis
+A	Jerome McNeill
+P	27
+Q	36
 
 I	288
 # OK, comes from CEC/Hindawi
@@ -335,8 +397,7 @@ I	288
 
 
 I	289
-# Got 9(289) TOC from BHL or Swain
-# http://www.biodiversitylibrary.org/item/42922#page/63/mode/1up
+# Got 9(289) TOC from http://biodiversitylibrary.org/page/11642201
 # 286 289 297 306 307 310 314 are in Swain but not in Ant Room
 
 T	On the species of Nemobius known to occur in Indiana
@@ -396,6 +457,7 @@ I	296
 # OK, comes from CEC/Hindawi
 
 I	297
+Y	1901
 # OK, comes from CEC/Hindawi
 
 I	298
@@ -462,9 +524,34 @@ P	252
 Q	252
 
 I	306
-# TBD: get 9(306) TOC from BHL or Swain
-# http://www.biodiversitylibrary.org/item/42922#page/271/mode/1up
+# Got 9(306) TOC from BHL
+# http://biodiversitylibrary.org/page/11642409
 # 286 289 297 306 307 310 314 are in Swain but not in Ant Room
+
+T	Mating of Attacus gloveri
+A	Caroline G. Soule
+P	255
+Q	255
+
+T	Miogryllvs and its species in the United States
+A	Samuel H. Scudder
+P	256
+Q	258
+
+T	Kermes quercus Linn.
+A	George B. King
+P	258
+Q	259
+
+T	A check-list of the Massachusetts Formicidae, with soime notes on the species
+A	George B. King
+P	260
+Q	262
+
+T	Life histories of North American Geometridae. — XXVI
+A	Harrison G. Dyar
+P	262
+Q	263
 
 I	307
 # Got 9(307) TOC from BHL
@@ -494,18 +581,79 @@ P	273
 Q	275
 
 I	308
-# TBD: get 9(308) TOC from BHL
-# http://www.biodiversitylibrary.org/item/42922#page/295/mode/1up
+# Got 9(308) TOC from BHL
+# http://biodiversitylibrary.org/page/11642433
 # 293 305 308 in neither Swain not Ant Room; present only BHL
 
+T	On the larval forms of several exotic Ceratocampid moths
+A	A. S. Packard
+P	279
+Q	282
+
+T	Some insects of the Husonian zone in Xew Mexico — VI — Hymenoptera Apoidea, II
+A	Nathan Banks
+A	T. D. A. Cockerell
+P	282
+Q	287
+
+T	Life histories of North American Geometridae — XXVIII
+A	Harrison G. Dyar
+P	287
+Q	288
+
+T	Distribution of Cryptocercus punctulata
+A	S. H. Scudder
+P	288
+Q	288
+
 I	309
+Y	1902
 # OK, comes from CEC/Hindawi
 
 I	310
-# TBD: get 9(310) TOC from BHL or Swain
-# http://www.biodiversitylibrary.org/item/42922#page/319/mode/1up
+# Got 9(310) TOC from BHL or Swain
+# http://biodiversitylibrary.org/page/11642457
 # 286 289 297 306 307 310 314 are in Swain but not in Ant Room
-# starts on page 399, no TOC
+
+T	Some insects of the Hudsoniax zone in New Mexico — VII — Coleoptera
+A	H. C. Fall
+P	303
+Q	303
+
+T	A note on the secondary sexual characters of Omophron — 
+A	Roland Hayward
+P	304
+Q	304
+
+T	A preliminary sketch of the Sphingicampidae, a new group of protosphingine Lepidoptera, with its subdivisions — I
+A	A. S. Packard
+P	304
+Q	307
+
+T	Two new species of Ophion
+A	E. P. Felt
+P	307
+Q	308
+
+T	On the United States Orthoptera which have been referred to the genus Tridactylus
+A	Samuel H. Scudder
+P	308
+Q	310
+
+T	Life histories of North American Geometridae — XXX
+A	Harrison G. Dyar
+P	310
+Q	311
+
+T	Economic Entomology
+A	None
+P	311
+Q	311
+
+T	Proceedings of the Club (Alcurodcs citri; Cave crickets; Coenonympha in California; Enodia portlandia in New England; Miogryllus ; Venation and wing folding)
+A	None
+P	311
+Q	312
 
 I	311
 # OK, comes from CEC/Hindawi
@@ -517,9 +665,24 @@ I	313
 # OK, comes from CEC/Hindawi
 
 I	314
-# TBD: get 9(314) TOC from BHL or Swain
-# http://www.biodiversitylibrary.org/item/42922#page/371/mode/1up
+# Got 9(314) TOC from BHL or Swain
+# http://biodiversitylibrary.org/page/11642509
 # 286 289 297 306 307 310 314 are in Swain but not in Ant Room
+
+T	Notes on the larvae of some Texan Diptera. Illustrated
+A	Charles Thomas Brues
+P	351
+Q	354
+
+T	The structure of the nests of some North American species of Formica
+A	Herman Muckermann
+P	355
+Q	360
+
+T	Notes
+A	None
+P	360 
+Q	360
 
 I	315
 # OK, comes from CEC/Hindawi
@@ -11710,7 +11873,7 @@ Q	181
 
 V	74
 I	3
-# TBD: Get TOC from BHL
+# Got TOC from BHL
 # Missing from both Ant Room and Swain: Volume 74 numbers 2 and 3
 # TOC = http://biodiversitylibrary.org/page/50887692
 
