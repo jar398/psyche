@@ -1,8 +1,9 @@
+SCHEME48=/usr/local/bin/scheme48
 
 SCHEME_FILES=build-web-site.sch articles.sch journal-meta.sch \
     pdf-file-sizes.sch dois.sch
 RESOURCE_FILES=seal150.png style.css robots.txt
-TOC_FILE=toc.txt
+TOC_FILE=toc/processed-toc.txt
 
 # Where to put the derived files.
 BUILD_DIR=build
@@ -19,7 +20,7 @@ $(BUILD_DIR)/index.html: $(SCHEME_FILES) $(TOC_FILE)
 	 echo ,open extended-ports signals posix-files ;\
 	 echo ,open html xml web-utils  ;\
 	 echo ,load $(SCHEME_FILES) ;\
-	 echo '(doit "$(TOC_FILE)" "$(BUILD_DIR)")' ) | scheme48
+	 echo '(doit "$(TOC_FILE)" "$(BUILD_DIR)")' ) | $(SCHEME48)
 
 
 #THERE=pluto.mumble.net
