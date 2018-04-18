@@ -12,6 +12,7 @@ all: $(BUILD_DIR)/index.html $(RESOURCE_FILES)
 	cp -p $(RESOURCE_FILES) $(BUILD_DIR)/
 	find $(BUILD_DIR) -name "*~" -exec rm {} \;
 
+# Create static web site files
 $(BUILD_DIR)/index.html: $(SCHEME_FILES) $(TOC_FILE)
 	mkdir -p $(BUILD_DIR)
 	(echo ,batch ;\

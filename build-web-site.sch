@@ -9,7 +9,7 @@
 
 (define articles-root "http://psyche.entclub.org/pdf/")
 ;(define text-files-root "/Users/jar/Scratch/Psyche/text/")
-(define text-files-root "../text/")
+(define text-files-root "text/")    ;; or ../text/
 
 
 "
@@ -18,9 +18,8 @@
 ,open define-record-types sorting c-system-function tables
 ,open extended-ports signals posix-files
 ,open html xml web-utils
-,load build-web-site.sch articles.sch journal-meta.sch dois.sch
-,load pdf-file-sizes.sch
-(doit <target-directory>)
+,load pdf-file-sizes.sch build-web-site.sch articles.sch journal-meta.sch dois.sch
+(doit <toc> <outdir>)  ;toc/processed-toc.txt build
 "
 
 (define (testit) (doit "toc.txt" "~/Scratch/Psyche/build"))
@@ -38,18 +37,24 @@
 
 (define (do-quick-part toc-file build-dir)
   (read-prepared-toc-file toc-file)
+  (message "index.html")
   (write-page build-dir
 	      "index.html"
 	      (make-main-page "index.html"))
+  (message "master-toc.html")
   (write-page build-dir
 	      "master-toc.html"
 	      (make-master-toc-page "master-toc.html"))
+  (message "about.html")
   (write-page build-dir
 	      "about.html"
 	      (make-about-page "about.html"))
+  (message "contact.html")
   (write-page build-dir
 	      "contact.html"
 	      (make-contact-page "contact.html")))
+
+(define (message x) (display x) (newline))
 
 (define (do-slow-part toc-file build-dir)
   (read-prepared-toc-file toc-file)
@@ -58,7 +63,7 @@
 (define (do-slow-part-1 build-dir)
   (system (string-append "mkdir -p "
 			 (path->filename build-dir "metadata")))
-  ;; (write-articles-metadata build-dir)  -- too big, now split among vols
+  ;; (write-articles-metadata (all-volumes-with-tocs) build-dir)  -- too big, now split among vols
   (for-each (lambda (volnum)
 	      (process-one-volume volnum build-dir))
 	    (cdr (iota 104))
@@ -67,7 +72,7 @@
 
 (define-record-type article :article
   (make-article stem title authors volume year pages issue id comments)
-  (stem article-stem)          ;E.g. "30-013"
+  (stem article-stem)          ;E.g. "30-013" for PDF file, if any
   (title article-title)
   (authors article-authors)    ;list of authors
   (volume article-volume)
@@ -92,7 +97,7 @@
 			volpath
 			(make-volume-toc-page volnum articles build-dir volpath)))
 	  (for-each (lambda (article)
-		      (if (and article (prepared? article))
+		      (if (and article (article-stem article) (prepared? article))
 			  ;; Write the article's own page.
 			  (write-article-page article build-dir)))
 		    articles)
@@ -123,10 +128,14 @@
 	    #f))))
 
 (define (article< a1 a2)
-  (if (= (article-year a1) (article-year a2))
-      (string<? (article-stem a1)
-		(article-stem a2))
-      (< (article-year a1) (article-year a2))))
+  (if (= (article-volume a1) (article-volume a2))
+      (if (and (string? (article-stem a1))
+               (string? (article-stem a2)))
+          (string<? (article-stem a1)
+                    (article-stem a2))
+          (< (car (article-pages a1))
+             (car (article-pages a2))))
+      (< (article-volume a1) (article-volume a2))))
 
 (define (make-volume-toc-page volnum articles build-dir here)
   (let* ((prepared (get-volume-scans volnum)) ;List of stems "30-013"
@@ -173,16 +182,14 @@
 			  "Index to volume "
 			  volnum)))
 	      (span))
-	  (p (a (hlink (path-to-metadata volnum) here)
+	  (p (a (rlink (path-to-metadata volnum) here)
 		"Table of contents metadata (XML)")))))
 
 ; Not sure where to put the .xml file: in the volume directory
 ; (e.g. 10/metadata.xml), or in a metadata directory (metadata/10.xml)?
 
 (define (path-to-metadata volnum)
-  (if #t
-      (cons "metadata" (string-append (number->string volnum) ".xml"))
-      (cons (number->string volnum) "metadata.xml")))
+  (cons "metadata" (string-append (number->string volnum) ".xml")))
 
 ; If article name starts with "covers-n" then return the issue number
 ; as a string.
@@ -200,9 +207,11 @@
   (path-in-volume volnum "toc.html"))
 
 (define (path-to-article article)
-  (path-in-volume (article-volume article)
-		  (string-append (article-stem article)
-				 ".html")))
+  (if (article-stem article)
+      (path-in-volume (article-volume article)
+                      (string-append (article-stem article)
+                                     ".html"))
+      #f))
 
 (define (path-in-volume volnum path)
   (cons (number->string volnum) path))
@@ -219,9 +228,10 @@
 
 (define (write-article-page article build-dir)
   (let ((path (path-to-article article)))
-    (write-page build-dir
-		path
-		(make-article-page path article))))
+    (if path
+        (write-page build-dir
+                    path
+                    (make-article-page path article)))))
 
 ; Quoth Google Scholar on May 10, 2007:
 ;
@@ -253,68 +263,14 @@
 ; Table of contents for one volume or for a set of articles (query result?)
 
 (define (make-article-page here article)
-  (let ((pdf-link (article-pdf-link article here))
-	(title-string (article-title-string article))
-	(inverted-authors (map (lambda (name)
-				 (invert-name (remove-markup name)))
-			       (article-authors article))))
+  (let ((pdf-link (article-pdf-link article here)))
     (apply-meta-boilerplate
      here
      (string-append "Psyche "
 		    (number->string (article-volume article))
 		    ":"
 		    (article-page-range article))
-     (list (meta (name= "citation_journal_title")
-		 (content= "Psyche"))
-	   ;; authors
-	   (if (not (null? inverted-authors))
-	       (meta (name= "citation_authors")
-		     (content=
-		      (apply string-append
-			     (car inverted-authors)
-			     (apply append (map (lambda (inv)
-						  (list "; " inv))
-						(cdr inverted-authors))))))
-	       '())
-	   (meta (name= "citation_title")
-		 (content= title-string))
-	   (meta (name= "citation_date")
-		 (content= (article-year article)))
-	   (meta (name= "citation_volume")
-		 (content= (article-volume article)))
-	   (let ((issue (article-issue article)))
-	     (if issue
-		 (meta (name= "citation_issue")
-		       (content= issue))
-		 (begin
-		   (if (not (null? (article-authors article)))
-		       (begin (write `(missing issue: ,(article-volume article) ,@(article-pages article)))
-			      (newline)))
-		   '())))		;?
-	   (let ((pages (article-pages article)))
-	     (if pages
-		 (list (meta (name= "citation_firstpage")
-			     (content= (car pages)))
-		       (if (integer? (cadr pages))
-			   (meta (name= "citation_lastpage")
-				 (content= (cadr pages)))
-			   '()))
-		 '()))
-	   
-	   (meta (name= "citation_pdf_url")
-		 (content= (article-pdf-url article here)))
-	   (meta (name= "citation_publisher")
-		 (content= "Cambridge Entomological Club"))
-	   ;; citation_abstract_html_url
-	   ;; citation_fulltext_html_url
-	   (meta (name= "dc.Title")
-		 (content= title-string))
-	   (meta (name= "dc.Date")
-		 (content= (article-year article)))
-	   (map (lambda (author)
-		  (meta (name= "dc.Contributor")
-			(content= (remove-markup author))))
-		inverted-authors))
+     (make-google-scholar-stuff here article)
      (div
       (p (if (not (null? (article-authors article)))
 	     (list (span (class= "authors")
@@ -337,7 +293,7 @@
 					 (path->string here))))
 	   (span (class= "stableurl")
 		 (a (href= permalink)
-		    "Stable URL: "
+		    "At CEC: "
 		    permalink)))
 
 	 (br)
@@ -357,9 +313,66 @@
 
 	 (hr)
 	 (let ((volnum (article-volume article)))
-	   (span (a (hlink (path-to-toc volnum) here)
+	   (span (a (rlink (path-to-toc volnum) here)
 		    "Volume " volnum " table of contents")))
 	 )))))
+
+(define (make-google-scholar-stuff here article)
+  (let ((title-string (article-title-string article))
+	(inverted-authors (map (lambda (name)
+				 (invert-name (remove-markup name)))
+			       (article-authors article))))
+    (list (meta (name= "citation_journal_title")
+                (content= "Psyche"))
+          ;; authors
+          (if (not (null? inverted-authors))
+              (meta (name= "citation_authors")
+                    (content=
+                     (apply string-append
+                            (car inverted-authors)
+                            (apply append (map (lambda (inv)
+                                                 (list "; " inv))
+                                               (cdr inverted-authors))))))
+              '())
+          (meta (name= "citation_title")
+                (content= title-string))
+          (meta (name= "citation_date")
+                (content= (article-year article)))
+          (meta (name= "citation_volume")
+                (content= (article-volume article)))
+          (let ((issue (article-issue article)))
+            (if issue
+                (meta (name= "citation_issue")
+                      (content= issue))
+                (begin
+                  (if (not (null? (article-authors article)))
+                      (begin (write `(missing issue: ,(article-volume article) ,@(article-pages article)))
+                             (newline)))
+                  '())))                ;?
+          (let ((pages (article-pages article)))
+            (if pages
+                (list (meta (name= "citation_firstpage")
+                            (content= (car pages)))
+                      (if (integer? (cadr pages))
+                          (meta (name= "citation_lastpage")
+                                (content= (cadr pages)))
+                          '()))
+                '()))
+	   
+          (meta (name= "citation_pdf_url")
+                (content= (article-pdf-url article here)))
+          (meta (name= "citation_publisher")
+                (content= "Cambridge Entomological Club"))
+          ;; citation_abstract_html_url
+          ;; citation_fulltext_html_url
+          (meta (name= "dc.Title")
+                (content= title-string))
+          (meta (name= "dc.Date")
+                (content= (article-year article)))
+          (map (lambda (author)
+                 (meta (name= "dc.Contributor")
+                       (content= (remove-markup author))))
+               inverted-authors))))
 
 (define (article-doi-url article)
   (if (article-pages article)
@@ -376,6 +389,7 @@
       #f))
 
 (define (make-article-abstract article)
+  (if (article-stem article)
   (let ((fname (string-append text-files-root
 			      (number->string (article-volume article))
 			      "/"
@@ -410,12 +424,15 @@
 					 (cons (br) items))
 				     (+ count 1))))))))))))
 	(begin (write `(no text file ,fname)) (newline)
-	       '()))))
+	       '())))))
+
+;; path may be #f
 
 (define (write-page build-dir path item)
-  (call-with-output-file (path->filename build-dir path)
-    (lambda (port)
-      (write-item item port))))
+  (if path
+      (call-with-output-file (path->filename build-dir path)
+        (lambda (port)
+          (write-item item port)))))
 
 (define (make-master-toc-page here)
   (apply-boilerplate here "Psyche master table of contents"
@@ -455,7 +472,7 @@
 		    (span "[" stuff "]"))))
     (if (or (get-volume-scans volnum)
 	    (get-volume-toc volnum))
-	(a (hlink (path-to-toc volnum)
+	(a (rlink (path-to-toc volnum)
 		  here)
 	   stuff)
 	stuff)))
@@ -518,7 +535,7 @@
 
     (hr)
 
-    (p (a (hlink (path-to-article (get-article-info 81 3)) here)
+    (p (a (rlink (path-to-article (get-article-info 81 3)) here)
           "History of the Cambridge Entomological Club [and "
 	  (i "Psyche")
 	  "]"))
@@ -612,7 +629,10 @@
   ;; title
   (if (prepared? art)
       (a (class= "title")
-	 (hlink (path-to-article art) here)
+         (let ((path (path-to-article art)))
+           (if path
+               (rlink path here)
+               '()))
 	 (maybe-with-period (article-title art)))
       (maybe-with-period (article-title art))))
 
@@ -633,35 +653,40 @@
 	(else (error "confusing markup" item))))
 
 (define (maybe-with-period x)           ; => item
-  (if (pair? x)
-      (if (null? (cdr x))
-          (cons (maybe-with-period (car x)) '())
-          (cons (car x) (maybe-with-period (cdr x))))
-      (if (and (string? x)
-               (memq (string-ref x (- (string-length x) 1))
-                     '(#\. #\? #\!)))
-          x
-          (list x "."))))
+  (cond ((pair? x)
+         (if (null? (cdr x))
+             (cons (maybe-with-period (car x)) '())
+             (cons (car x) (maybe-with-period (cdr x)))))
+        ((and (string? x)
+              (memq (string-ref x (- (string-length x) 1))
+                    '(#\. #\? #\!)))
+         x)
+        ((not x) "")
+        (else (list x "."))))
 
 (define (article-pdf-link art here)
-  (a (href= (article-pdf-url art here))
-     ;; TBD: pdf file size
-     "Searchable PDF"
-     (let ((size (table-ref pdf-file-sizes (article-stem art))))
-       (if size
-	   (list ", " size "K")
-	   '()))))
+  (if (article-stem art)
+      (a (href= (article-pdf-url art here))
+         ;; TBD: pdf file size
+         "At CEC"
+         (let ((size (table-ref pdf-file-sizes (article-stem art))))
+           (if size
+               (list ", " size "K")
+               '())))
+      '()))
 
 (define (article-pdf-url art here)
-  (let* ((volnum (number->string (article-volume art)))
-	 (path (cons volnum
-		     (string-append (article-stem art)
-				    ".pdf"))))
-    (string-append articles-root
-		   (path->string path))))
+  (if (article-stem art)
+      (let* ((volnum (number->string (article-volume art)))
+             (path (cons volnum
+                         (string-append (article-stem art)
+                                        ".pdf"))))
+        (string-append articles-root
+                       (path->string path)))
+      "data:,no go"))
 
 (define (article-stable-link art here)
-  ;;(a (hlink (path-to-article art) here) "Permalink")
+  ;;(a (rlink (path-to-article art) here) "Permalink")
   (let* ((volnum (number->string (article-volume art)))
 	 (path (cons volnum
 		     (string-append (article-stem art)
@@ -703,7 +728,7 @@
 ; Path ("a" "b" . "c") == "a/b/c"
 ; Path ("a" "b") == "a/b/"
 
-(define (hlink where here)
+(define (rlink where here)
   (let ((ref (reference where here)))
     (if ref
         (href= ref)
@@ -739,9 +764,9 @@
   (html
    (apply head
 	  (title the-title)
-	  (link (type= "text/css")
-		(rel= "stylesheet")
-		(hlink "style.css" here))
+	  (hlink (type= "text/css")
+                 (rel= "stylesheet")
+                 (rlink "style.css" here))
 	  meta-elements)
    (body
     (table
@@ -789,15 +814,15 @@
                                     (value= "Go!"))))
 
                   (div (class= "control")
-                       (a (hlink "master-toc.html" here)
+                       (a (rlink "master-toc.html" here)
                           "Contents"))
                        
                   (div (class= "control")
-                       (a (hlink "index.html" here)
+                       (a (rlink "index.html" here)
                           "Home"))
                        
                   (div (class= "control")
-                       (a (hlink "about.html" here)
+                       (a (rlink "about.html" here)
                           "About"))
 
 		  (div (class= "control")
@@ -805,7 +830,7 @@
                           "Author information"))
                        
                   (div (class= "control")
-                       (a (hlink "contact.html" here)
+                       (a (rlink "contact.html" here)
                           "Contact"))
 
 ;                  (div (class= "control")
@@ -1032,110 +1057,133 @@
   (call-with-input-file infile
     (lambda (in)
       (display "Reading ") (display infile) (newline)
-      (let vloop ((volume #f))
-
-	(define (finish-volume articles)
-	  (if (not (null? articles))
-	      (define-volume-toc
-		volume
-		(let ((taps (list-sort article< articles)))
-		  (map (lambda (t-a-p next)
-			 (apply (lambda (stem title authors page qage issue comments)
-				  (make-article stem
-						title
-						(reverse authors)
-						volume
-						(volume->year volume)
-						(if (integer? page)
-						    (cons page
-							  (if qage
-							      (list qage)
-							      (if next
-								  (let ((qage (cadddr next)))
-								    (if (number? qage)
-									(list (- qage 1) '?)
-									'(?)))
-								  '(?))))
-						    #f)
-						issue
-						(id-from-stem stem)
-						comments))
-				t-a-p))
-		       taps
-		       (append (cdr taps) (list #f)))))))
+      (let vloop ((volume #f))          ;Volume loop
    
 	;; Compare the stems e.g.  "17-053", "17-214"
 	(define (article< tap1 tap2)
 	  (string<? (car tap1) (car tap2)))
 
 	;; Loop for accumulating articles...
-	(let aloop ((issue #f) (articles '()))
+	(let aloop ((issue #f) (articles '())) ;Article loop
 
-	(let loop ((stem #f)
-		   (title #f)
-		   (authors '())
-		   (page #f)
-		   (qage #f)    ;ending page, if known
-		   (comments '()))
+          ;; Loop for properties of a single article...
+          (let loop ((stem #f)
+                     (title #f)
+                     (authors '())
+                     (year #f)
+                     (page #f)
+                     (qage #f)          ;ending page, if known
+                     (issue #f)
+                     (doi #f)
+                     (comments '()))
 
-	  (define (finish-article) ;returns list of articles
-	    (if (or stem title page)
-		(cons (list stem title authors page qage issue comments)
-		      articles)
-		articles))
+            (define (finish-article)   ;returns reversed list of articles
+              (if (or stem title page)
+                  (cons (list stem title authors year page qage issue doi comments)
+                        articles)
+                  articles))
 
-	  (let ((line (read-line-foo in)))
-	    (cond ((eof-object? line)
-		   (finish-volume (finish-article)))
-		  ((< (string-length line) 2)
-		   ;; Blank lines separate articles
-		   (aloop issue (finish-article)))
-		  (else
-		   ;; New article
-		   (let ((c (string-ref line 0))
-			 (arg (substring line 2 (string-length line))))
-		     (case c
-		       ((#\V)
-			(let ((new-volume (or (string->number arg) arg)))
-			  (if (equal? volume new-volume)
-			      (loop stem title authors page qage comments)
-			      (begin (finish-volume (finish-article))
-				     (vloop new-volume)))))
-		       ((#\I)
-			;; Should barf if we have any info saved up
-			(aloop arg (finish-article)))
-		       ;; 'Stem' e.g. 46-072
-		       ((#\S) (loop arg #f '() #f #f comments))
-		       ((#\T) (loop stem (allow-markup arg)
-				    authors page qage comments))
-		       ((#\A) (loop stem title
-				    (cons (allow-markup arg) authors)
-				    page qage comments))
-		       ((#\P) (loop stem title authors
-				    (or (string->number arg) arg)
-				    qage comments))
-		       ((#\Q) (loop stem title authors
-				    page
-				    (or (string->number arg) arg)
-				    comments))
-		       ((#\#) (loop stem title authors page qage
-				    (cons line comments)))
-		       (else (display volume)
-			     (display ":")
-			     (display page)
-			     (display ": ")
-			     (display "Unrecognized directive in TOC file: ")
-			     (display line)
-			     (newline)
-			     (loop stem title authors page qage comments)))))))))))))
+            (let ((line (read-line-foo in)))
+              (cond ((eof-object? line)
+                     (finish-volume volume (finish-article)))
+                    ((< (string-length line) 2)
+                     ;; Blank lines separate articles
+                     (aloop issue (finish-article)))
+                    (else
+                     ;; New article
+                     (let ((c (string-ref line 0))
+                           (arg (substring line 2 (string-length line))))
+                       (case c
+                         ((#\V)
+                          (let ((new-volume (or (string->number arg) arg)))
+                            (if (equal? volume new-volume)
+                                (loop stem title authors year page qage issue doi comments)
+                                (begin (finish-volume volume (finish-article))
+                                       (vloop new-volume)))))
+                         ;; 'Stem' e.g. 46-072
+                         ((#\S) (loop arg
+                                      title authors year page qage issue doi comments))
+                         ((#\T) (loop stem
+                                      (if arg (allow-markup arg) "No title")
+                                      authors year page qage issue doi comments))
+                         ((#\A) (loop stem title
+                                      (if (and (> (string-length arg) 0)
+                                               (not (string=? arg "None")))
+                                          (cons (allow-markup arg) authors)
+                                          authors)
+                                      year page qage issue doi comments))
+                         ((#\Y) (loop stem title authors
+                                      (or (string->number arg) arg)
+                                      page qage issue doi comments))
+                         ((#\P) (loop stem title authors year
+                                      (or (string->number arg) arg)
+                                      qage issue doi comments))
+                         ((#\Q #\R) (loop stem title authors year page
+                                          (or (string->number arg) arg)
+                                          issue doi comments))
+                         ((#\I) (loop stem title authors year page qage
+                                      arg
+                                      doi comments))
+                         ((#\D) (loop stem title authors year page qage issue
+                                      arg
+                                      comments))
+                         ((#\#) (loop stem title authors year page qage issue doi
+                                      (cons line comments)))
+                         (else (display volume)
+                               (display ":")
+                               (display page)
+                               (display ": ")
+                               (display "Unrecognized directive in TOC file: ")
+                               (display line)
+                               (newline)
+                               (loop stem title authors year page qage issue doi comments)))))))))))))
 
-(define (id-from-stem stem)
-  (let ((foo (member #\- (string->list stem))))
-    (if foo
-	(let ((z (list->string (cdr foo))))
-	  (or (string->number z)
-	      (string->symbol z)))
-	(error "stem has no -" stem))))
+;; articles is a list of (stem title authors year page qage issue doi comments)
+
+(define (finish-volume volume articles)
+  (if (not (null? articles))
+      (let* ((articles (reverse articles)))
+        (define-volume-toc
+          volume
+          (let ((taps articles)) ;was (list-sort article< articles), before processed-toc
+            (map (lambda (t-a-p next)
+                   (apply (lambda (stem title authors year page qage issue doi comments)
+                            (make-article stem
+                                          title
+                                          (reverse authors)
+                                          volume
+                                          (or year (volume->year volume))
+                                          (if (integer? page)
+                                              (cons page
+                                                    (if qage
+                                                        (list qage)
+                                                        (if next
+                                                            (let ((qage (list-ref next 4)))
+                                                              (if (number? qage)
+                                                                  (list (- qage 1) '?)
+                                                                  '(?)))
+                                                            '(?))))
+                                              #f)
+                                          issue
+                                          (id-from-stem stem page)
+                                          comments))
+                          t-a-p))
+                 taps
+                 (append (cdr taps) (list #f))))))))
+
+; Unique id for article within volume ... 
+;  hmm, there are ambiguities when muliple articles on a page
+
+(define (id-from-stem stem page)
+  (if stem
+      (let ((foo (member #\- (string->list stem))))
+        (if foo
+            (let ((z (list->string (cdr foo))))
+              (or (string->number z)
+                  (string->symbol z)))
+            (error "stem has no -" stem)))
+      page))
+
 
 (define (write-prepared-toc-file outfile)
   (call-with-output-file outfile
@@ -1361,9 +1409,12 @@
     cons))
 
 (define (unsplit l c)
-  (cdr (apply append (map (lambda (clist)
-			    (cons #\space clist))
-			  l))))
+  (let ((stuff (apply append (map (lambda (clist)
+                                    (cons #\space clist))
+                                  l))))
+    (if (null? stuff)
+        stuff
+        (cdr stuff))))
 
 ;-----
 ; Search

@@ -901,6 +901,7 @@ A	Karl R. Coolidge
 P	101
 
 T	Notes on Geographic Distribution
+A	C. W. Johnson
 P	104
 Q	104
 
@@ -11800,7 +11801,7 @@ Q	287
 
 # Flush
 S	73-index
-T	Author and Subject Index to Volue 73
+T	Author and Subject Index to Volume 73
 P	289
 
 
@@ -11858,12 +11859,26 @@ A	Louis M. Roth
 P	85
 
 P	104
+T	The life-cycle of the spider <i>Phidippus coccineus</i> (Salticidae) under laboratory conditions
+A       Beatrice T. Gardner
+Q	106
 
 P	107
+T	Defense mechanisms of arthropods. XX. Quantitative assessment of hydrogen cyanide production in two species of millipedes
+A	H. E. Eisner
+A	D. W. Alsop
+A	T. Eisner
+Q       117
 
 P	118
+T	The electrentomoid psocids (Psocoptera)
+A	Edward L. Mockford
+Q       165
 
 P	166
+T	A new <i>Pseudanophthalmus</i> from an epigean environment in West Virginia (Coleoptera: Carabidae)
+A	Thomas C. Barr, Jr.
+Q	172
 
 T	Attack behavior of diguetid spiders and the origin of prey wrapping in spiders
 A	William Eberhard

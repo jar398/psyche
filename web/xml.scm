@@ -68,6 +68,7 @@
   (content element-content))
 
 (define (make-element type attributes content)
+  (check-item content)
   (%make-element type
 		 ;; These must be attributes
 		 (check-attributenesses attributes)
@@ -81,6 +82,20 @@
 	      ,@(or (element-content el)
 		    '()))))
 
+
+(define (check-item item)
+  (if (list? item)
+      (for-each check-item item)
+      (if (or (string? item)
+              (symbol? item)
+              (char? item)
+              (number? item)
+              (element? item)
+              (procedure? item)
+              (entity? item))
+          #f
+          ;; use ,preview to figure it out
+          (error "invalid item" item))))
 
 ; (element-constructor type)
 ; E.g. (define form (element-constructor 'form))
@@ -121,24 +136,28 @@
 	    items))
 
 (define (write-pcdata pcdata port)
-  (if (char? pcdata)
-      (write-parsed-char pcdata port)
-      (let* ((s (stringify pcdata))
-	     (len (string-length s)))
-	(if (let loop ((i 0))
-	      (if (>= i len)
-		  #t
-		  (if (or (char=? #\< (string-ref s i))
-			  (char=? #\& (string-ref s i)))
-		      #f
-		      (loop (+ i 1)))))
-	    ;; Premature optimization
-	    (display s port)
-	    ;; General case
-	    (let loop ((i 0))
-	      (if (< i len)
-		  (begin (write-parsed-char (string-ref s i) port)
-			 (loop (+ i 1)))))))))
+  (cond ((char? pcdata)
+         (write-parsed-char pcdata port))
+        ((null? pcdata)
+         ;; Temporary kludge for debugging
+         (display "#f" port))
+        (else
+         (let* ((s (stringify pcdata))
+                (len (string-length s)))
+           (if (let loop ((i 0))
+                 (if (>= i len)
+                     #t
+                     (if (or (char=? #\< (string-ref s i))
+                             (char=? #\& (string-ref s i)))
+                         #f
+                         (loop (+ i 1)))))
+               ;; Premature optimization
+               (display s port)
+               ;; General case
+               (let loop ((i 0))
+                 (if (< i len)
+                     (begin (write-parsed-char (string-ref s i) port)
+                            (loop (+ i 1))))))))))
 
 (define (write-parsed-char c port)
   (case c
@@ -219,7 +238,7 @@
 ;  write-item on those native structures will do the right thing?
 
 (define (read-item port)		;  => pcdata or element
-  (let ((token (read-token port)))
+  (let ((token (read-xml-token port)))
     (if (start-tag? token)
 	(call-with-values (lambda () (read-element token port))
 	  (lambda (element extra)
@@ -227,7 +246,7 @@
 	    element))
 	token)))
 
-(define (read-token port)
+(define (read-xml-token port)
   (let ((c (peek-char port)))
     (cond ((eof-object? c) c)
 	  ((char=? c #\<)
@@ -312,7 +331,7 @@
 			((table) '(table br p))
 			(else '()))))
     (let loop ((items '()) (extra #f))
-      (let ((token (or extra (read-token port))))
+      (let ((token (or extra (read-xml-token port))))
 	(cond ((and (end-tag? token)
 		    (eq? (end-tag-type token) type))
 	       (finish-element tag items #f))

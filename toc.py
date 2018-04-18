@@ -1,5 +1,7 @@
 # Psyche table of contents tool
 
+#   python toc.py toc.txt master-toc
+
 # Read, merge, write ?
 
 # toc.txt must end with a blank line
@@ -428,6 +430,10 @@ def real_article(d):
         return False
     if t.startswith('Bibliographical'):
         return False
+    if t.startswith('Recent Publications'):
+        return False
+    if t.startswith('Recent Literature'):
+        return False
     if 'Index' in t:
         return False
     return True
@@ -477,7 +483,23 @@ def write_toc(dictified, ambiguous_dois, path):
     with open(os.path.join(path, 'ambiguous-dois.txt'), 'w') as outfile:
         for doi in sorted(ambiguous_dois):
             outfile.write('%s\n' % doi)
+    with open(os.path.join(path, 'no-doi.csv'), 'w') as outfile:
+        writer = csv.writer(outfile)
+        writer.writerow(['volume', 'issue', 'first page', 'last page', 'title', 'authors'])
+        for d in dictified:
+            t = d.get('T','')
+            if ('P' in d and not 'D' in d and
+                'A' in d and
+                not 'Exchange Column' in t and
+                not 'index to ' in t.lower()):
+                writer.writerow([d['V'], d['I'], d['P'], get_last_page(d), t, ';'.join(authors(d))])
 
+def authors(d):
+    a = []
+    for (verb, value) in d['object']:
+        if verb == 'A' and value != 'None':
+            a.append(value)
+    return a
 
 toc = read_toc(sys.argv[1])
 infer_volume_and_issue(toc)

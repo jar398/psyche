@@ -40,7 +40,7 @@
 (define $pub-type=     (attribute-constructor 'pub-type))
 (define $xlink:href=  (attribute-constructor 'xlink:href))
 
-(define (write-articles-metadata build-dir)
+(define (write-articles-metadata volumes build-dir)
   (call-with-output-file
       (path->filename build-dir "journal_meta.xml")
     (lambda (port)
@@ -59,7 +59,7 @@
 					   (xml-end-of-line port))))
 			      (or (get-volume-toc volnum) '()))
 		    (xml-end-of-line port))
-		  (all-volumes-with-tocs))
+		  volumes)
 	(display "</articles>" port)
 	(newline port)))))
 
@@ -102,20 +102,20 @@
 	     (call-with-values
 		 (lambda () (parse-author-name auth))
 		 (lambda (surname given-names suffix)
-		   (if (not given-names)
-		       (warn "No given names for this author"
-			     auth
-			     article))
-		   ($contrib ($contrib-type= "author")
-			     ($name
-			      ($surname surname)
-			      (if given-names
-				  ($given-names given-names)
-				  '())
-			      (if suffix
-				  ($suffix suffix)
-				  '())
-			      )))))
+                   (if (not given-names)
+                       (warn "No given names for this author"
+                             auth
+                             article))
+                   ($contrib ($contrib-type= "author")
+                             ($name
+                              ($surname surname)
+                              (if given-names
+                                  ($given-names given-names)
+                                  '())
+                              (if suffix
+                                  ($suffix suffix)
+                                  '())
+                              )))))
 	   (article-authors article)))
      ($pub-date ($pub-type= "pub")
 		($year (article-year article)))
@@ -128,8 +128,11 @@
 		     ($lpage last)
 		     '())))
 	 '())
-     ($self-uri ($xlink:href= (string-append "http://psyche.entclub.org/"
-					     (path->string (path-to-article article)))))))))
+     (let ((path (path-to-article article)))
+       (if path
+           ($self-uri ($xlink:href= (string-append "http://psyche.entclub.org/"
+                                                   (path->string path))))
+           '()))))))
 
 (define (parse-author-name auth)
   (let ((auth (explode-item auth)))

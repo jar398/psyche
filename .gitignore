@@ -2,3 +2,7 @@
 TAGS
 *.old
 tmp.*
+bhl-pages-*
+bhl/pageimage/
+bhl/article/
+*.tmp

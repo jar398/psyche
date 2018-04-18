@@ -42,7 +42,7 @@
 (define head (element-constructor 'head))
 (define meta (element-constructor 'meta))
 (define title (element-constructor 'title))
-(define link (element-constructor 'link))
+(define hlink (element-constructor 'link))   ;link conflicts with posix-files
 (define base (element-constructor 'base))    ;<base href="foo">
 (define body (element-constructor 'body))
 (define bgcolor= (attribute-constructor 'bgcolor))
