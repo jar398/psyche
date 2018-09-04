@@ -104,17 +104,13 @@ I	249
 # Missing Ant Room and Swain, present only BHL: 249 263 273 279
 # No issue TOC - volume index only
 
-T	Antennal structure of certain Diplosids (Plate I.)
-A	E. Porter Felt
-P	1
-Q	2
-# Ambiguity with article in supplement, which Hindawi also has.
-
 P	3
 Q	5
 T	Antennal structure of certain Diplosids
 A	E. Porter Felt
-# Preceded by Plate I (see BHL).  Hindawi combines article with plate??
+D	10.1155/1897/347258
+# Preceded by Plate I (see BHL).  Hindawi puts the plate under
+# separate DOI (or used to).
 # This article is in issue 249, not in the supplement
 
 P	6
@@ -778,8 +774,10 @@ I	4
 
 T	A review of the North American species of Notiophilus
 A	H. C. Fall
-P	79
+P	81
 Q	92
+D	10.1155/1906/169729
+# Hindawi has first page number wrong; it's 81, not 79.
 
 # BHL page 96 is actually Plate V - not sure which article it belongs to
 T	Life histories of North American Geometridae. LXVL
@@ -5487,6 +5485,7 @@ S	32-323
 T	Index
 P	323
 Q	328
+# Missing ??  Why not flush it entirely.
 
 I	folder
 
@@ -11860,7 +11859,7 @@ P	85
 
 P	104
 T	The life-cycle of the spider <i>Phidippus coccineus</i> (Salticidae) under laboratory conditions
-A       Beatrice T. Gardner
+A	Beatrice T. Gardner
 Q	106
 
 P	107
@@ -11868,12 +11867,12 @@ T	Defense mechanisms of arthropods. XX. Quantitative assessment of hydrogen cyan
 A	H. E. Eisner
 A	D. W. Alsop
 A	T. Eisner
-Q       117
+Q	117
 
 P	118
 T	The electrentomoid psocids (Psocoptera)
 A	Edward L. Mockford
-Q       165
+Q	165
 
 P	166
 T	A new <i>Pseudanophthalmus</i> from an epigean environment in West Virginia (Coleoptera: Carabidae)

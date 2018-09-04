@@ -93,7 +93,7 @@
 			       input
 			       kbd
 			       li
-			       link
+			       hlink
 			       meta
 			       ol
 			       p
@@ -112,6 +112,7 @@
 			       bgcolor=
 			       border=
 			       cellspacing=
+                               charset=
 			       class=
 			       color=
 			       cols=

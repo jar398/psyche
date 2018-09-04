@@ -48,6 +48,7 @@
 (define bgcolor= (attribute-constructor 'bgcolor))
 (define align= (attribute-constructor 'align))
 (define rel= (attribute-constructor 'rel))    ;for <link ...>
+(define charset= (attribute-constructor 'charset))
 
 (define class= (attribute-constructor 'class))
 

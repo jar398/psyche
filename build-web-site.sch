@@ -18,7 +18,8 @@
 ,open define-record-types sorting c-system-function tables
 ,open extended-ports signals posix-files
 ,open html xml web-utils
-,load pdf-file-sizes.sch build-web-site.sch articles.sch journal-meta.sch dois.sch
+,load pdf-file-sizes.sch bhl/first-pages.sch build-web-site.sch
+,load articles.sch journal-meta.sch dois.sch 
 (doit <toc> <outdir>)  ;toc/processed-toc.txt build
 "
 
@@ -71,7 +72,7 @@
   (newline))
 
 (define-record-type article :article
-  (make-article stem title authors volume year pages issue id comments)
+  (make-article stem title authors volume year pages issue id doi comments)
   (stem article-stem)          ;E.g. "30-013" for PDF file, if any
   (title article-title)
   (authors article-authors)    ;list of authors
@@ -80,6 +81,7 @@
   (pages article-pages set-article-pages!)
   (id article-id)		;sequential within volume
   (issue article-issue)
+  (doi article-doi)
   (comments article-comments))
 
 ; Write TOC page, and one 'stub' page per article.
@@ -144,10 +146,7 @@
 			  prepared)
 		  '())))
     (make-articles-page (span "Volume " volnum
-			      " (" (volume->years volnum) ")"
-			      (if prepared
-				  '()
-				  " [not yet available on web site]"))
+			      " (" (volume->years volnum) ")")
 			articles
 			(compose-aux-links aux volnum here)
 			(string-append "Psyche "
@@ -206,7 +205,9 @@
 (define (path-to-toc volnum)
   (path-in-volume volnum "toc.html"))
 
-(define (path-to-article article)
+; Returns a URI reference
+
+(define (path-to-landing-page article)
   (if (article-stem article)
       (path-in-volume (article-volume article)
                       (string-append (article-stem article)
@@ -227,11 +228,11 @@
 		   id)))
 
 (define (write-article-page article build-dir)
-  (let ((path (path-to-article article)))
+  (let ((path (path-to-landing-page article)))
     (if path
         (write-page build-dir
                     path
-                    (make-article-page path article)))))
+                    (make-article-landing-page path article)))))
 
 ; Quoth Google Scholar on May 10, 2007:
 ;
@@ -262,9 +263,8 @@
 
 ; Table of contents for one volume or for a set of articles (query result?)
 
-(define (make-article-page here article)
-  (let ((pdf-link (article-pdf-link article here)))
-    (apply-meta-boilerplate
+(define (make-article-landing-page here article)
+  (apply-meta-boilerplate
      here
      (string-append "Psyche "
 		    (number->string (article-volume article))
@@ -283,31 +283,39 @@
 		(article-title article)))
 	 (br)
 	 (maybe-with-period
-	  (article-citation article)))
+	  (article-reference article)))
 
-      (p (span (class= "contentlink")
-	       pdf-link)
-	  
-	 (br)
-	 (let ((permalink (string-append "http://psyche.entclub.org/"
-					 (path->string here))))
-	   (span (class= "stableurl")
-		 (a (href= permalink)
-		    "At CEC: "
-		    permalink)))
-
-	 (br)
-	 (let ((doi-url (article-doi-url article)))
+      (p (let ((doi-url (article-doi-url article)))
 	   (if doi-url
-	       (span (class= "stableurl")
-		     "At Hindawi: "
-		     (a (href= doi-url) doi-url)
-		     (br))
-	       (begin
-		 (if (and (not (equal? (article-title article) "Exchange Column"))
-			  (>= (article-volume article) 17))
-		     (begin (write `(no-doi ,(article-stem article))) (newline)))
-		 '())))
+	       (list (span (class= "stableurl")
+                           "This article at Hindawi Publishing: "
+                           (a (href= doi-url) doi-url))
+                     (br))
+	       '()))
+         (let ((bhl-url (article-bhl-url article)))
+	   (if bhl-url
+	       (list (span (class= "stableurl")
+                           "This article at Biodiversity Heritage Library: "
+                           (a (href= bhl-url) bhl-url))
+                     (br))
+	       '()))
+         (span (class= "contentlink")
+	       (let ((url (article-cec-pdf-url article here)))
+                 (if url
+                     (list "CEC's scan of this article: "
+                           (a (href= url) url)
+                           (let ((size (table-ref pdf-file-sizes (article-stem article))))
+                             (if size
+                                 (list ", " size "K")
+                                 '()))
+                           (br))
+                     '())))
+	 (let ((cec-url (string-append "http://psyche.entclub.org/"
+					 (path->string here))))
+	   (list (span (class= "stableurl")
+                       "This landing page: "
+                       (a (href= cec-url) cec-url))
+                 (br)))
 
 	 (make-article-abstract article)
 
@@ -315,7 +323,7 @@
 	 (let ((volnum (article-volume article)))
 	   (span (a (rlink (path-to-toc volnum) here)
 		    "Volume " volnum " table of contents")))
-	 )))))
+	 ))))
 
 (define (make-google-scholar-stuff here article)
   (let ((title-string (article-title-string article))
@@ -359,8 +367,10 @@
                           '()))
                 '()))
 	   
-          (meta (name= "citation_pdf_url")
-                (content= (article-pdf-url article here)))
+          (let ((cec-url (article-cec-pdf-url article here)))
+            (if cec-url
+                (meta (name= "citation_pdf_url")
+                      (content= cec-url))))
           (meta (name= "citation_publisher")
                 (content= "Cambridge Entomological Club"))
           ;; citation_abstract_html_url
@@ -374,57 +384,86 @@
                        (content= (remove-markup author))))
                inverted-authors))))
 
+(define doi-prefix "https://doi.org/")
+
 (define (article-doi-url article)
-  (if (article-pages article)
-      (let* ((key (vpq->key (article-volume article)
-			    (car (article-pages article))
-			    (cadr (article-pages article))))
-	     (doi-list (table-ref dois key)))
-	(if (pair? doi-list)
-	    (if (null? (cdr doi-list))
-		(string-append "http://dx.doi.org/" (car doi-list))
-		#f)		  ;Ambiguous... normal
-	    ;; TBD: filter out "Exchange Column"
-	    #f))
-      #f))
+  (if (article-doi article)
+      (string-append doi-prefix (article-doi article))
+      (if (article-pages article)
+          (let* ((key (vpq->key (article-volume article)
+                                (car (article-pages article))
+                                (cadr (article-pages article))))
+                 (doi-list (table-ref dois key)))
+            (if (pair? doi-list)
+                (if (null? (cdr doi-list))
+                    (string-append doi-prefix (car doi-list))
+                    #f)		  ;Ambiguous... normal
+                ;; TBD: filter out "Exchange Column"
+                #f))
+          #f)))
+
+(define first-pages-table (make-string-table))
+(for-each (lambda (first-page)
+            (table-set! first-pages-table (car first-page) (cadr first-page)))
+          first-pages)
+
+(define (article-bhl-url article)
+  (let ((pageid (table-ref first-pages-table (bhl-key article))))
+    (if pageid
+        (string-append "https://www.biodiversitylibrary.org/page/"
+                       pageid)
+        #f)))
+
+(define (bhl-key article)
+  (let ((pages (article-pages article)))
+    (if pages
+        (string-append (number->string (article-volume article))
+                       "-"
+                       (number->string (car pages))
+                       "-"
+                       (if (integer? (cadr pages))
+                           (number->string (cadr pages))
+                           (number->string (car pages))))
+        "no pages")))
 
 (define (make-article-abstract article)
   (if (article-stem article)
-  (let ((fname (string-append text-files-root
-			      (number->string (article-volume article))
-			      "/"
-			      (article-stem article)
-			      ".txt")))
-    (if (accessible? fname (access-mode read))
-	(call-with-input-file fname
-	  (lambda (iport)
-	    ;; Skip over header.  Usually about 6 lines.
-	    (let loop ()
-	      (let ((line (read-line-foo iport)))
-		(if (eof-object? line)
-		    (warn "ill-formed .txt file")
-		    (if (= (string-length line) 0)
-			'ok
-			(loop)))))
-	    (list
-	     (hr)
-	     (p (i "The following unprocessed text is extracted from the PDF file, and "
-		   "is likely to be both incomplete and full of errors. "
-		   "Please consult the PDF file for the complete article."))
-	     (p (reverse
-		 (let loop ((items '()) (count 0))
-		   (let ((line (read-line-foo iport)))
-		     (if (eof-object? line)
-			 items
-			 (let ((items (cons line items)))
-			   (if (> count 5000) ;increased, was 500
-			       items
-			       (loop (if (> (string-length line) 40)
-					 items
-					 (cons (br) items))
-				     (+ count 1))))))))))))
-	(begin (write `(no text file ,fname)) (newline)
-	       '())))))
+      (let ((fname (string-append text-files-root
+                                  (number->string (article-volume article))
+                                  "/"
+                                  (article-stem article)
+                                  ".txt")))
+        (if (accessible? fname (access-mode read))
+            (call-with-input-file fname
+              (lambda (iport)
+                ;; Skip over header.  Usually about 6 lines.
+                (let loop ()
+                  (let ((line (read-line-foo iport)))
+                    (if (eof-object? line)
+                        (warn "ill-formed .txt file")
+                        (if (= (string-length line) 0)
+                            'ok
+                            (loop)))))
+                (list
+                 (hr)
+                 (p (i "The following unprocessed text is extracted automatically "
+                       "from the PDF file, and "
+                       "is likely to be both incomplete and full of errors. "
+                       "Please consult the PDF file for the complete article."))
+                 (p (reverse
+                     (let loop ((items '()) (count 0))
+                       (let ((line (read-line-foo iport)))
+                         (if (eof-object? line)
+                             items
+                             (let ((items (cons line items)))
+                               (if (> count 5000) ;increased, was 500
+                                   items
+                                   (loop (if (> (string-length line) 40)
+                                             items
+                                             (cons (br) items))
+                                         (+ count 1))))))))))))
+            (begin (write `(no text file ,fname)) (newline)
+                   '())))))
 
 ;; path may be #f
 
@@ -436,28 +475,28 @@
 
 (define (make-master-toc-page here)
   (apply-boilerplate here "Psyche master table of contents"
-   (div
-    (h3 "Tables of Contents")
+                     (div
+                      (h3 "Tables of Contents")
 
-    (p "For some volumes, articles and/or table of contents are not yet available on this web site.")
+                      (p "For some volumes, articles and/or table of contents are not yet available on this web site.")
 
-    (let* ((vs (map (lambda (volnum)
-		      (let ((foo
-			     (td (volume-stuff volnum here))))
-			foo))
-		    (cdr (iota 104))))
-	   (k 3)			;Number of columns
-	   (n (length vs)) ;103
-	   ;; Add dummy entries to end of volumes list
-	   (vs (append vs (map (lambda (i) '()) (cdr (iota k)))))
-	   (n/k (/ (+ n (- k 1)) k))) ;35
-      (table (width= "100%")
-	     (apply map
-		    (lambda vv (apply tr vv))
-		    (map (lambda (i)
-			   (sublist vs (* i n/k) (* (+ i 1) n/k)))
-			 (iota k))))))))
-		
+                      (let* ((vs (map (lambda (volnum)
+                                        (let ((foo
+                                               (td (volume-stuff volnum here))))
+                                          foo))
+                                      (cdr (iota 104))))
+                             (k 3)			;Number of columns
+                             (n (length vs)) ;103
+                             ;; Add dummy entries to end of volumes list
+                             (vs (append vs (map (lambda (i) '()) (cdr (iota k)))))
+                             (n/k (/ (+ n (- k 1)) k))) ;35
+                        (table (width= "100%")
+                               (apply map
+                                      (lambda vv (apply tr vv))
+                                      (map (lambda (i)
+                                             (sublist vs (* i n/k) (* (+ i 1) n/k)))
+                                           (iota k))))))))
+
 (define (round-up-to-nearest-multiple n k)
   (- (+ n (- k 1)) (remainder (+ n (- k 1)) k)))
 
@@ -479,105 +518,105 @@
 
 (define (make-about-page here)
   (apply-boilerplate here "About Psyche"
-   (div
-    (h3 "About " (i "Psyche"))
+                     (div
+                      (h3 "About " (i "Psyche"))
 
-    (p (i "Psyche") " is a journal for the publication of "
-       "'biological contributions upon Arthropoda from any competent person.' "
-       "It was founded in 1874 by the "
-       (a (href= "http://entclub.org/") "Cambridge Entomological Club")
-       ". "
-       "The title derives from the Greek word for butterfly. ")
+                      (p (i "Psyche") " is a journal for the publication of "
+                         "'biological contributions upon Arthropoda from any competent person.' "
+                         "It was founded in 1874 by the "
+                         (a (href= "http://entclub.org/") "Cambridge Entomological Club")
+                         ". "
+                         "The title derives from the Greek word for butterfly. ")
 
-    (p "The Club transferred management of the journal to "
-       (a (href= "http://www.hindawi.com/journals/psyche/")
-	  "Hindawi Publishing Corporation")
-       " in July 2007. "
-       "Hindawi "
-       (a (href= "http://www.hindawi.com/journals/psyche/guidelines.html")
-	  "accepts manuscripts")
-       " for review "
-       "and publishes new articles online as the are ready.  "
-       "Access to new articles is open; there are no "
-       "subscription or access charges.")
+                      (p "The Club transferred management of the journal to "
+                         (a (href= "http://www.hindawi.com/journals/psyche/")
+                            "Hindawi Publishing Corporation")
+                         " in July 2007. "
+                         "Hindawi "
+                         (a (href= "http://www.hindawi.com/journals/psyche/guidelines.html")
+                            "accepts manuscripts")
+                         " for review "
+                         "and publishes new articles online as the are ready.  "
+                         "Access to new articles is open; there are no "
+                         "subscription or access charges.")
 
-    (p "The Cambridge Entomological Club will honor written requests for refunds "
-       "of advance payment to CEC for issues not received (through volume 103). "
-       "Indicate the amount paid and "
-       "which issues were expected but not received, "
-       "and include an email address for correspondence. "
-       "Address requests to "
-       "Cambridge Entomological Club,"
-       " 26 Oxford St., Cambridge, MA 02138.")
+                      (p "The Cambridge Entomological Club will honor written requests for refunds "
+                         "of advance payment to CEC for issues not received (through volume 103). "
+                         "Indicate the amount paid and "
+                         "which issues were expected but not received, "
+                         "and include an email address for correspondence. "
+                         "Address requests to "
+                         "Cambridge Entomological Club,"
+                         " 26 Oxford St., Cambridge, MA 02138.")
 
-    (p "The Club has scanned "
-       "a 95% complete set of back issues "
-       "and has prepared all 5000+ articles "
-       "for download from this web site. "
-       "Articles were scanned at 400 dpi, processed by custom software for "
-       "contrast enhancement, "
-       "then processed by Adobe Acrobat for character recognition. ")
+                      (p "The Club has scanned "
+                         "a 95% complete set of back issues "
+                         "and has prepared all 5000+ articles "
+                         "for download from this web site. "
+                         "Articles were scanned at 400 dpi, processed by custom software for "
+                         "contrast enhancement, "
+                         "then processed by Adobe Acrobat for character recognition. ")
 
-    (p "The Club's back issues scanning project was made possible "
-       "by a generous grant from benefactor "
-       (a (href= "http://people.csail.mit.edu/tk/")
-	  "Tom Knight")
-       ".")
+                      (p "The Club's back issues scanning project was made possible "
+                         "by a generous grant from benefactor "
+                         (a (href= "http://people.csail.mit.edu/tk/")
+                            "Tom Knight")
+                         ".")
 
-    (p "Hindawi has prepared its own archive of back issues, "
-       "which may be accessed "
-       (a (href= "http://www.hindawi.com/journals/psyche/contents.html")
-	  "here") ".")
+                      (p "Hindawi has prepared its own archive of back issues, "
+                         "which may be accessed "
+                         (a (href= "http://www.hindawi.com/journals/psyche/contents.html")
+                            "here") ".")
 
-    (p "All articles published in "
-       (i "Psyche")
-       " prior to 1989 are in the public domain.")
+                      (p "All articles published in "
+                         (i "Psyche")
+                         " prior to 1989 are in the public domain.")
 
-    (hr)
+                      (hr)
 
-    (p (a (rlink (path-to-article (get-article-info 81 3)) here)
-          "History of the Cambridge Entomological Club [and "
-	  (i "Psyche")
-	  "]"))
+                      (p (a (rlink (path-to-landing-page (get-article-info 81 3)) here)
+                            "History of the Cambridge Entomological Club [and "
+                            (i "Psyche")
+                            "]"))
 
-    (p (a (href= "http://www.google.com/search?q=psyche+entomology+-consciousness&ie=UTF-8&oe=UTF-8")
-          "References to " (i "Psyche")
-	  " on the Internet")
-       " (Google search)")
+                      (p (a (href= "http://www.google.com/search?q=psyche+entomology+-consciousness&ie=UTF-8&oe=UTF-8")
+                            "References to " (i "Psyche")
+                            " on the Internet")
+                         " (Google search)")
 
-    (p (a (href= "http://psyche1.entclub.org/options/")
-          "Memo on the future of " (i "Psyche")))
+                      (p (a (href= "http://psyche1.entclub.org/options/")
+                            "Memo on the future of " (i "Psyche")))
 
-    (p (a (href= "https://github.com/jar398/psyche")
-          "Source code")
-       " for this web site")
+                      (p (a (href= "https://github.com/jar398/psyche")
+                            "Source code")
+                         " for this web site")
 
-    )))
+                      )))
 
 (define (make-contact-page here)
   (apply-boilerplate here "Contact Psyche"
-   (div
-    (h3 "Contact " (i "Psyche"))
-    (p (dl
-	(dt "As of 2007, " (i "Psyche") " is published by "
-	    (a (href= "http://www.hindawi.com/")
-	       "Hindawi Publishing Corporation")
-	    ". All correspondence regarding current publication should be addressed to Hindawi.")))
-    (p (dl (dt "This archive of " (i "Psyche") " pre 2007 is provided by "
-	       " the Cambridge Entomological Club"
-	       " and is managed by Jonathan A. Rees. "
-	       "Email: "
-	       (a (href= "mailto:psyche@entclub.org") "psyche@entclub.org"))))
-    (p (dl
-	(dt "Address for written correspondence:")
-	(dd "Cambridge Entomological Club" (br)
-	    "26 Oxford St." (br)
-	    "Cambridge, MA 02138"))))))
+                     (div
+                      (h3 "Contact " (i "Psyche"))
+                      (p (dl
+                          (dt "As of 2007, " (i "Psyche") " is published by "
+                              (a (href= "http://www.hindawi.com/")
+                                 "Hindawi Publishing Corporation")
+                              ". All correspondence regarding current publication should be addressed to Hindawi.")))
+                      (p (dl (dt "This archive of " (i "Psyche") " pre 2007 is provided by "
+                                 " the Cambridge Entomological Club"
+                                 " and is managed by Jonathan A. Rees. "
+                                 "Email: "
+                                 (a (href= "mailto:psyche@entclub.org") "psyche@entclub.org"))))
+                      (p (dl
+                          (dt "Address for written correspondence:")
+                          (dd "Cambridge Entomological Club" (br)
+                              "26 Oxford St." (br)
+                              "Cambridge, MA 02138"))))))
 
-; Article has:
-;  title, authors, citation (volume, issue(?), page number start/end, year),
-;   abstract-is-on-line flag,
-;   article-is-on-line flag
+                                        ; Article has:
+                                        ;  title, authors, citation (volume, issue(?), page number start/end, year),
+                                        ;   abstract-is-on-line flag,
+                                        ;   article-is-on-line flag
 
 (define (make-main-page here)
   (make-articles-page "Featured articles"
@@ -586,38 +625,58 @@
 		      "Psyche: A Journal of Entomology"
 		      here))
 
+                                        ; Make page for a list of articles (usually a table of contents, but
+                                        ; not always)
+
 (define (make-articles-page heading articles more title here)
   (apply-boilerplate here title
-			  
-   (span (h3 heading)
-         (map (lambda (art)
-		(if art
-		    (p (div (class= "title")
-			    (article-title-element art here))
-		       (if (not (null? (article-authors art)))
-			   (div (class= "authors")
-				(maybe-with-period
-				 (andify
-				  (article-authors art))))
-			   (div))
+                     (span (h3 heading)
+                           (map (lambda (art)
+                                  (if art
+                                      (p (div (class= "title")
+                                              (article-title-element art here))
+                                         (if (not (null? (article-authors art)))
+                                             (div (class= "authors")
+                                                  (maybe-with-period
+                                                   (andify
+                                                    (article-authors art))))
+                                             (div))
 
-		       ;; One line with several things
-		       (div (class= "accesslinks") ;make smaller
-			    (article-citation art)
-			    (if (prepared? art)
-				(list " | "
-				      (article-pdf-link art here)
-				      ;; " | " (article-stable-link art here)
-				      )
-				'())
-			    (let ((doi-url (article-doi-url art)))
-			      (if doi-url
-				  (list " | "
-					(a (href= doi-url) "At Hindawi: " doi-url))
-				  '()))))
-		    (div)))
-              articles)
-	 more)))
+                                         (let ((doi-url (article-doi-url art))
+                                               (bhl-url (article-bhl-url art))
+                                               (cec-land (path-to-landing-page art))
+                                               (cec-pdf (article-cec-pdf-url art here)))
+                                           ;; One line with several things
+                                           (if (not (or doi-url bhl-url cec-land cec-pdf))
+                                               (begin
+                                                 (write `(missing article ,(article-title art)))
+                                                 (newline)))
+                                           (div (class= "accesslinks") ;make smaller
+                                                (article-reference art) ;Psyche n:n-n,yyyy
+                                                (if doi-url
+                                                    (list " | "
+                                                          (a (href= doi-url) "At Hindawi"))
+                                                    '())
+                                                (if bhl-url
+                                                    (list " | "
+                                                          (a (href= bhl-url) "At BHL"))
+                                                    '())
+                                                (let ()
+                                                  (if (or cec-land cec-pdf)
+                                                      (list " | "
+                                                            (if cec-land
+                                                                (a (rlink cec-land here) "At CEC")
+                                                                '())
+                                                            (if (and cec-land cec-pdf)
+                                                                " "
+                                                                '())
+                                                            (if cec-pdf
+                                                                (a (href= cec-pdf) " (PDF)")
+                                                                '()))
+                                                      '())))))
+                                      (div)))
+                                articles)
+                           more)))
 
 (define (prepared? article)
   (let ((prepared (get-volume-scans (article-volume article))))
@@ -627,14 +686,7 @@
 
 (define (article-title-element art here)
   ;; title
-  (if (prepared? art)
-      (a (class= "title")
-         (let ((path (path-to-article art)))
-           (if path
-               (rlink path here)
-               '()))
-	 (maybe-with-period (article-title art)))
-      (maybe-with-period (article-title art))))
+  (strong (maybe-with-period (article-title art))))
 
 (define (article-title-string art)
   (remove-markup (article-title art)))
@@ -664,18 +716,9 @@
         ((not x) "")
         (else (list x "."))))
 
-(define (article-pdf-link art here)
-  (if (article-stem art)
-      (a (href= (article-pdf-url art here))
-         ;; TBD: pdf file size
-         "At CEC"
-         (let ((size (table-ref pdf-file-sizes (article-stem art))))
-           (if size
-               (list ", " size "K")
-               '())))
-      '()))
+; Relative URL for CEC PDF.  #f if none.
 
-(define (article-pdf-url art here)
+(define (article-cec-pdf-url art here)
   (if (article-stem art)
       (let* ((volnum (number->string (article-volume art)))
              (path (cons volnum
@@ -683,18 +726,7 @@
                                         ".pdf"))))
         (string-append articles-root
                        (path->string path)))
-      "data:,no go"))
-
-(define (article-stable-link art here)
-  ;;(a (rlink (path-to-article art) here) "Permalink")
-  (let* ((volnum (number->string (article-volume art)))
-	 (path (cons volnum
-		     (string-append (article-stem art)
-				    ".html"))))
-    (span (class= "contentlink")
-	  (a (href= (string-append "http://psyche.entclub.org/"
-				   (path->string path)))
-	     "Stable URL"))))
+      #f))
 
 ; The thing that comes after the ':' in a citation
 (define (article-page-range art)
@@ -715,9 +747,13 @@
 ;        ((symbol? x) (symbol->string x))
 ;        (else x)))
 
-(define (article-citation art)
+(define (article-reference art)
   (span (class= "citation")
-	(i "Psyche ") (strong (article-volume art)) ":"
+	(i "Psyche ") (strong (article-volume art))
+        (if (and (article-issue art)
+                 (> (string-length (article-issue art)) 0))
+            (list "(" (article-issue art) ")"))
+        ":"
 	(article-page-range art)
 	", " (article-year art)))
 
@@ -725,6 +761,7 @@
   (lambda (art)
     `(article ,(article-stem art))))
 
+; URI reference to target page relative to here.
 ; Path ("a" "b" . "c") == "a/b/c"
 ; Path ("a" "b") == "a/b/"
 
@@ -767,6 +804,7 @@
 	  (hlink (type= "text/css")
                  (rel= "stylesheet")
                  (rlink "style.css" here))
+          (meta (charset= "utf-8"))
 	  meta-elements)
    (body
     (table
@@ -983,6 +1021,7 @@
 					    (list (- (cadr foo) 1) '?)))
 			       #f	;issue is unknown
 			       id
+                               #f    ;DOI
 			       '()))
 		(else #f))
 	  #f))))
@@ -1166,6 +1205,7 @@
                                               #f)
                                           issue
                                           (id-from-stem stem page)
+                                          doi
                                           comments))
                           t-a-p))
                  taps

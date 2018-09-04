@@ -162,7 +162,7 @@ def load_dois(dictified, path):
                 probe = index_by_vip.get((volume, issue, first_page))
                 if probe != None:
                     if probe.get('Q') != None:
-                        print 'last page mismatch: %s %s %s' \
+                        print 'last page mismatch: us %s Hindawi %s %s' \
                             % (page_range_key(probe), last_page, doi)
                         proclaim(probe, '#', ' Hindawi has last page = %s' % last_page)
                     else:
@@ -493,6 +493,12 @@ def write_toc(dictified, ambiguous_dois, path):
                 not 'Exchange Column' in t and
                 not 'index to ' in t.lower()):
                 writer.writerow([d['V'], d['I'], d['P'], get_last_page(d), t, ';'.join(authors(d))])
+    with open(os.path.join(path, 'toc.csv'), 'w') as outfile:
+        writer = csv.writer(outfile)
+        writer.writerow(['volume', 'issue', 'first page', 'last page', 'title', 'authors', 'doi'])
+        for d in dictified:
+            t = d.get('T','')
+            writer.writerow([d.get('V'), d.get('I'), d.get('P'), get_last_page(d), t, ';'.join(authors(d)), d.get('D')])
 
 def authors(d):
     a = []

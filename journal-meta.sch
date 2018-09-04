@@ -128,7 +128,7 @@
 		     ($lpage last)
 		     '())))
 	 '())
-     (let ((path (path-to-article article)))
+     (let ((path (path-to-landing-page article)))
        (if path
            ($self-uri ($xlink:href= (string-append "http://psyche.entclub.org/"
                                                    (path->string path))))
