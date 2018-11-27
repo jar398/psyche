@@ -24,6 +24,13 @@ Y	1876
 V	2
 # Present Ant Room and Swain, complete.
 
+I	35-36
+P	17
+Q	19
+T	Experiments on the Vitality of Insects
+A	A. S. Packard, Jr.
+# Hindawi error in title and author
+
 I	45-46
 Y	1878
 
@@ -2513,7 +2520,7 @@ P	45
 Q	50
 
 S	21-050
-T	Sitowski&apos;s New Aberration of <i>Colias hyale</i> L
+T	Sitowski&apos;s New Aberration of <i>Colias hyale</i> L.
 A	P. W. Whiting
 P	50
 
@@ -3108,7 +3115,7 @@ P	198
 Q	203
 
 S	22-203
-T	A New Bog-Inhabiting Variety of <i>Formica fusca</i> L
+T	A New Bog-Inhabiting Variety of <i>Formica fusca</i> L.
 A	William Morton Wheeler
 P	203
 
@@ -5011,7 +5018,7 @@ P	74
 
 S	30-077
 T	New Saw-flies, Hymenoptera, from Oregon
-A	A. D MacGillivray
+A	A. D. MacGillivray
 P	77
 
 S	30-082
@@ -8722,7 +8729,7 @@ V	50
 I	1-2
 
 S	50-001
-T	The Corpus Allatum of the Sheep Ked, <i>Melophagus ovinus</i> L
+T	The Corpus Allatum of the Sheep Ked, <i>Melophagus ovinus</i> L.
 A	M. F. Day
 P	1
 
@@ -9498,7 +9505,7 @@ Q	69
 
 S	56-069
 T	A Correction
-A	W. L Brown, Jr.
+A	W. L. Brown, Jr.
 P	69
 
 S	56-070
@@ -10120,7 +10127,7 @@ I	2
 
 S	60-041
 T	Tabanidae from the State of Chiapas, Mexico, with Descriptions of Two New Species (Diptera)
-A	G. B Fairchild
+A	G. B. Fairchild
 P	41
 Q	51
 
@@ -13911,7 +13918,7 @@ P	304
 
 S	83-310
 T	Life History and Ecology of <i>Diploperla robusta</i> Stark and Gautin (Plecoptera: Perlodidae)
-A	Diana L Ashley
+A	Diana L. Ashley
 A	Donald C. Tartar
 A	William D. Watkins
 P	310
@@ -14273,7 +14280,7 @@ P	355
 S	85-383
 T	External Sex Brand Morphology of Three Sulphur Butterflies (Lepidoptera: Pieridae)
 A	Richard S. Vetter
-A	Ronald L Rutowski
+A	Ronald L. Rutowski
 P	383
 Q	393
 
@@ -14715,7 +14722,7 @@ A	Philip S. Ward
 P	109
 
 S	88-127
-T	The Ontogeny of <i>Lyssomanes viridis</i> (Walckenaer) (Araneae: Salticidae) on Magnolia grandiflora L
+T	The Ontogeny of <i>Lyssomanes viridis</i> (Walckenaer) (Araneae: Salticidae) on Magnolia grandiflora L.
 A	David B. Richman
 A	Willard H. Whitcomb
 P	127

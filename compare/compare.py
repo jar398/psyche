@@ -88,54 +88,6 @@ def abbreviates(cec, hin):
         return False
   return True
 
-# print 'test1', abbreviates('H. F. Wickham', 'Henry Frederick Wickham')
-
-pattern = re.compile('\W+')
-
-def distill(val):
-  if val:
-    # Not sure about this.
-    val = re.sub(pattern, '', val).lower()
-  return val
-
-def note(record, remark):
-  if 'comment' in record:
-    record['comment'] = record['comment'] + ';' + remark
-  record['comment'] = remark
-
-# Workflow
-
-toc1 = batch.read_batch(sys.argv[1]) # Typically Hindawi
-toc2 = batch.read_batch(sys.argv[2]) # Typically CEC
-
-(matched1, unmatched1) = compare(toc1, toc2)
-(matched2, unmatched2) = compare(toc2, toc1)
-
-# diff all the matched1
-# print all the unmatched2
-
-filtered = [r for r in unmatched2 if not silly(r)]
-print 'silly unmatched records in toc2:', len(unmatched2) - len(filtered)
-print 'good unmatched records in toc2:', len(unmatched2)
-batch.write_batch(filtered,
-                  'in-toc2-but-not-toc1.csv',
-                  ['volume', 'issue', 'start page', 'end page',
-                   'year', 'doi', 'title', 'authors',
-                   'inferred end page', 'comment', 'cec pdf'])
-
-def show_diff(m):
-  (brf, tag, val1, val2) = m
-  if 'title' in tag:
-    print "%-20s %s: \n  Hindawi '%s'\n      CEC '%s'" % m
-  else:
-    print "%-20s %s: Hindawi '%s' vs. '%s' CEC" % m
-
-def trivially_different(val1, val2):
-  d1 = distill(val1)
-  d2 = distill(val2)
-  return (d1 == d2 or
-          key == 'title' and (d1.startswith(d2) or d1.endswith(d2)))
-
 # Fill in information that's missing from record2 with information
 # provided by record1.  Side effecty.
 
@@ -167,37 +119,112 @@ def add_bhl_pages(target, bhl):
         count += 1
   print >>sys.stderr, 'added BHL pages info for %s records' % count
 
+# print 'test1', abbreviates('H. F. Wickham', 'Henry Frederick Wickham')
+
+pattern = re.compile('\W+')
+
+def how_different(val1, val2, key):
+  val1 = val1.lower()
+  val2 = val2.lower()
+  if val1 == val2:
+    return 'case'
+  val1 = val1.replace(' ','')
+  val2 = val2.replace(' ','')
+  if val1 == val2:
+    return 'spacing'
+  val1 = re.sub(pattern, '', val1)
+  val2 = re.sub(pattern, '', val2)
+  if val1 == val2:
+    return 'punctuation'
+  if val1.startswith(val2) or val1.endswith(val2):
+    return 'extends'
+  if val2.startswith(val1) or val2.endswith(val1):
+    return 'shortens'
+  return 'different'
+
+def note(record, remark):
+  if 'comment' in record:
+    record['comment'] = record['comment'] + ';' + remark
+  record['comment'] = remark
+
+def show_diff(m):
+  (record, tag, val1, val2) = m
+  brf = brief(record)
+  if 'title' in tag:
+    print '%-20s %s:' % (brf, tag)
+    print "%9s '%s'" % (name1, val1)
+    print "%9s '%s'" % (name2, val2)
+  else:
+    print "%-20s %s: %s '%s' vs. '%s' %s" % (brf, tag, name1, val1, val2, name2)
+
+# Workflow
+
+toc1 = batch.read_batch(sys.argv[1]) # Typically Hindawi
+toc2 = batch.read_batch(sys.argv[2]) # Typically CEC
+
+name1 = 'Hindawi'
+name2 = 'CEC'
+
+(matched1, unmatched1) = compare(toc1, toc2)
+(matched2, unmatched2) = compare(toc2, toc1)
+
+# diff all the matched1
+# print all the unmatched2
+
+filtered = [r for r in unmatched2 if not silly(r)]
+print 'silly unmatched records in toc2:', len(unmatched2) - len(filtered)
+print 'good unmatched records in toc2:', len(unmatched2)
+extras_path = 'in-toc2-but-not-toc1.csv'
+print >>sys.stderr, 'writing', extras_path
+batch.write_batch(filtered,
+                  extras_path,
+                  ['volume', 'issue', 'start page', 'end page',
+                   'year', 'doi', 'title', 'authors',
+                   'inferred end page', 'comment'])
+
 print
-for key in ['volume', 'year', 'start page', 'end page',
-            'doi', 'issue', 'title', 'authors']:
-  m1 = []
-  m2 = []
-  for (record1, record2) in matched1:
-    val1 = record1.get(key)
-    val2 = record2.get(key)
-    if val1 and val2 and val1 != val2:
-      if not abbreviates(val2, val1):
-        trivially_different(val1, val2)
-        if trivially_different(val1, val2):
-          m1.append((brief(record1), 'case mismatch (%s)' % key, val1, val2))
-        else:
-          m2.append((brief(record1), '%s mismatch' % key, val1, val2))
-          note(record2, '%s mismatch: %s' % (key, val1))
-  if len(m2) > 0:
-    for m in m2:
-      show_diff(m)
-    print
-  if len(m1) > 0:
-    for m in m1:
-      show_diff(m)
-    print
+outpath = 'compare.csv'
+with open(outpath, 'w') as outfile:
+  print >>sys.stderr, 'writing', outpath
+  writer = csv.writer(outfile)
+  writer.writerow(['doi', 'volume', 'issue', 'start page', 'end page', 'key', 'how',
+                   name1.lower(), name2.lower()])
+  for key in ['volume', 'year', 'start page', 'end page',
+              'doi', 'issue', 'title', 'authors']:
+    m1 = []
+    m2 = []
+    for (record1, record2) in matched1:
+      val1 = record1.get(key)
+      val2 = record2.get(key)
+      if val1 and val2 and val1 != val2:
+        if not abbreviates(val2, val1):
+          how = how_different(val1, val2, key)
+          writer.writerow([record1.get('doi'),
+                           record1.get('volume'),
+                           record1.get('issue'),
+                           record1.get('start page'),
+                           record1.get('end page'),
+                           key, how, val1, val2])
+          if how == 'different':
+            m2.append((record1, '%s mismatch' % key, val1, val2))
+            note(record2, '%s mismatch: %s' % (key, val1))
+          else:
+            m1.append((record1, '%s %s' % (key, how), val1, val2))
+    if len(m2) > 0:
+      for m in m2:
+        show_diff(m)
+      print
+    if len(m1) > 0:
+      for m in m1:
+        show_diff(m)
+      print
 
 merged = []
 for record in unmatched1:
-  note(record, "Not at Hindawi")
+  note(record, 'Not at ' + name2)
   merged.append(record)
 for record in unmatched2:
-  note(record, "Not at CEC")
+  note(record, 'Not at ' + name1)
   merged.append(record)
 
 for (record1, record2) in matched1:
