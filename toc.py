@@ -1,12 +1,31 @@
+# -*- coding: utf-8 -*-
+
 # Psyche table of contents tool
 
-#   python toc.py toc.txt master-toc
+#   python toc.py toc.txt dois.csv doi-metadata.csv articles.csv master-toc
+# or
+#   python toc.py toc.txt /dev/null /dev/null articles.csv cec-toc
+
+# An 'object' is an entry from toc.txt, with fields in order
+#  represented as a vector of (key, value).
+# These are processed to become 'records' which are little dictionaries.
 
 # Read, merge, write ?
 
 # toc.txt must end with a blank line
 
-import sys, os, csv
+import sys, os, csv, re
+
+def check_record(record):
+    for (key, value) in record.items():
+        if key == 'object':
+            for (key, value) in value:
+                if not isinstance(value, str):
+                    print "bad value in object", key, value
+        else:
+            if isinstance(value, str) and value.isdigit():
+                print "failed to convert to integer", key, value
+
 
 def read_toc(path):
     all_objects = []
@@ -85,15 +104,16 @@ def infer_end_page(toc):
 
 def dictify(toc):
     # N.b. loses order, and does not include all authors & comments
-    return [dictify_object(obj) for obj in toc]
+    return [object_to_record(obj) for obj in toc]
 
-def dictify_object(obj):
-    d = {verb: value for (verb, value) in obj}
+# Turn a single TOC 'object' into a dictionary.
+def object_to_record(obj):
+    d = {verb: maybe_int(value) for (verb, value) in obj}
     d['object'] = obj
     return d
 
 def proclaim(d, verb, value):
-    d[verb] = value
+    d[verb] = maybe_int(value)
     d['object'].append((verb, value))
 
 def forget(d, verb, value):
@@ -109,87 +129,121 @@ def forget(d, verb, value):
     else:
         print '%s not in obj' % ((verb, value),)
 
-def index_toc(dictified, fun):
+def index_toc(dictified, fun, tag):
     index = {}
     ambiguous = {}
+    sample = []
     for d in dictified:
         key = fun(d)
-        if not key in ambiguous:
+        if key and not key in ambiguous:
             if key in index:
                 del index[key]
                 ambiguous[key] = True
+                sample.append(key)
             else:
                 index[key] = d
-    print 'Ambiguous: %s' % len(ambiguous)
+    print 'Ambiguous by %s: %s %s' % (tag, len(ambiguous), sample[0:2])
     return (index, ambiguous)
 
-def page_range_key(d):
-    return (d.get('V'), d.get('I'), d.get('P'), get_last_page(d))
+# VP
+# Fails with the supplements
+def vp_key(record):
+    return (record.get('V'), record.get('P'))
 
-def get_last_page(d):
-    q = d.get('Q')
+# VIP
+def page_start_key(record):
+    return (record.get('V'), get_issue_key(record), record.get('P'))
+
+# VIPQ
+def page_range_key(record):
+    return (record.get('V'), get_issue_key(record), record.get('P'), get_last_page(record))
+
+# VIPQT
+def record_sort_key(record):
+    return (record.get('V'), get_issue_key(record), record.get('P'), get_last_page(record), record.get('T'))
+
+# returns an integer or None
+def get_last_page(record):
+    q = record.get('Q')
     if q != None: return q
-    return d.get('R')
+    return record.get('R')
 
-def page_start_key(d):
-    return (d.get('V'), d.get('I'), d.get('P'))
+def get_issue_key(record):
+    i = record.get('I')
+    if i == None:
+        return i
+    return issue_key(i)
 
-def vp_key(d):
-    return (d.get('V'), d.get('P'))
+def issue_key(i):
+    if isinstance(i, int):
+        return i
+    else:
+        parts = i.split('-')
+        i = parts[0]
+        if i.isdigit():
+            return int(i)
+        else:
+            return i
 
 def load_dois(dictified, path):
     count = 0
     ambiguous = []
-    (index_by_vipq, vipq_ambiguous) = \
-      index_toc(dictified, page_range_key)
+    # vpiq = volume, index, start page, end page
     (index_by_vip, vip_ambiguous) = \
-      index_toc(dictified, page_start_key)
+      index_toc(dictified, page_start_key, 'vip')
+    (index_by_vipq, vipq_ambiguous) = \
+      index_toc(dictified, page_range_key, 'vipq')
     (index_by_doi, doi_ambiguous) = \
-      index_toc(dictified, lambda d: d.get('D'))
+      index_toc(dictified, lambda d: d.get('D'), 'DOI')
     more = []
     with open(path, 'r') as infile:
         reader = csv.reader(infile)
+        header = reader.next()   # 'volume,issue,start page,end page,doi'
         for (volume, issue, first_page, last_page, doi) in reader:
-            first_page = first_page.lstrip('0')
-            last_page = last_page.lstrip('0')
             if doi in index_by_doi:
                 continue
+            first_page = first_page.lstrip('0')
+            last_page = last_page.lstrip('0')
             if (volume, first_page) in losers:
                 continue
-            probe = index_by_vipq.get((volume, issue, first_page, last_page))
+            vip = (maybe_int(volume),
+                   issue_key(issue),
+                   maybe_int(first_page))
+            vipq = vip + (maybe_int(last_page),)
+            have = index_by_vipq.get(vipq)
 
-            if probe == None and vipq_ambiguous.get(probe) == None:
-                probe = index_by_vip.get((volume, issue, first_page))
-                if probe != None:
-                    if probe.get('Q') != None:
-                        print 'last page mismatch: us %s Hindawi %s %s' \
-                            % (page_range_key(probe), last_page, doi)
-                        proclaim(probe, '#', ' Hindawi has last page = %s' % last_page)
+            if have == None and vipq_ambiguous.get(vipq) == None:
+                have = index_by_vip.get(vip)
+                if have != None:
+                    if have.get('Q') != None:
+                        print '%s last page mismatch: CEC %s, Hindawi %s' \
+                            % (doi, page_range_key(have), last_page)
+                        proclaim(have, '#', ' Hindawi has last page = %s' % last_page)
                     else:
                         # Don't have last page.  Get it from Hindawi's CSV.
-                        proclaim(probe, 'Q', last_page)
-                        proclaim(probe, '#', ' Got last page %s from Hindawi' % last_page)
-            if probe != None:
-                if probe.get('D') == None:
-                    proclaim(probe, 'D', doi)
+                        proclaim(have, 'Q', last_page)
+                        proclaim(have, '#', ' Got last page %s from Hindawi' % last_page)
+            if have != None:
+                if have.get('D') == None:
+                    proclaim(have, 'D', doi)
                     count += 1
-                elif probe['D'] != doi:
-                    print 'wrong DOI: %s %s' % (probe['D'], doi)
-            elif vip_ambiguous.get((volume, issue, first_page)) != None:
+                elif have['D'] != doi:
+                    print 'wrong DOI: %s %s' % (have['D'], doi)
+            elif vip_ambiguous.get(vip) != None:
                 ambiguous.append(doi)
             elif (doi.startswith('10') and 
-                   index_by_vip.get((volume, issue, first_page)) == None):
+                   index_by_vip.get(vip) == None):
                 # Article not in CEC scanned set
-                h = []
-                h.append(('#', ' From Hindawi DOI file'))
-                h.append(('V', volume))
-                h.append(('I', issue))
-                h.append(('P', first_page))
-                h.append(('Q', last_page))
-                h.append(('D', doi))
-                more.append(dictify_object(h))
-    for new_d in more:
-        dictified.append(new_d)
+                have = {'object': []}
+                proclaim(have, '#', ' From Hindawi DOI file')
+                proclaim(have, 'V', volume)
+                proclaim(have, 'I', issue)
+                proclaim(have, 'P', first_page)
+                proclaim(have, 'Q', last_page)
+                proclaim(have, 'D', doi)
+                more.append(have)
+    for new_record in more:
+        dictified.append(new_record)
     print 'added %s dois, added %s articles' % (count, len(more))
     return ambiguous
                 
@@ -198,50 +252,91 @@ losers = [('8', '1'), ('8', '8'), ('8', '13'), ('64', '75')]
 # Get titles and authors
 
 def load_more_dois(dictified, path):
+    (index_by_vip, vip_ambiguous) = \
+      index_toc(dictified, page_start_key, 'vip')
+    (index_by_vipq, vipq_ambiguous) = \
+      index_toc(dictified, page_range_key, 'vipq')
     (index_by_doi, doi_ambiguous) = \
-      index_toc(dictified, lambda d: d.get('D'))
+      index_toc(dictified, lambda d: d.get('D'), 'DOI')
     for doi in doi_ambiguous:
-        print 'ambiguous: %s' % doi
+        print 'Ambiguous DOI: %s' % doi
     rcount = 0
     tcount = 0
     acount = 0
+    more = []
     with open(path, 'r') as infile:
-        reader = csv.reader(infile)
-        for (doi, volume, issue, first_page, last_page, title, authors) in reader:
+        reader = csv.reader(infile)  # doi,volume,issue,start page,end page,title,authors
+        header = reader.next()
+        legend = {key: i for (key, i) in zip(header, range(len(header)))}
+        print legend
+        for record in reader:
+            def getcha(key):
+                probe = legend.get(key)
+                if probe != None:
+                    return record[probe]
+                else:
+                    return ''
+            # (doi, volume, issue, first_page, last_page, title, authors) = record
+            doi = getcha('doi')
+            volume = getcha('volume')
+            issue = getcha('issue')
+            first_page = getcha('start page')
+            last_page = getcha('end page')
+            title = getcha('title')
+            authors = getcha('authors')
+
+            vip = (maybe_int(volume),
+                   issue_key(issue),
+                   maybe_int(first_page))
+            vipq = vip + (maybe_int(last_page),)
+
+            have = index_by_doi.get(doi)
+            if doi in doi_ambiguous: have = None
+            if not have:
+                have = index_by_vip.get(vipq)
+                if vip in vip_ambiguous: have = None
+            if not have:
+                have = index_by_vipq.get(vipq)
+                if vipq in vipq_ambiguous: have = None
+            if not have:
+                have = {'object': []}
+                more.append(have)
             rcount += 1
-            d = index_by_doi.get(doi)
-            if d != None:
-                if d.get('T') == None:
-                    if title == '':
-                        proclaim(d, 'T', 'None')
-                    else:
-                        proclaim(d, 'T', title)
-                        tcount += 1
-                if d.get('A') == None:
-                    if authors == '' or authors == 'None':
-                        proclaim(d, 'A', 'None')
-                    else:
-                        for a in authors.split(';'):
-                            proclaim(d, 'A', a)
-                        acount += 1
-                if d['V'] != volume:
-                    print '** volume mismatch %s:%s %s:%s %s' % \
-                      (d['V'], d['P'], volume, first_page, doi)
-                if d['I'].lower() != issue.lower():
-                    print '** issue mismatch %s(%s):%s %s(%s):%s %s' % \
-                      (d['V'], d['I'], d['P'], volume, issue, first_page, doi)
-                if d.get('P') != first_page:
-                    print '** page mismatch %s:%s %s:%s %s' % \
-                      (d['V'], d.get('P'), volume, first_page, doi)
-            else:
-                print 'no object with this DOI: %s' % doi
+            if have.get('T') == None:
+                if title != '':
+                    proclaim(have, 'T', title)
+                    tcount += 1
+            if have.get('A') == None:
+                if authors != '':
+                    for a in authors.split(';'):
+                        proclaim(have, 'A', a)
+                    acount += 1
+            if have.get('V') == None:
+                proclaim(have, 'V', volume)
+            elif have['V'] != maybe_int(volume):
+                print '** volume mismatch %s:%s %s:%s %s' % \
+                  (have['V'], have['P'], volume, first_page, doi)
+            if have.get('I') == None:
+                proclaim(have, 'I', issue)
+            elif have['I'] != maybe_int(issue):  #.lower()
+                print '** issue mismatch %s(%s):%s %s(%s):%s %s' % \
+                  (have['V'], have['I'], have['P'], volume, issue, first_page, doi)
+            if have.get('P') == None:
+                proclaim(have, 'P', first_page)
+            elif have.get('P') != maybe_int(first_page):
+                print '** start page mismatch %s:%s %s:%s %s' % \
+                  (have['V'], have.get('P'), volume, first_page, doi)
+            if have.get('Q') == None:
+                proclaim(have, 'P', first_page)
+    for new_record in more:
+        dictified.append(new_record)
     print 'added titles to %s articles' % tcount
     print 'added authors to %s articles' % acount
     print '%s author/title records' % rcount
 
 def add_cec_holdings(dictified, path):
     (index_by_vp, vp_ambiguous) = \
-      index_toc(dictified, vp_key)
+      index_toc(dictified, vp_key, 'vp')
     count = 0
     losers = []
     ambiguous_s = []
@@ -270,7 +365,7 @@ def add_cec_holdings(dictified, path):
     print 'added %s CEC holdings' % count
     print '%s listed in %s but missing from TOC' % (len(losers), path)
     print losers[0:10]
-    print 'ambiguous CEC (volume, page): %s' % len(ambiguous_s)
+    print 'ambiguous by CEC volume + page: %s' % len(ambiguous_s)
     print ambiguous_s[0:10]
     count = 0
     for d in dictified:
@@ -281,6 +376,7 @@ def add_cec_holdings(dictified, path):
                 proclaim(d, '#', ' Removed S = %s' % s)
                 count += 1
     print 'Removed %s S fields' % count
+    return dictified
 
 # Assumes dictified is sorted
 
@@ -288,14 +384,14 @@ def infer_years(dictified):
     last_issue = {}    # maps volume to (issue, last_article)
     for d in dictified:
         if 'P' in d:
-            i = issue_number(d)
+            i = get_issue_key(d)
             if i != None:
                 l = last_issue.get(d['V'])
                 if l == None:
                     last_issue[d['V']] = (i, d)
                 else: 
                     (z, last_d) = l
-                    if issue_number(last_d) <= i:
+                    if get_issue_key(last_d) <= i:
                         last_issue[d['V']] = (i, d)
     if False:
         # for debugging
@@ -309,30 +405,20 @@ def infer_years(dictified):
         # If starting a new volume, advance the year
         if d['V'] != volume:
             volume = d['V']
-            y = get_year(d)
-            year = str(y)
+            year = get_year(d)
             # Advice already carried out
             if False:
                 # Number of issues in this volume
                 (z, last_d) = last_issue[d['V']]
                 if z > 6:
-                    q = int(get_last_page(last_d))
+                    q = get_last_page(last_d)
                     print ('v. %s: check for %s near %s and %s near %s' % 
                            (d['V'], y+1, (q / 3), y+2, (2 * q / 3)))
         if 'Y' in d:
             year = d['Y']
         if 'P' in d:
             # usually, just repeat year of previous article
-            proclaim(d, 'Y', year)
-
-def issue_number(d):
-    i = d.get('I')
-    if i != None:
-        if '-' in i:
-            i = i.split('-',1)[1]
-        if i.isdigit():
-            return int(i)
-    return None
+            proclaim(d, 'Y', str(year))
 
 # One year per volume starting with volume 10 in 1903
 
@@ -351,15 +437,11 @@ def get_year(d):
 
 # Reporting
 
-def object_sort_key(d):
-    v = d.get('V')
-    i = d.get('I')
-    if i == None: i = ''
-    if '-' in i:
-        i = i.split('-')[0]
-    p = d.get('P')
-    lp = len(p) if p != None else 0
-    return (len(v), v, len(i), i, lp, p, get_last_page(d), d.get('T'))
+def maybe_int(x):
+    if isinstance(x, str) and x.isdigit():
+        return int(x)
+    else:
+        return x
 
 def field_sort_key(field):
     (verb, value) = field
@@ -381,17 +463,18 @@ def check_continuity(dictified):
     previous_page = None
     previous_d = None
     for d in dictified:
+        check_record(d)
         if d['V'] != previous_volume:
             previous_page = 0
-            previous_issue = None
+            previous_issue = 0
         if 'P' in d:
-            page = int(d['P'])
+            page = d['P']
             qage = get_last_page(d)
+            issue = get_issue_key(d)
             if qage == None:
                 if real_article(d):
                     print '* missing last page %s' % brief(d)
                 continue
-            qage = int(qage)
             if qage < page:
                 print '* backwards page range %s' % brief(d)
                 continue
@@ -403,18 +486,18 @@ def check_continuity(dictified):
                 # Common pattern in e.g. volume 97
                 True
             elif page < previous_page:
-                print '* going backwards: %s -> %s' % (brief(previous_d), brief(d))
-            elif (d.get('I') != previous_issue and
+                print '* going backwards: %s -> %s (%s)' % (previous_page, page, brief(d))
+            elif (issue != previous_issue and
                   page < previous_page + 10):
                 # Allow 10 pages between issues
                 True
             else:
-                print '* gap [%s]: %s -> %s' % \
-                  (page-previous_page-1, brief(previous_d), brief(d))
+                print '* gap: %s -> %s [%s pages]' % \
+                  (brief(previous_d), brief(d), page-previous_page-1)
             previous_page = qage
             previous_d = d
             previous_volume = d['V']
-            previous_issue = d.get('I')
+            previous_issue = issue
         
 def brief(d):
     return '%s(%s):%s-%s' % (d.get('V'), d.get('I'), d.get('P'), get_last_page(d))
@@ -485,7 +568,7 @@ def write_toc(dictified, ambiguous_dois, path):
             outfile.write('%s\n' % doi)
     with open(os.path.join(path, 'no-doi.csv'), 'w') as outfile:
         writer = csv.writer(outfile)
-        writer.writerow(['volume', 'issue', 'first page', 'last page', 'title', 'authors'])
+        writer.writerow(['volume', 'issue', 'start page', 'end page', 'title', 'authors'])
         for d in dictified:
             t = d.get('T','')
             if ('P' in d and not 'D' in d and
@@ -493,12 +576,66 @@ def write_toc(dictified, ambiguous_dois, path):
                 not 'Exchange Column' in t and
                 not 'index to ' in t.lower()):
                 writer.writerow([d['V'], d['I'], d['P'], get_last_page(d), t, ';'.join(authors(d))])
-    with open(os.path.join(path, 'toc.csv'), 'w') as outfile:
+    write_master_csv(dictified, path)
+
+# dictified comes in sorted properly
+
+def write_master_csv(dictified, path):
+    records = []
+    for d in dictified:
+        title = d.get('T','')
+        if d.get('P') == None and title == '': continue
+        # if title == '' and d.get('P') == '':
+        records.append([d.get('V'),
+                        d.get('I'),
+                        d.get('P'),
+                        get_last_page(d),
+                        d.get('Y'), d.get('D'),
+                        demarkupify(title),
+                        ';'.join(map(demarkupify, authors(d)))])
+    with open(os.path.join(path, 'master-toc.csv'), 'w') as outfile:
         writer = csv.writer(outfile)
-        writer.writerow(['volume', 'issue', 'first page', 'last page', 'title', 'authors', 'doi'])
-        for d in dictified:
-            t = d.get('T','')
-            writer.writerow([d.get('V'), d.get('I'), d.get('P'), get_last_page(d), t, ';'.join(authors(d)), d.get('D')])
+        writer.writerow(['volume', 'issue', 'start page', 'end page',
+                         'year', 'doi', 'title', 'authors'])
+        for record in records:
+            writer.writerow(record)
+
+tag_pattern = re.compile('<[a-zA-Z/]+>')
+
+def demarkupify(s):
+    s = re.sub(tag_pattern, '', s, 99)
+
+    # Diacritics and ligatures
+    s = s.replace('&eaigu;', 'é')
+    s = s.replace('&eacute;', 'é')
+    s = s.replace('&euml;', 'ë')
+    s = s.replace('&egrave;', 'è')
+    s = s.replace('&ouml;', 'ö')
+    s = s.replace('&uuml;', 'ü')
+    s = s.replace('&oelig;', 'oe')
+    s = s.replace('&OElig;', 'OE')
+    s = s.replace('&aelig;', 'ae')
+    s = s.replace('&AElig;', 'AE')
+    s = s.replace('&acir;', 'å')
+    s = s.replace('&oacute;', 'ó')
+    s = s.replace('&iacute;', 'í')
+    s = s.replace('&aacute;', 'á')
+    s = s.replace('&aaigu;', 'á')
+    s = s.replace('&atilde;', 'ã')
+    s = s.replace('&uacute;', 'ú')
+    s = s.replace('&auml;', 'ä')
+    s = s.replace('&ocirc;', 'ô')
+
+    # Punctuation
+    s = s.replace('&mdash;', ' - ')
+    s = s.replace('&ndash;', ' - ')
+    s = s.replace('&ldquo;', '"')
+    s = s.replace('&rdquo;', '"')
+    s = s.replace('&amp;', '&')
+    s = s.replace('&apos;', "'")
+    s = s.replace('&lsquo;', "'")
+    s = s.replace('&rsquo;', "'")
+    return s
 
 def authors(d):
     a = []
@@ -507,16 +644,22 @@ def authors(d):
             a.append(value)
     return a
 
-toc = read_toc(sys.argv[1])
+toc_path = sys.argv[1]
+dois_path = sys.argv[2]       # 'dois.csv'
+more_dois_path = sys.argv[3]  # 'doi-metadata.csv'
+articles_path = sys.argv[4]   # 'articles.csv'
+output_dir = sys.argv[5]
+
+toc = read_toc(toc_path)
 infer_volume_and_issue(toc)
 infer_end_page(toc)
-dictified = dictify(toc)
-ambiguous_dois = load_dois(dictified, 'dois.csv')
-load_more_dois(dictified, 'doi-metadata.csv')
-add_cec_holdings(dictified, 'articles.csv')
+records = dictify(toc)
+ambiguous_dois = load_dois(records, dois_path)
+load_more_dois(records, more_dois_path)
+add_cec_holdings(records, articles_path)
 
-dictified = sorted(dictified, key=object_sort_key)
-infer_years(dictified)
-check_continuity(dictified)
-count_things(dictified)
-write_toc(dictified, ambiguous_dois, sys.argv[2])
+records = sorted(records, key=record_sort_key)
+infer_years(records)
+check_continuity(records)
+count_things(records)
+write_toc(records, ambiguous_dois, output_dir)

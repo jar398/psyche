@@ -7,6 +7,9 @@
 ;
 ; Or use the Makefile.
 
+; This is REALLY UGLY CODE, please don't hold me to it
+
+
 (define articles-root "http://psyche.entclub.org/pdf/")
 ;(define text-files-root "/Users/jar/Scratch/Psyche/text/")
 (define text-files-root "text/")    ;; or ../text/
@@ -208,11 +211,13 @@
 ; Returns a URI reference
 
 (define (path-to-landing-page article)
-  (if (article-stem article)
-      (path-in-volume (article-volume article)
-                      (string-append (article-stem article)
-                                     ".html"))
-      #f))
+  (let ((stem (article-stem article)))
+    (if (and stem
+             (table-ref pdf-file-sizes stem))
+        (path-in-volume (article-volume article)
+                        (string-append stem
+                                       ".html"))
+        #f)))
 
 (define (path-in-volume volnum path)
   (cons (number->string volnum) path))
@@ -655,7 +660,7 @@
                                                 (article-reference art) ;Psyche n:n-n,yyyy
                                                 (if doi-url
                                                     (list " | "
-                                                          (a (href= doi-url) "At Hindawi"))
+                                                          (a (href= doi-url) doi-url))
                                                     '())
                                                 (if bhl-url
                                                     (list " | "
@@ -664,14 +669,14 @@
                                                 (let ()
                                                   (if (or cec-land cec-pdf)
                                                       (list " | "
-                                                            (if cec-land
-                                                                (a (rlink cec-land here) "At CEC")
+                                                            (if cec-pdf
+                                                                (a (href= cec-pdf) "At CEC")
                                                                 '())
                                                             (if (and cec-land cec-pdf)
                                                                 " "
                                                                 '())
-                                                            (if cec-pdf
-                                                                (a (href= cec-pdf) " (PDF)")
+                                                            (if cec-land
+                                                                (a (rlink cec-land here) "OCR")
                                                                 '()))
                                                       '())))))
                                       (div)))
@@ -1166,7 +1171,7 @@
                          ((#\D) (loop stem title authors year page qage issue
                                       arg
                                       comments))
-                         ((#\#) (loop stem title authors year page qage issue doi
+                         ((#\# #\B) (loop stem title authors year page qage issue doi
                                       (cons line comments)))
                          (else (display volume)
                                (display ":")

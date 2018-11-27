@@ -3,7 +3,9 @@ SCHEME48=/usr/local/bin/scheme48 -h 60000000
 SCHEME_FILES=bhl/first-pages.sch build-web-site.sch articles.sch journal-meta.sch \
     pdf-file-sizes.sch dois.sch
 RESOURCE_FILES=seal150.png style.css robots.txt
-TOC_FILE=toc/processed-toc.txt
+OLD_TOC_FILE=toc/processed-toc.txt
+NEW_TOC_FILE=compare/merged-toc.txt
+TOC_FILE=$(NEW_TOC_FILE)
 
 # Where to put the derived files.
 BUILD_DIR=build
@@ -30,10 +32,12 @@ $(BUILD_DIR)/103/toc.html: $(SCHEME_FILES) $(TOC_FILE)
 THEREHOST=norbert.csail.mit.edu
 THEREDIR=/raid/www/roots/psyche
 
-toc: $(TOC_FILE)
+toc: $(OLD_TOC_FILE)
 
-toc/processed-toc.txt: toc.txt dois.csv
+$(OLD_TOC_FILE): toc.txt dois.csv
 	python toc.py toc.txt toc
+
+# For new toc file, see compare/Makefile
 
 bhl/first-pages.sch: bhl/first-pages.py
 	python bhl/first-pages.py
