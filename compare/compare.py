@@ -59,8 +59,8 @@ def compare(toc1, toc2):
     else:
       # Skip silly records
       unmatched.append(record)
-  print 'matches:', len(matched)
-  print 'unmatched:', len(unmatched)
+  print >>sys.stderr, 'matches:', len(matched)
+  print >>sys.stderr, 'unmatched:', len(unmatched)
   return (matched, unmatched)
 
 def brief(r):
@@ -145,17 +145,20 @@ def how_different(val1, val2, key):
 def note(record, remark):
   if 'comment' in record:
     record['comment'] = record['comment'] + ';' + remark
-  record['comment'] = remark
+  else:
+    record['comment'] = remark
 
 def show_diff(m):
-  (record, tag, val1, val2) = m
+  (record, record2, tag, val1, val2) = m
   brf = brief(record)
+  foo = ' '
+  if 'Verified' in record2.get('comment', ''): foo = '*'
   if 'title' in tag:
-    print '%-20s %s:' % (brf, tag)
+    print '%-18s %s%s:' % (brf, foo, tag)
     print "%9s '%s'" % (name1, val1)
     print "%9s '%s'" % (name2, val2)
   else:
-    print "%-20s %s: %s '%s' vs. '%s' %s" % (brf, tag, name1, val1, val2, name2)
+    print "%-20s %s%s: %s '%s' vs. '%s' %s" % (brf, foo, tag, name1, val1, val2, name2)
 
 # Workflow
 
@@ -171,16 +174,17 @@ name2 = 'CEC'
 # diff all the matched1
 # print all the unmatched2
 
-filtered = [r for r in unmatched2 if not silly(r)]
-print 'silly unmatched records in toc2:', len(unmatched2) - len(filtered)
-print 'good unmatched records in toc2:', len(unmatched2)
-extras_path = 'in-toc2-but-not-toc1.csv'
+good_records = [r for r in unmatched2 if not silly(r)]
+print >>sys.stderr, 'nontrivial unmatched records in %s: %s' % (name2, len(good_records))
+extras_path = 'in-%s-but-not-%s.csv' % (name2, name1)
 print >>sys.stderr, 'writing', extras_path
-batch.write_batch(filtered,
+batch.write_batch(good_records,
                   extras_path,
                   ['volume', 'issue', 'start page', 'end page',
                    'year', 'doi', 'title', 'authors',
                    'inferred end page', 'comment'])
+
+# Report on differences
 
 print
 outpath = 'compare.csv'
@@ -188,28 +192,35 @@ with open(outpath, 'w') as outfile:
   print >>sys.stderr, 'writing', outpath
   writer = csv.writer(outfile)
   writer.writerow(['doi', 'volume', 'issue', 'start page', 'end page', 'key', 'how',
-                   name1.lower(), name2.lower()])
+                   name1.lower(), name2.lower(), 'checked'])
   for key in ['volume', 'year', 'start page', 'end page',
               'doi', 'issue', 'title', 'authors']:
     m1 = []
     m2 = []
-    for (record1, record2) in matched1:
+    for (record2, record1) in matched2:
       val1 = record1.get(key)
       val2 = record2.get(key)
       if val1 and val2 and val1 != val2:
         if not abbreviates(val2, val1):
           how = how_different(val1, val2, key)
+          if 'Verified' in record2.get('comment', ''):
+            for comment in record2.get('comment', '').split(';'):
+              if 'Verified' in comment:
+                checked = comment
+                break
+          else:
+            checked = ''
           writer.writerow([record1.get('doi'),
                            record1.get('volume'),
                            record1.get('issue'),
                            record1.get('start page'),
                            record1.get('end page'),
-                           key, how, val1, val2])
+                           key, how, val1, val2, checked])
           if how == 'different':
-            m2.append((record1, '%s mismatch' % key, val1, val2))
+            m2.append((record1, record2, '%s mismatch' % key, val1, val2))
             note(record2, '%s mismatch: %s' % (key, val1))
           else:
-            m1.append((record1, '%s %s' % (key, how), val1, val2))
+            m1.append((record1, record2, '%s %s' % (key, how), val1, val2))
     if len(m2) > 0:
       for m in m2:
         show_diff(m)
@@ -221,13 +232,16 @@ with open(outpath, 'w') as outfile:
 
 merged = []
 for record in unmatched1:
-  note(record, 'Not at ' + name2)
+  # Metadata from Hindawi, none from CEC
+  note(record, 'Metadata from %s' % name1)
   merged.append(record)
 for record in unmatched2:
-  note(record, 'Not at ' + name1)
+  # Metadata from CEC, none from Hindawi
+  if not silly(record):
+    note(record, 'No %s metadata' % name1)
   merged.append(record)
 
-for (record1, record2) in matched1:
+for (record2, record1) in matched2:
   merged.append(improve(record2, record1))
 
 add_holdings_info(merged, batch.read_batch('cec-pdf-list.csv'))

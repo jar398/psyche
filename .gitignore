@@ -6,3 +6,5 @@ bhl-pages-*
 bhl/pageimage/
 bhl/article/
 *.tmp
+*.pyc
+.out
