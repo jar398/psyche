@@ -232,40 +232,40 @@ T	Description of the bot-fly of the cotton-tail rabbit in New Mexico, Cuterebra 
 A	C. H. Tyler Townsend
 # Not supplement
 
-S	8-010
 P	10
 Q	10
 T	Some facts in the life-history of <i>Hypopta bertholdi</i> Grote
 A	J. J. Rivers
 # Verified: Hindawi error, has it ending on 11, should be 10 (combined two articles)
+# Not in CEC set
 
-S	8-010a
 # Second article on page 10
 P	10
 Q	11
 T	Description of the larva of <i>Hypopta bertholdi</i>
 A	Harrison G. Dyar
 # Verified: Hindawi error, title OCR
+# Not in CEC set
 
 # Three articles on one page
-S	8-011
 P	11
 Q	11
 T	Notes on eggs of <i>Stagmomantis carolina</i>
 A	Samuel H. Scudder
+# Not in CEC set
 
 # Three articles on one page
-S	8-011a
 P	11
 Q	11
 T	<i>Leucania unipuncta</i>
 A	Caroline G. Soule
+# Not in CEC set
 
-S	8-012
 P	12
 Q	12
 T	Proceedings of the [Cambridge Entomological] Club
 # TOC has long form, article has short form
+# Not in CEC set (but page 13 is)
 
 I	250
 # Issues 250-262 are present in the Ant Room collection (and Hindawi)
@@ -844,7 +844,9 @@ V	10
 V	11
 # Ant room set is complete.
 # These are photocopies in the ant room set: 1 3 4 5
-# Entire volume missing from Swain
+# Entire volume missing from Swain; on a sheet of paper that came with
+# the set, there is a note "All extra copies burned (by editor) due to
+furor over missing author's name"
 
 V	12
 # Ant room set is complete.
@@ -853,7 +855,7 @@ V	12
 
 V	13
 # 2-3 4 missing from Ant Room; present only BHL
-# Entire volume missing from Swain
+# Entire volume missing from Swain. "Given away at AAAS meeting"
 
 I	2-3
 # Got 13(2-3) TOC from BHL
@@ -963,6 +965,7 @@ A	L. W. Swett
 P	103
 Q	103
 B	11809633
+# Missing from Hindawi's DOI list.
 
 # Review of ...
 T	Recent entomological literature
@@ -1036,6 +1039,7 @@ Q	123
 
 
 V	15
+# Swain set: "Copies locked in director's office and subsequently lost"
 
 I	5
 # TOC is complete (from BHL)
@@ -1099,6 +1103,7 @@ P	122
 Q	124
 
 V	16
+# Swain set: "Copies locked in director's office and subsequently lost"
 
 I	4
 # http://www.biodiversitylibrary.org/item/43796#page/93/mode/1up
@@ -1538,55 +1543,46 @@ P	258
 Q	258
 
 
-# Missing Ant Room, present Swain: issues 1, 2, 4, 5, 6
+# Missing from Ant Room / CEC, present Swain: issues 1, 2, 4, 5, 6
 # Double Swain check issue 3
 # TOC from May Library ?
 V	18
 I	1
 
-S	18-001
 T	On the Homologies and Mechanism of the Mouth-parts of Hemiptera
 A	F. Muir
 A	J. C. Kershaw
 P	1
 
-S	18-013
 T	A Note on the Hunting Habits of an American Ammophila
 A	C. H. Turner
 P	13
 
-S	18-015
 T	New Neotropical Ploearinae
 A	E. Bergroth
 P	15
 
-S	18-021
 T	Notes on Some Genera of Ophioniae with Toothed Femora
 A	C. T. Brues
 P	21
 
-S	18-027
 T	Notes on the Guests of Some Californian Ants
 A	W. M. Mann
 P	27
 
-S	18-032
 T	Western Lepidoptera IV
 A	C. R. Coolidge
 P	32
 
-S	18-034
 T	Additions to List of Sphingidae of America North of Mexico
 A	Wm. Barnes
 A	J. J. McDunnough
 P	34
 
-S	18-035
 T	Some Carabidae Taken in Connecticut
 A	A. B. Champlain
 P	35
 
-S	18-037
 T	New Predaceous and Parasitic Acarina
 A	H. E. Ewing
 P	37
@@ -1596,50 +1592,41 @@ Q	43
 V	18
 I	2
 
-S	18-045
 T	A Revision of the North American Species of the Dipterous Genus Hydrophorus
 A	J. M. Aldrich
 P	45
 
-S	18-070
 T	The Dipterous Genus Diostracus Loew
 A	J. M. Aldrich
 P	70
 
-S	18-073
 T	Notes on the Dipterous Genera Proposed by Billberg in his Enumeratio Insectorum
 A	C. W. Johnson
 P	73
 
-S	18-074
 T	Another Imported Clover Weevil
 A	E. G. Titus
 P	74
 
-S	18-075
 T	On the Later Embryological Stages of the Head of <i>Pristhesancus papuensis</i>
 A	F. Muir
 A	J. C. Kershaw
 P	75
 
-S	18-080
 T	The Food Habits of Megarhinus
 A	Frederick Knab
 P	80
 
-S	18-082
 T	Stridulation of the Shield-backed Grasshoppers of the Genera Neduba and Aglaothorax
 A	C. Pemberton
 P	82
 
-S	18-085
 T	A New Species of Lasioptera with Observations on Certain Homologies
 A	E. P. Felt
 P	84
 Q	86
 D	10.1155/1911/376039
 
-S	18-087
 T	Two New Species of Holcaspis from Mexico
 A	William Beutenmuller
 P	86
@@ -1647,14 +1634,12 @@ Q	87
 D	10.1155/1911/481061
 # Plate (with blank reverse) between page 88 and page 89 goes with Beutenmuller article
 
-S	18-089
 T	Notes on some genera of Blattid&aelig;
 A	A. N. Caudell
 P	88
 Q	89
 # Plate (with blank reverse) between page 88 and page 89 goes with Beutenmuller article
 
-S	18-090
 T	<i>Lucilia sericata</i> as a Household Pest
 A	A. P. Morse
 P	89
@@ -1665,43 +1650,35 @@ D	10.1155/1911/525147
 V	18
 I	3
 
-S	18-093
 T	Two Fungus-Growing Ants from Arizona
 A	W. M. Wheeler
 P	93
 
-S	18-102
 T	On Some Northwestern Ants and Their Guests
 A	W. M. Mann
 P	102
 
-S	18-110
 T	A New Slave-Making Ant from Japan
 A	M. Yano
 P	110
 
-S	18-112
 T	On <i>Melanetaerius infernalis</i> Fall
 A	W. M. Wheeler
 P	112
 
-S	18-114
 T	The Sound-Making of Diptera and Hymenoptera
 A	C. E. Pemberton
 P	114
 # Verified: Hindawi error, author OCR
 
-S	18-118
 T	The Stridulations of Two Interesting Locustidae
 A	H. A. Allard
 P	118
 
-S	18-120
 T	Another Aquatic Caterpillar
 A	W. T. M. Forbes
 P	120
 
-S	18-121
 T	A few Suggestions on the Care of the Eggs and the Rearing of the Walking-stick, <i>Diapheromera femorata</i> Say
 A	H. H. P. Severin
 A	H. C. Severin
@@ -1712,33 +1689,27 @@ Q	123
 V	18
 I	4
 
-S	18-125
 T	The Philippine Mosquitoes
 A	C. S. Ludlow
 P	125
 
-S	18-134
 T	A List of the Bees of the Genus <i>Perdita</i> Smith
 A	T. D. A. Cockerell
 P	134
 
-S	18-144
 T	A New Genus of Reduviidae
 A	E. Bergroth
 P	144
 
-S	18-146
 T	Hosts of Insect Egg-Parasites in North and South America
 A	A. Ars&egrave;ne Girault 
 P	146 
 Q	153
 
-S	18-153
 T	Two New Names of Sphecoid Wasps 
 A	S. A. Rohwer
 P	153
 
-S	18-155
 # TOC has wrong page number
 T	Book Review: Howard's "The House Fly"
 A	C. T. Brues
@@ -1749,37 +1720,30 @@ Q	156
 V	18
 I	5
 
-S	18-157
 T	On Certain <i>Olene</i> Species
 A	William Barnes
 A	J. McDunnough
 P	157
 
-S	18-159
 T	Daniel William Coquillett
 P	159
 
-S	18-160
 T	<i>Tipula fallax</i> and Others
 A	R. W. Doane
 P	160
 
-S	18-166
 T	Pseudoscorpions in Ant Nests
 A	W. M. Wheeler
 P	166
 
-S	18-168
 T	Fluffy Cecropia Cocoons
 A	P. Rau
 P	168
 
-S	18-170
 T	Notes on Coleoptera from Connecticut
 A	A. B. Champlain
 P	170
 
-S	18-173
 T	Notes on a Sarcophagid Found in a Turtle
 A	T. L. Patterson
 P	173
@@ -1789,37 +1753,30 @@ Q	174
 V	18
 I	6
 
-S	18-175
 T	Samuel Hubbard Scudder
 A	J. S. Kingsley
 P	175
 
-S	18-179
 T	Doctor Scudder's Work on the Lepidoptera
 A	William L. W. Field
 P	179
 
-S	18-181
 T	Scudder's Work on Fossil Insects
 A	T. D. A. Cockerell
 P	181
 
-S	18-187
 T	The Orthopterological Work of Mr. S. H. Scudder, with Personal Reminiscences
 A	Albert P. Morse
 P	187
 
-S	18-192
 T	Synonymical, and Other Notes on the Tipulidae (Diptera)
 A	Charles P. Alexander
 P	192
 
-S	18-203
 T	Three New Ants from Mexico and Central America
 A	William Morton Wheeler
 P	203
 
-S	18-209
 T	Book Review: <i>The Reduction of Domestic Mosquitoes</i> by Edward H. Ross
 A	R. W. Glaser
 P	209
@@ -2124,7 +2081,7 @@ V	19
 I	6
 
 S	19-162
-# PDF file is misnamed
+# CEC PDF file is misnamed (19-162, should be 19-163)
 T	New Nearctic Tipulidae
 A	C. P. Alexander
 P	163
@@ -3347,6 +3304,7 @@ A	C. W. Johnson
 P	81
 Q	81
 D	no DOI yet
+B	16318315
 # setting DOI field to overcome bug in analysis software
 
 S	23-081
@@ -3799,7 +3757,6 @@ T	Exchange Column
 P	197
 Q	198
 
-# Flush
 S	24-index
 # Q based on scanned page count ?
 T	Index to Volume XXIV
@@ -4475,7 +4432,6 @@ T	Hemiptera Collected in Western New England, Chiefly from Mountains
 A	H. M. Parshley
 P	139
 
-S	27-144
 # Missing from CEC scans, present in Hindawi
 T	A New Genus in the Chilopod Family Megistocephalid&aelig;
 A	R. V. Chamberlin
@@ -4943,6 +4899,7 @@ T	Pictorial Key to Anisopteran Nymphs or Larvae (chart 17x22 inches)
 A	R. Heber Howe, Jr.
 P	1
 Q	1
+# Missing from both BHL and Hindawi, as far as I can tell. CEC has it
 
 
 V	30
@@ -5329,7 +5286,7 @@ V	31
 I	5
 
 S	31-176
-# PDF file is misnamed
+# PDF file is misnamed (should be 31-175)
 T	Biological Notes on <i>Lethocerus americanus</i> (Leidy)
 A	W. E. Hoffman
 P	175
@@ -5443,8 +5400,8 @@ T	Proceedings of the Cambridge Entomological Club
 P	312
 Q	313
 
-S	31-317
 # Q based on scanned page count
+S	31-index
 T	Index
 P	317
 Q	326
@@ -5592,28 +5549,28 @@ Q	194
 V	32
 I	4-5
 
-S	32-195
+# Missing from CEC scans
 T	The External Anatomy of the Head and Abdomen of the Roach, <i>Periplaneta americana</i>
 A	G. C. Crampton
 P	195
 
-S	32-227
+# Missing from CEC scans
 T	The Weight of Vegetation Transported by Tropical Fungus Ants
 A	G. H. Parker
 P	227
 
-S	32-229
+# Missing from CEC scans
 T	The Fossil Fly Eophlebomyia
 A	T. D. A. Cockerell
 P	229
 
-S	32-231
+# Missing from CEC scans
 T	The Insects and Plants of a Strip of New Jersey Coast
 A	H. B. Weiss
 A	Erdman West
 P	231
 
-S	32-244
+# Missing from CEC scans
 T	Notes on Galerucinae in My Collection
 A	F. C. Bowdlitch
 P	244
@@ -5624,7 +5581,7 @@ V	32
 I	6
 
 S	32-266
-# PDF file is misnamed
+# CEC PDF file is misnamed (should be 32-265)
 T	Notes on Hippoboscid&aelig;
 A	J. Bequaert
 P	265
@@ -5647,7 +5604,7 @@ P	285
 Q	290
 
 S	32-291
-# PDF file is misnamed
+# CEC PDF file is misnamed (should be 32-290)
 T	The Second Abdominal Pleurite in the Higher Coleoptera
 A	W. T. M. Forbes
 P	290
@@ -5702,12 +5659,6 @@ T	Proceedings of the Cambridge Entomological Club
 P	319
 Q	320
 
-S	32-323
-T	Index
-P	323
-Q	328
-# Missing ??  Why not flush it entirely.
-
 I	supplement
 
 S	32-folder
@@ -5715,6 +5666,7 @@ P	1
 Q	1
 T	Folder, Pictorial Key to Dragon-fly Larv&aelig;
 A	R. H. Howe
+# Missing from Hindawi and maybe BHL, but CEC has it
 
 
 V	33
@@ -5944,11 +5896,6 @@ S	33-172
 T	Benjamin Pickman Mann
 P	172
 Q	172
-
-S	33-175
-T	Index
-P	175
-Q	181
 
 
 V	34
@@ -7263,7 +7210,6 @@ T	500th Meeting of the Cambridge Entomological Club
 P	194
 Q	195
 
-# Flush
 S	38-index
 T	Index to Volume 38
 P	197
@@ -7400,14 +7346,8 @@ P	79
 # CEC PDF is missing a page
 Q	82
 
-S	39-081
-T	Review of <i>A Monographic Revision of the Twisted Winged Insects Comprising the Order Strepsiptera Kirby,</i> by W. Dwight Pierce
-P	81
-Q	82
-# Verified: Hindawi error, article is missing
-
 S	39-082
-T	A New Culex from Panama (Dipt., Culicidae)
+T	A New Culex, from Panama (Dipt., Culicidae)
 A	W. H. W. Komp
 A	D. P. Curry
 P	82
@@ -7485,7 +7425,6 @@ A	Charles H. Hicks
 P	150
 Q	154
 
-# Flush
 S	39-index
 T	Index to Volume XXXIX
 P	157
@@ -7634,7 +7573,7 @@ A	E. D. Ball
 P	145
 Q	150
 
-S	40-155
+S	40-index
 T	Index
 P	155
 
@@ -7830,7 +7769,7 @@ A	Phil Rau
 P	245
 Q	245
 
-S	41-249
+S	41-index
 T	Index
 P	249
 
@@ -8077,7 +8016,7 @@ A	Nathan Banks
 P	126
 Q	130
 
-S	43-131
+S	43-index
 T	Index
 P	131
 
@@ -8277,7 +8216,6 @@ A	G. C. Crampton
 P	165
 Q	181
 
-# Flush
 S	45-index
 T	Index to Volume 45
 P	183
@@ -8323,6 +8261,7 @@ P	38
 Q	41
 
 V	46
+Y	1939
 I	2-3
 
 S	46-043
@@ -8399,13 +8338,16 @@ P	167
 Q	168
 D	10.1155/1939/63969
 
-# Flush
 S	46-index
 T	Index to Volume 46
 P	169
 
 
 V	47
+# In the CEC scans, volume 47 table of contents AND scans were mostly a 
+# duplicate of volume 46!
+# The envelope had wrong contents!  So 47 is mi
+
 # Hindawi seems to only have issue 1 of volume 47 on its site.
 # Ant Room set had wrong contents in envelope for volume 47,
 # only issue 1 was correct.
@@ -8447,47 +8389,40 @@ A	F. M. Carpenter
 P	44
 Q	44
 
-# Volume 47 table of contents AND scans were mostly a duplicate of volume 46!
-# The envelope had wrong contents!
 # Issue 2-3 is in the Swain/Carpenter set, but not the Ant Room set.
 # TOC from Mayr Library
 V	47
 I	2-3
 
-S	47-045
+# Missing from CEC set?  (see above)
 T	Henry Clinton Fall (1862-1939)
 A	Philip J. Darlington, Jr.
 P	45
+B	50901481
 # Seems to be missing from Hindawi site 2018-11-26
 
-S	47-055
 T	<i>Hilar granditarsis,</i> A Balloon-maker
 A	A. L. Melander
 P	55
 # Seems to be missing from Hindawi site 2018-11-26
 
-S	47-057
 T	A New Species of <i>Haliplus</i>
 A	Edith W. Mank
 P	57
 
-S	47-060
 T	Notes on <i>Epeira pentagona</i> Hentz
 A	Elizabeth B. Bryant
 A	Allan F. Archer
 P	60
 
-S	47-066
 T	On Some Chilopods from Barro Colorado Island
 A	Ralph V. Chamberlin
 P	66
 
-S	47-075
 T	Rare Ponerine Genera in Panama and British Guiana (Hymenoptera: Formicidae)
 A	Neal A. Weber
 P	75
 
-S	47-085
 T	Notes on Hippoboscidae. 14. The Genus Echestypus Speiser
 A	J. Bequaert
 P	85
@@ -8498,36 +8433,31 @@ Q	104
 V	47
 I	4
 
-S	47-105
 T	An Experimental Study on Caste Determination in Ants
 A	Laurence G. Wesson, Jr.
 P	105
 Q	111
+B	50901545
 # Seems to be missing from Hindawi site 2018-11-26
 
-S	47-112
 T	The Histology of the Wing Pads of the Early Instars of <i>Pteronarcys proteus</i> Newport (Plecoptera)
 A	R. P. Holdsworth, Jr.
 P	112
 
-S	47-121
 # Missing from CEC web site.
 # Scanned by Mary Sears.
 T	A Synopsis of the Genus Acerataspis (Hymenoptera, Ichneumonidae)
 A	C. D. Michener
 P	121
 
-S	47-125
 T	The Mathing Habits of the Winter Mecopteron, <i>Boreus brumalis</i> Fitch
 A	G. C. Crampton
 P	125
 
-S	47-129
 T	New Chrysopidae from Australia
 A	Nathan Banks
 P	129
 
-S	47-136
 T	New Species of North American Diplotaxis
 A	M. A. Cazier
 P	136
@@ -8763,7 +8693,6 @@ A	J. Bequaert
 P	108
 Q	117
 
-# Flush
 S	49-index
 T	Index to Volume 49
 P	119
@@ -8885,7 +8814,6 @@ A	C. T. Brues
 P	116
 Q	118
 
-# Flush
 S	50-index
 T	Index to Volume 50
 P	119
@@ -8995,7 +8923,6 @@ A	G. C. Steyskal
 P	183
 Q	184
 
-# Flush
 S	51-index
 T	Index to Volume 51
 P	187
@@ -9078,7 +9005,6 @@ A	V. Nabokov
 P	193
 Q	193
 
-# Flush
 S	52-index
 T	Index to Volume 52
 P	194
@@ -9191,7 +9117,6 @@ A	K. A. Christiansen
 P	89
 Q	89
 
-# Flush
 S	53-index
 T	Index to Volume 53
 P	90
@@ -9347,7 +9272,6 @@ A	N. Banks
 P	266
 Q	291
 
-# Flush
 S	54-index
 T	Index to Volume 54
 P	293
@@ -9634,6 +9558,7 @@ T	A New African Milliped Observed in Migration
 A	R. V. Chamberlin
 P	184
 Q	186
+B	50910090
 # Verified: Hindawi error, in the PDF for previous article
 
 S	56-187
@@ -9643,7 +9568,6 @@ A	C. J. Drake
 P	187
 Q	194
 
-# Flush
 S	56-index
 T	Index to Volume 56
 P	195
@@ -9812,7 +9736,6 @@ A	J. Bequaert
 P	146
 Q	146
 
-# Flush
 S	57-index
 T	Index to Volume 57
 P	147
@@ -9963,7 +9886,6 @@ A	R. M. DeCoursey
 P	158
 Q	158
 
-# Flush
 S	58-index
 T	Index to Volume 58
 P	159
@@ -10117,7 +10039,6 @@ A	Wm. S. Creighton
 P	148
 Q	162
 
-# Flush
 S	59-index
 T	Index to Volume 59
 P	163
@@ -10292,7 +10213,6 @@ A	W. L. Brown, Jr.
 P	160
 Q	166
 
-# Flush
 S	60-index
 T	Index to Volume 60
 P	167
@@ -10400,7 +10320,6 @@ P	162
 Q	162
 # Verified: Hindawi error, has title = 'types'
 
-# Flush
 S	61-index
 T	Index to Volume 61
 P	163
@@ -10590,7 +10509,6 @@ A	J. A. Manter
 P	157
 Q	158
 
-# Flush
 S	62-index
 T	Index to Volume 62
 P	159
@@ -10751,7 +10669,7 @@ T	Index to Authors
 P	147
 Q	148
 
-S	63-148
+S	63-index
 T	Index to Subjects
 P	148
 
@@ -10899,7 +10817,7 @@ T	Index to authors
 P	149
 Q	150
 
-S	64-151
+S	64-index
 T	Index to Subjects
 P	151
 Q	152
@@ -10978,11 +10896,11 @@ A	Phillip A. Adams
 P	115
 Q	127
 
-S	65-131
+S	65-index
 T	Index to Authors
 P	131
 
-S	65-133
+S	65-index
 T	Index to Subjects
 P	133
 Q	133
@@ -11065,7 +10983,7 @@ A	M. Pavan
 P	70
 Q	76
 
-S	66-079
+S	66-index
 T	Author and Subject Index for Volume 66
 P	79
 
@@ -11153,7 +11071,7 @@ A	P. J. Darlington, Jr.
 P	111
 Q	126
 
-S	67-129
+S	67-index
 T	Author and Subject Index for Volume 67
 P	129
 
@@ -11379,7 +11297,7 @@ A	J. W. Abalos
 P	268
 Q	270
 
-S	69-271
+S	69-index
 T	Author and Subject Index for Volume 69
 P	271
 
@@ -11545,7 +11463,7 @@ A	F. M. Carpenter
 P	240
 Q	256
 
-S	70-259
+S	70-index
 T	Author and Subject Index for Volume 70
 P	259
 
@@ -11695,7 +11613,7 @@ A	Louis M. Roth
 P	198
 Q	243
 
-S	71-245
+S	71-index
 T	Author and Subject Index for Volume 71
 P	245
 
@@ -11813,29 +11731,27 @@ S	72-191
 T	A Redefinition of <i>Ischyropalpus,</i> and Six New Species (Coleoptera: Anthicidae)
 A	Floyd G. Werner
 P	191
+B	50935612
 # Seems to be missing from Hindawi site 2018-11-26
 
-S	72-210
+# Missing from CEC scans
 T	Notes on Neotropical Tabanidae VI. A New Species of <i>Lefiselaga</i> Macq. with Remarks on Related Genera
 A	G. B. Fairchild
 P	210
 
-S	72-218
 T	Self-Burying Behavior in the Genus <i>Sicarius</i> (Araneae, Sicariidae)
 A	Jonathan Reiskind
 P	218
+# Not in CEC set
 
-S	72-225
 T	Second African Species of the Dacetine Ant Genus <i>Codiomyrmex</i>
 A	Robert W. Taylor
 P	225
 
-S	72-229
 T	Five New Species of the Genus <i>Tmarus</i> (Araneae, Thomisidae) from the West Indies
 A	Arthur M. Chickering
 P	229
 
-S	72-241
 T	A Key to the North American <i>Statira</i> (Coleoptera: Lagriidae)
 A	Carl T. Parsons
 P	241
@@ -11896,7 +11812,7 @@ A	Guy L. Bush
 P	307
 Q	323
 
-S	72-325
+S	72-index
 T	Author and Subject Index for Volume 72
 P	325
 Q	329
@@ -12059,7 +11975,6 @@ A	Thomas C. Barr, Jr.
 P	284
 Q	287
 
-# Flush
 S	73-index
 T	Author and Subject Index to Volume 73
 P	289
@@ -12251,7 +12166,6 @@ A	Ellis G. MacLeod
 P	342
 Q	352
 
-# Flush
 S	74-index
 T	Author and Subject Index to Volume 74
 P	353
@@ -12615,7 +12529,6 @@ A	Olga Turner
 P	487
 Q	501
 
-# Flush
 S	76-index
 T	Author and Subject Index to Volume 7
 P	505
@@ -12818,55 +12731,46 @@ A	Arthur M. Chickering
 P	487
 Q	512
 
-# Flush
 S	77-index
 T	Index to Volume 77
 P	515
 
 
-# Missing from ant room set: v 78 issues 1 2
+# Missing from ant room / CEC set: v 78 issues 1 2
 # TOC obtained from Mayr Library
 V	78
 I	1-2
 
-S	78-001
 T	The Reproductive Pattern of <i>Diponera grandis</i> Roger (Hymenoptera, Ponerinae) with Notes on the Ethology of the Species
 A	Caryl P. Haskins
 A	Paul A. Zahl
 P	1
 
-S	78-012
 T	Fine Structure of the Thread Connections in the Orb Web of <i>Araneus diadematus</i>
 A	Robert R. Jackson
 P	12
 
-S	78-032
 T	<i>Micratopus</i> Casey in the United States (Coleoptera: Carabidae: Bembidiinae)
 A	Thomas C. Burr, Jr.
 P	32
 
-S	78-038
 T	Colonization of the Northeastern United States by Two Palearctic Moths (Lepidoptera: Tortricidae)
 A	Jerry A. Powell
 A	John M. Burns
 P	38
 
-S	78-049
 T	A New Scenopinidae (Diptera) from Bermuda
 A	L. P. Kelsey
 P	49
 
-S	78-051
 T	Differentiation of the Carabid Antenna Cleaner
 A	T. F. Hlavac
 P	51
 
-S	78-067
 T	Notes on the Phasmatodea of the West Indies: Two New Genera
 A	Carl Farr Moxey
 P	67
 
-S	78-084
 T	The Male Genitalia of Blattaria. VI. Blaberidae: Oxyhaloinae
 A	Louis M. Roth
 P	84
@@ -12971,7 +12875,6 @@ A	Ruth L. Willey
 P	330
 Q	349
 
-# Flush
 S	78-index
 T	Index to Volume 78
 P	351
@@ -13164,7 +13067,7 @@ P	365
 # Q inferred
 Q	378
 
-S	79-379
+S	79-index
 T	Author and Subject Index for Volume 79
 P	379
 
@@ -13330,7 +13233,7 @@ T	The 100th Anniversary of the Cambridge Entomological Club
 P	374
 Q	374
 
-S	80-375
+S	80-index
 T	Author and Subject Index for Volume 80
 P	375
 
@@ -13581,7 +13484,6 @@ P	534
 # Q inferred
 Q	536
 
-# Flush
 S	81-index
 T	Author and Subject Index to Volume 81
 P	537
@@ -13788,7 +13690,6 @@ A	Elizabetwh Aldorf
 P	359
 Q	365
 
-# Flush
 S	82-index
 T	Author and Subject Index to Volume 82
 P	369
@@ -13912,73 +13813,60 @@ Q	221
 V	83
 I	3-4
 
-S	83-223
 T	Structure and Relationships of the Upper Carboniferous Insect, <i>Eucaenus ovolis</i> (Protorthoptera: Eucaenidae)
 A	Frank M. Carpenter
 A	Eugene S. Richardson, Jr.
 P	223
 
-S	83-243
 T	Predation as a Selection Factor in the Mating Strategy of the Jumping Spider, <i>Phidippus johnsoni</i> (Salticidae, Araneae)
 A	R. R. Jackson
 P	243
 
-S	83-256
 T	Defensive Adaptations of Some Neotropical Long-Horned Beetles (Coleoptera: Cerambycidae): Antennal Spines, Tergiversation, and Double Mimicry
 A	Robert E. Silberglied
 A	Annette Aiello
 P	256
 B	50926679
 
-S	83-263
 T	Studies on Neotropical Pompilidae (Hymenoptera). X. Supplementary Notes
 A	Howard E. Evans
 P	263
 
-S	83-271
 T	<i>Prosthoporus,</i> a New Bolivian Genus of the Subtribe Lymeonina (Hymenoptera, Ichneumonidae)
 A	Charles C. Porter
 P	271
 
-S	83-277
 T	The First Workerless Parasite in the Ant Genus <i>Formica</i> (Hymenoptera: Formicidae)
 A	Edward O. Wilson
 P	277
 
-S	83-282
 T	The Natural History of the Workerless Ant Parasite, <i>Formica talbotae</i>
 A	Mary Talbot
 P	282
 
-S	83-289
 T	The Functional Anatomy of the Mesothoracic Leg of the Waterstrider, <i>Gerris remigis</i> Say (Heteroptera)
 A	Elizabeth Bowdan
 P	289
 B	50926712
 
-S	83-304
 T	New Records for Thyreodon from South Texas (Hymenoptera, Ichneumonidae) 
 A	Charles C. Porter
 P	304
 
-S	83-310
 T	Life History and Ecology of <i>Diploperla robusta</i> Stark and Gaufin (Plecoptera: Perlodidae)
 A	Diana L. Ashley
 A	Donald C. Tartar
 A	William D. Watkins
 P	310
 
-S	83-319
 T	Swimming Ability of Notonectidae (Hemiptera)
 A	Steven H. Gittelman
 P	319
 
-S	83-324
 T	Observations on the Nesting Behavior and Prey of Gorytine Wasps in Trinidad (Hymenoptera, Sphecidae)
 A	E. McC. Callon
 P	324
 
-S	83-336
 T	The Lower Permian Insects of Kansas. Part 12. Protorthoptera (continued), Neuroptera, Additional Palaeodictyoptera, and Families of Uncertain Position
 A	Frank M. Carpenter
 P	336
@@ -14167,7 +14055,6 @@ A	Sandy B. Fiance
 P	308
 Q	316
 
-# Flush
 S	84-index
 T	Author and Subject Index to Volume 84
 P	319
@@ -14356,7 +14243,7 @@ A	Frank M. Carpenter
 P	417
 Q	423
 
-S	85-425
+S	85-index
 T	Index to Authors and Subjects
 P	425
 
@@ -14550,7 +14437,7 @@ A	William G. Eberhard
 P	407
 Q	413
 
-S	86-415
+S	86-index
 T	Index to Authors and Subjects
 P	415
 
@@ -15097,7 +14984,7 @@ A	Jerrold Meinwald
 P	357
 Q	367
 
-S	89-371
+S	89-index
 T	Index
 P	371
 
@@ -15290,7 +15177,6 @@ A	Maria Guadalupe Del Rio Pesado
 P	425
 Q	436
 
-# Flush
 S	90-index
 T	Index to volume 90
 P	449
@@ -15418,7 +15304,6 @@ P	333
 Q	335
 B	50923871
 
-# Flush
 S	91-index
 T	Index to volume 91
 P	339
@@ -15695,7 +15580,6 @@ A	Frank M. Carpenter
 P	575
 Q	582
 
-# Flush
 S	92-index
 T	Index to Volume 92
 P	583
@@ -15884,7 +15768,6 @@ P	375
 Q	376
 # Verified: Hindawi error, author
 
-# Flush
 S	93-index
 T	Index to Volume 93
 P	377
@@ -16321,7 +16204,6 @@ A	G. William Wolfe
 P	327
 Q	344
 
-# Flush
 S	95-index
 T	Index to volume 95
 P	347
@@ -16511,7 +16393,6 @@ A	Frank N. Young
 P	307
 Q	309
 
-# Flush
 S	96-index
 T	Index to volume 96
 P	313
@@ -16686,7 +16567,6 @@ A	Robert W. Taylor
 P	281
 Q	296
 
-# Flush
 S	97-index
 T	Index to Volume 97
 P	299
@@ -17084,7 +16964,6 @@ A	Guy L. Bush
 P	335
 Q	357
 
-# Flush
 S	99-index
 T	Index to Volume 99
 P	359

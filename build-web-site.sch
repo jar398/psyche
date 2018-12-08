@@ -75,7 +75,7 @@
   (newline))
 
 (define-record-type article :article
-  (make-article stem title authors volume year pages issue id doi comments)
+  (make-article stem title authors volume year pages issue id doi bhl comments)
   (stem article-stem)          ;E.g. "30-013" for PDF file, if any
   (title article-title)
   (authors article-authors)    ;list of authors
@@ -85,6 +85,7 @@
   (id article-id)		;sequential within volume
   (issue article-issue)
   (doi article-doi)
+  (bhl article-bhl)
   (comments article-comments))
 
 ; Write TOC page, and one 'stub' page per article.
@@ -111,7 +112,7 @@
 
 (define (create-article-list volnum)
   (let ((toc (get-volume-toc volnum))
-	(prepared (get-volume-scans volnum))) ;List of article id's
+	(prepared (get-volume-scans volnum))) ;List of 'stems' vv-ppp
     (if toc
 	;; Augment TOC with any additional files listed in
 	;; the prepared articles list.
@@ -231,6 +232,14 @@
 		     ((2) "0")
 		     (else ""))
 		   id)))
+
+(define (parse-stem stem)
+  (let* ((chars (string->list stem))
+         (tail (member #\- chars))
+         (page-part (list->string (cdr tail)))
+         (page-num (string->number page-part))
+         (volnum (string->number (list->string (sublist chars 0 (- (length chars) (length tail)))))))
+    (list volnum (or page-num page-part))))
 
 (define (write-article-page article build-dir)
   (let ((path (path-to-landing-page article)))
@@ -413,7 +422,8 @@
           first-pages)
 
 (define (article-bhl-url article)
-  (let ((pageid (table-ref first-pages-table (bhl-key article))))
+  (let ((pageid (or (article-bhl article)
+                    (table-ref first-pages-table (bhl-key article)))))
     (if pageid
         (string-append "https://www.biodiversitylibrary.org/page/"
                        pageid)
@@ -676,7 +686,7 @@
                                                                 " "
                                                                 '())
                                                             (if cec-land
-                                                                (a (rlink cec-land here) "OCR")
+                                                                (a (rlink cec-land here) "(OCR)")
                                                                 '()))
                                                       '())))))
                                       (div)))
@@ -1012,7 +1022,7 @@
     (let ((foo (member id prepared)))	;foo = (31 35 49 55 ...) numbers/symbols
       (if foo
 	  (cond ((integer? id)
-		 ;; (make-article stem title authors volume year pages issue id comments)
+		 ;; (make-article stem title authors volume year pages issue doi bhl comments)
 		 (make-article (create-stem volnum id)
 			       (string-append
 				"Article beginning on page "
@@ -1027,6 +1037,7 @@
 			       #f	;issue is unknown
 			       id
                                #f    ;DOI
+                               #f    ;BHL
 			       '()))
 		(else #f))
 	  #f))))
@@ -1119,11 +1130,13 @@
                      (qage #f)          ;ending page, if known
                      (issue #f)
                      (doi #f)
+                     (bhl #f)
                      (comments '()))
 
             (define (finish-article)   ;returns reversed list of articles
               (if (or stem title page)
-                  (cons (list stem title authors year page qage issue doi comments)
+                  (cons (list (get-stem stem volume page)
+                              title authors year page qage issue doi bhl comments)
                         articles)
                   articles))
 
@@ -1141,38 +1154,46 @@
                          ((#\V)
                           (let ((new-volume (or (string->number arg) arg)))
                             (if (equal? volume new-volume)
-                                (loop stem title authors year page qage issue doi comments)
+                                (loop stem title authors year page qage issue
+                                      doi bhl comments)
                                 (begin (finish-volume volume (finish-article))
                                        (vloop new-volume)))))
                          ;; 'Stem' e.g. 46-072
                          ((#\S) (loop arg
-                                      title authors year page qage issue doi comments))
+                                      title authors year page qage issue
+                                      doi bhl comments))
                          ((#\T) (loop stem
                                       (if arg (allow-markup arg) "No title")
-                                      authors year page qage issue doi comments))
+                                      authors year page qage issue
+                                      doi bhl comments))
                          ((#\A) (loop stem title
                                       (if (and (> (string-length arg) 0)
                                                (not (string=? arg "None")))
                                           (cons (allow-markup arg) authors)
                                           authors)
-                                      year page qage issue doi comments))
+                                      year page qage issue
+                                      doi bhl comments))
                          ((#\Y) (loop stem title authors
                                       (or (string->number arg) arg)
-                                      page qage issue doi comments))
+                                      page qage issue
+                                      doi bhl comments))
                          ((#\P) (loop stem title authors year
                                       (or (string->number arg) arg)
-                                      qage issue doi comments))
+                                      qage issue
+                                      doi bhl comments))
                          ((#\Q #\R) (loop stem title authors year page
                                           (or (string->number arg) arg)
-                                          issue doi comments))
+                                          issue
+                                          doi bhl comments))
                          ((#\I) (loop stem title authors year page qage
                                       arg
-                                      doi comments))
+                                      doi bhl comments))
                          ((#\D) (loop stem title authors year page qage issue
-                                      arg
-                                      comments))
-                         ((#\# #\B) (loop stem title authors year page qage issue doi
-                                      (cons line comments)))
+                                      arg bhl comments))
+                         ((#\B) (loop stem title authors year page qage issue
+                                      doi arg comments))
+                         ((#\# #\B) (loop stem title authors year page qage issue
+                                          doi bhl (cons line comments)))
                          (else (display volume)
                                (display ":")
                                (display page)
@@ -1180,7 +1201,30 @@
                                (display "Unrecognized directive in TOC file: ")
                                (display line)
                                (newline)
-                               (loop stem title authors year page qage issue doi comments)))))))))))))
+                               (loop stem title authors year page qage issue doi bhl comments)))))))))))))
+
+;; E.g "20-170a" 20 170
+
+;; This is stil not right but it's better than what it was.
+;; Should check to see if curated page belongs to volume's present-article list.
+
+(define (get-stem curated-stem volume page)
+  (let ((pages (get-volume-scans volume)))    ;files actually present on site
+    (let ((verified-stem (if (and volume
+                                  pages
+                                  (member page pages))
+                             (create-stem volume page)
+                             #f)))
+    (if (and curated-stem
+             (not (equal? curated-stem verified-stem))
+             (let ((p (parse-stem curated-stem)))
+               (and p (integer? (cadr p)))))
+        ;; If curated but not observed, that's a problem
+        (begin (display (list 'curated: curated-stem
+                              'observed: verified-stem
+                              'page: page))
+               (newline)))
+    (or curated-stem verified-stem))))
 
 ;; articles is a list of (stem title authors year page qage issue doi comments)
 
@@ -1191,7 +1235,7 @@
           volume
           (let ((taps articles)) ;was (list-sort article< articles), before processed-toc
             (map (lambda (t-a-p next)
-                   (apply (lambda (stem title authors year page qage issue doi comments)
+                   (apply (lambda (stem title authors year page qage issue doi bhl comments)
                             (make-article stem
                                           title
                                           (reverse authors)
@@ -1211,6 +1255,7 @@
                                           issue
                                           (id-from-stem stem page)
                                           doi
+                                          bhl
                                           comments))
                           t-a-p))
                  taps
@@ -1350,6 +1395,7 @@
   (vector-ref table-of-scans volnum))
 
 ; Declares a bunch of prepared articles
+; See articles.sch
 
 (define (declare-prepared-articles-list n id-list)
   (vector-set!
