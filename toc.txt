@@ -4237,7 +4237,7 @@ V	27
 I	1
 
 S	27-001
-T	Notes on Forest Insects. III. Two New Species of Pytophthorus from Colorado
+T	Notes on Forest Insects. III. Two New Species of Pityophthorus from Colorado
 A	M. W. Blackman
 P	1
 
