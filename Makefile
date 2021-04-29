@@ -14,7 +14,7 @@ all: $(BUILD_DIR)/103/toc.html $(RESOURCE_FILES)
 	find $(BUILD_DIR) -name "*~" -exec rm {} \;
 
 # Create static web site files
-$(BUILD_DIR)/103/toc.html: $(SCHEME_FILES) $(TOC_FILE)
+$(BUILD_DIR)/103/toc.html: $(SCHEME_FILES) $(TOC_FILE) text/52/52-001.txt
 	mkdir -p $(BUILD_DIR)
 	(echo ,batch ;\
 	 echo ,config ,load web/web-config.scm ;\
@@ -33,13 +33,8 @@ THEREDIR=/raid/www/roots/psyche
 
 toc: $(TOC_FILE)
 
-$(OLD_TOC_FILE): toc.txt dois.csv compare/all-doi-metadata.csv articles.csv
-	python toc.py toc.txt dois.csv compare/all-doi-metadata.csv articles.csv master-toc
-
-$(TOC_FILE):
+$(TOC_FILE): compare/Makefile compare/compare.py compare/batch.py toc.txt
 	$(MAKE) -C compare merged-toc.txt
-
-# For new toc file, see compare/Makefile
 
 bhl/first-pages.sch: bhl/first-pages.py
 	python bhl/first-pages.py

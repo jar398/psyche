@@ -13,7 +13,7 @@
 (define articles-root "http://psyche.entclub.org/pdf/")
 ;(define text-files-root "/Users/jar/Scratch/Psyche/text/")
 (define text-files-root "text/")    ;; or ../text/
-
+(define cec-base-url "http://psyche.entclub.org/")
 
 "
 ,bench
@@ -324,8 +324,8 @@
                                  '()))
                            (br))
                      '())))
-	 (let ((cec-url (string-append "http://psyche.entclub.org/"
-					 (path->string here))))
+	 (let ((cec-url (string-append cec-base-url
+				       (path->string here))))
 	   (list (span (class= "stableurl")
                        "This landing page: "
                        (a (href= cec-url) cec-url))

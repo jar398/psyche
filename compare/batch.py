@@ -200,8 +200,11 @@ def write_toc(batch, path):
             orig = record['original title']
             if value == demarkupify(orig):
               value = orig
-          for value in value.split(';'):
+          if key == 'title':
             outfile.write('%s\t%s\n' % (inverse_translations[key], value))
+          else:
+            for value in value.split(';'):
+              outfile.write('%s\t%s\n' % (inverse_translations[key], value))
       outfile.write('\n')
 
 def field_sort_key(key):
