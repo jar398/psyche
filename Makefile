@@ -1,11 +1,10 @@
-SCHEME48=/usr/local/bin/scheme48 -h 60000000
+#SCHEME48=/usr/local/bin/scheme48 -h 60000000
+SCHEME48=scheme48 -h 60000000
 
 SCHEME_FILES=bhl/first-pages.sch build-web-site.sch articles.sch journal-meta.sch \
     pdf-file-sizes.sch dois.sch
 RESOURCE_FILES=seal150.png style.css robots.txt
-OLD_TOC_FILE=toc/processed-toc.txt
-NEW_TOC_FILE=compare/merged-toc.txt
-TOC_FILE=$(NEW_TOC_FILE)
+TOC_FILE=compare/merged-toc.txt
 
 # Where to put the derived files.
 BUILD_DIR=build
@@ -32,10 +31,13 @@ $(BUILD_DIR)/103/toc.html: $(SCHEME_FILES) $(TOC_FILE)
 THEREHOST=norbert.csail.mit.edu
 THEREDIR=/raid/www/roots/psyche
 
-toc: $(OLD_TOC_FILE)
+toc: $(TOC_FILE)
 
-$(OLD_TOC_FILE): toc.txt dois.csv
-	python toc.py toc.txt toc
+$(OLD_TOC_FILE): toc.txt dois.csv compare/all-doi-metadata.csv articles.csv
+	python toc.py toc.txt dois.csv compare/all-doi-metadata.csv articles.csv master-toc
+
+$(TOC_FILE):
+	$(MAKE) -C compare merged-toc.txt
 
 # For new toc file, see compare/Makefile
 
