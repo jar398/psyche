@@ -1,0 +1,232 @@
+; Inventory of the Swain/Carpenter set of Psyche.
+
+;Box labeled "1-18"
+
+; Volume 1, 1874-1876, 32 issues, 1-32
+; Two copies of number 29
+; MISSING: 1 2 3 5 6 7 8 9 10 11 12
+; MISSING: 20 21 23 24 26 28
+; Hindawi's version is complete through page 218/issue 32
+; Hindawi is missing pages 219-245... but so is CEC.
+;  Those pages are probably an index to volume 1.
+;
+(1 4
+ 13 14 15 16 17 18 19
+ 22 25 27 29 30 31 32 
+ )
+
+; Volume 2, 1887-1879, 36 issues, 33-68
+; COMPLETE
+; Hindawi's is complete, too.
+;
+(2
+ 33-34 35-36 37-38 39-40 41-42 43-44
+ 45-46 47-48 49-52 53-56
+ 57 58 59 60 61-62 63 64 65-68
+ )
+
+; Volume 3, 1880-1882, 36 issues, 69-104
+; MISSING A LOT
+; Two copies of number 94
+; Hindawi's is complete.
+;
+(3
+ ;; 69 70 71 72 73 74 75 76 77 78 79 80
+ ;; 81 82 83 84 85 86
+ 87-89 90-92
+ 93 94 95-96 97 98 99 100 101-102 103-104
+ )
+
+; Volume 4, 1883-1885, 36 issues, 105-140
+; COMPLETE
+; Hindawi's is complete, too.
+; N.b. mistake, 126-128 called itself "126-129"
+;
+(4
+ 105-106 107-108 109-110 111-112 113-114 115-116
+ 117-118 119 120 121 122-123 124-125 126-128
+ 129-131 132-134 135-137 138-140)
+
+; Not published in 1886-1887 !
+
+; Voume 5, 1888-1890, 36 issues, 141-176
+; COMPLETE
+; Hindawi's is complete, too.
+;
+(5 141-142 143 144 145 146 147-148 149-150 151-152
+   153 154-155 156 157-159 160-164
+   165 166 167-168 169 170 171 172-174 175-176)
+
+; Volume 6, 1891-1893, 36 issues, 177-212
+; MISSING 208
+; Hindawi's is complete.
+;
+(6 177 178 179 180 181 182 183 184 185 186 187 188
+   189 190 191 192 193 194 195 196 197 198 199 200
+   201 202 203 204 205 206 207 209 210 211 212)
+
+; Voume 7, 1894-1896, 36 issues, 213-248
+; COMPLETE
+; Hindawi's set is also complete.
+; There seems to be a reissue or correction of article on page 274.
+; Hindawi has a 'supplement' that we don't.
+;
+(7
+ 213 214 215 216 217 218-221 222 223 224
+ 225 226 227 228 229 230 231 232 233 234 235 236
+ 237 238 239 240 241 242 243 244 245 246 247 248)
+
+; Volume 8, 1897-1899, 249-284, 36 issues, 249-284
+; 
+; MISSING 249 - HINDAWI ALSO MISSING.
+; MISSING 251 252 253 254 255 256 257 258 259 260 261 - Hindawi has.
+; MISSING 263 - HINDAWI ALSO MISSING.
+; MISSING 264 265 269 - Hindawi has.
+; MISSING 271 272 - Hindaw has.
+; MISSING 273 - HINDAWI ALSO MISSING.
+; MISSING 274 275 276 277 278 - Hindawi has.
+; MISSING 279 - HINDAWI ALSO MISSING.
+; MISSING 280 281 - Hindawi has.
+; MISSING 284 - Hindawi has.
+; Hindawi has a 'supplement' that we don't.
+;
+(8
+ 250  ; 1897
+ 262 266 267 268 270  ;1898
+ 282 283  ;1899
+ )
+
+; Volume 9, 1900-1902, 36 issues, numbers 285-320
+; MISSING 285 (1900)
+; Hindawi is missing 286 297 - WE CAN PROVIDE
+; MISSING 305 and 308 (1901) - SO IS HINDAWI
+; Hindawi is missing 289 293 - WE CAN PROVIDE
+; Hindawi is missing 306 307 310 314 - WE CAN PROVIDE
+;  I can't find number 293 now.
+;
+(9
+ 286 287 288 289 290 291 292 294 295 296
+ 298 299 300 301 302 303 304 306 307
+ 309 310 311 312 313 314 315 316 317 318 319 320)
+
+; Volume 10, 1901, 6 issues, number 321-326
+; MISSING 323
+; Hindawi set is complete
+;
+(10 321  ;Feb
+    322  ;Apr
+    324  ;Aug
+    325-326)  ;Oct-Dec
+
+; Voume 11
+; MISSING
+; Hindawi set is complete but 1,3,4,5 are photocopies
+(11)
+
+; Volume 12
+; Hindawi set is complete but 1,2,6 are photocopies
+(12 5)
+
+; Volume 13
+; MISSING 
+; Hindawi set is missing 2,3,4
+(13)
+
+; Volume 14
+; Missing 3 5 6  (4 is dated August)
+; Hindawi set is missing 6
+(14 1 2 4)
+
+; Volume 15-16 missing; Hindawi's are partial
+(15)    ;Hindawi missing 5, 6
+(16)	;Hindawi missing 4, 6
+
+(17 1 2 3 4 5 6)
+
+; Can provide volume 18 to Hindawi
+(18 1 2 3 4 5 6)
+
+
+;Box labeled "19-37"
+(19 1 2 3 4 5 6)
+(20 1 2 3 4 5 6)
+(21 1 2 3 4 5 6)
+(22 1 2 3 4 5 6)
+(23 1 2 3 4 5 6)
+(24 1 2 3 4 5 6)
+(25 1 2 3 4 5 6)
+(26 1 2 3 4 5 6)
+(27 1 2-3 4 5 6)
+; CEC online is missing 27:144, but Hindawi has it.
+(28 1 2 3 4 5-6)
+(29 1 2 3 4 5-6)
+(30 1 2 3-4 5 6)
+(31 1 2 3-4 5 6)
+(32 1 2 3 4-5 6)
+(33 1 2 3 4-5 6)
+(34 1 2 3-4 5 6)
+(35 1 2 3 4)      ;Down to 4 per year
+(36 1 2 3 4)
+(37 1 2 3 4)
+
+; Box labeled "38-62"
+(38 1 2-3 4)
+(39 1-2 3 4)
+(40 1 2 3 4)
+(41 1 2 3 4)
+(42 1 2 3 4)
+(43 1 2-3 4)
+(44 1-2 3 4)
+(45 1 2-3 4)
+(46 1 2-3 4)
+# Hindawi seems to only have issue 1 of volume 47 on its site.
+# The CEC web site is screwed up.
+# Complaint that 47:121-124 is missing, and it is.
+(47 1 2-3 4)
+(48 1 2-3 4)
+(49 1-2 3-4)
+(50 1-2 3-4)
+; Address: Bio Labs, Harvard.  Printed by Harvard Printing Office.
+; Brues, editor  Meetings in B-455 bio labs.
+(51 1-2 3-4)    ;3-4 is thick
+(52 1-2 3-4)    ;1-2 is very think
+(53 1-2 3-4)
+;54 = First non-yellow binding.  Carpenter editor. New printer
+(54 1 2 3 4)
+(55 1 2 3 4)
+(56 1 2 3 4)
+(57 1 2 3 4)
+(58 1 2 3 4)
+(59 1 2 3 4)
+(60 1 2 3 4)
+(61 1 2 3 4)
+(62 1 2 3 4)    ;TWO COPIES
+
+; Box labeled "63-79"
+(63 1 2 3 4)
+(64 1 2 3 4)
+(65 1 2-3 4)
+(66 1-2 3)       ;Missing 4.  (Hindawi has 1-2 3 4)
+(67 1-2 3 4)
+(68 1 2-3 4)
+(69 1 2 3 4)
+(70 1 2 3 4)
+(71 1 2 3 4)
+(72 1 2 3 4)   ;Hindawi is missing #3 - CAN PROVIDE
+(73 1 2 3 4)
+(74 1 4)       ;MISSING 2 3 (as is Hindawi!!)
+; N.b. Confusion re 75:4, which Hindawi seems to be missing. Check
+(75 1 2 3)     ;PARTIAL 4 (Dec. 1968, pages 300-362) - Hindawi is missing all of #4
+(76 1 2 3 4)
+(77 1 2 3 4)
+(78 1-2 3 4)   ;Hindawi is missing 1-2, can provide
+(79 1-2 3 4)
+
+; Cannot help with missing issues after volume 79
+; (specifically: Hindawi is missing 83:3-4)
+
+;Loose
+(61 3)
+
+;Loose
+; Dec 1968, pages 299-362
