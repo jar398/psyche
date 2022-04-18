@@ -17,15 +17,14 @@
 import sys, os, csv, re
 
 def check_record(record):
-    for (key, value) in record.items():
-        if key == 'object':
-            for (key, value) in value:
-                if not isinstance(value, str):
-                    print "bad value in object", key, value
-        else:
-            if isinstance(value, str) and value.isdigit():
-                print "failed to convert to integer", key, value
-
+  for (key, value) in record.items():
+    if key == 'object':
+      for (key, value) in value:
+        if not isinstance(value, str):
+          print "bad value in object", key, value
+    else:
+      if isinstance(value, str) and value.isdigit():
+        print "failed to convert to integer", key, value
 
 def read_toc(path):
     all_objects = []
@@ -644,22 +643,26 @@ def authors(d):
             a.append(value)
     return a
 
-toc_path = sys.argv[1]
-dois_path = sys.argv[2]       # 'dois.csv'
-more_dois_path = sys.argv[3]  # 'doi-metadata.csv'
-articles_path = sys.argv[4]   # 'articles.csv'
-output_dir = sys.argv[5]
+def doit():
+  toc_path = sys.argv[1]
+  dois_path = sys.argv[2]       # 'dois.csv'
+  more_dois_path = sys.argv[3]  # 'doi-metadata.csv'
+  articles_path = sys.argv[4]   # 'articles.csv'
+  output_dir = sys.argv[5]
 
-toc = read_toc(toc_path)
-infer_volume_and_issue(toc)
-infer_end_page(toc)
-records = dictify(toc)
-ambiguous_dois = load_dois(records, dois_path)
-load_more_dois(records, more_dois_path)
-add_cec_holdings(records, articles_path)
+  toc = read_toc(toc_path)
+  infer_volume_and_issue(toc)
+  infer_end_page(toc)
+  records = dictify(toc)
+  ambiguous_dois = load_dois(records, dois_path)
+  load_more_dois(records, more_dois_path)
+  add_cec_holdings(records, articles_path)
 
-records = sorted(records, key=record_sort_key)
-infer_years(records)
-check_continuity(records)
-count_things(records)
-write_toc(records, ambiguous_dois, output_dir)
+  records = sorted(records, key=record_sort_key)
+  infer_years(records)
+  check_continuity(records)
+  count_things(records)
+  write_toc(records, ambiguous_dois, output_dir)
+
+if __name__ == '__main__':
+  doit()
