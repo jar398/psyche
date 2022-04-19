@@ -16,3 +16,7 @@ cec-pdf-list.csv: import_cec_pdf_list.py ../articles.sch
 bhl-start-pages.csv: import_bhl_start_pages.py ../bhl/first-pages.sch
 	python import_bhl_start_pages.py ../bhl/first-pages.sch >bhl-start-pages.csv.new
 	mv bhl-start-pages.csv.new bhl-start-pages.csv
+
+master-toc.csv: merged-toc.txt toc_to_csv.py
+	python toc_to_csv.py $< $@.new
+	mv -f $@.new $@

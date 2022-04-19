@@ -67,9 +67,9 @@ def maybe_int(field):
         return field
 
 def get_last_page(record):
-    q = record.get('inferred end page')
+    q = record.get('end page')
     if q != None: return q
-    return record.get('end page')
+    return record.get('inferred end page')
 
 # Read ad hoc 'block style' format in which primary CEC curation is kept.
 # Volume, year, and issue are carried forward from one block to the next.

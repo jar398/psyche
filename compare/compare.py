@@ -224,7 +224,7 @@ def doit(toc1_path, toc2_path, merged_path):
                              key, how, val1, val2, checked])
             if how == 'different':
               m2.append((record1, record2, '%s mismatch' % key, val1, val2))
-              note(record2, '%s mismatch: %s' % (key, val1))
+              note(record2, 'Hindawi %s: %s' % (key, val1))
             else:
               m1.append((record1, record2, '%s %s' % (key, how), val1, val2))
       if len(m2) > 0:

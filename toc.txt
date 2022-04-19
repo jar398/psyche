@@ -25,11 +25,23 @@ V	2
 # Present Ant Room and Swain, complete.
 
 I	35-36
+Y	1877
+
 P	17
 Q	19
 T	Experiments on the Vitality of Insects
 A	A. S. Packard, Jr.
 # Hindawi error: title and author
+
+I	58
+Y	1879
+
+P	210
+Q	211
+D	10.1155/1879/91957
+T	Attacks of Native Insects Upon Imported Trees
+A	H. A. Hagen
+# Hindawi error: title typo
 
 I	45-46
 Y	1878
@@ -50,11 +62,32 @@ D	10.1155/1980/32646
 I	80
 Y	1881
 
+I	81
+Y	1881
+
+P	159
+Q	161
+T	On the Number of Molts of Butterflies, With Some History of the Moth Callosamia Promethea
+A	William H. Edwards
+D	10.1155/1881/72425
+# "Continued on page 171"
+# Hindawi error: missing 'the' in title
+
 I	93
 Y	1882
 
 V	4
 # Present Ant Room and Swain, complete.
+
+I	111-112
+Y	1883
+
+P	75
+Q	75
+T	Captures of Feniseca Tarquinius Fabr.
+A	Joseph Albert Lintner
+D	10.1155/1883/94568
+# Hindawi error: spacing in title
 
 I	117-118
 Y	1884
@@ -62,6 +95,13 @@ Y	1884
 I	126-129
 # N.b. mistake: issue 126-128 called itself "126-129".
 # Hindawi calls it "126-129" so I guess stick with that.
+
+P	215
+Q	217
+D	10.1155/1884/63935
+T       Notes on the Habits of Hypotrichia Spissipes Lec., With Description of the Females
+A	Henry Guernsey Hubbard
+# Hindawi error: two title errors
 
 I	129-131
 Y	1885
@@ -966,6 +1006,7 @@ P	103
 Q	103
 B	11809633
 # Missing from Hindawi's DOI list.
+# BHL only!
 
 # Review of ...
 T	Recent entomological literature
@@ -1743,6 +1784,7 @@ P	168
 T	Notes on Coleoptera from Connecticut
 A	A. B. Champlain
 P	170
+Q       172
 
 T	Notes on a Sarcophagid Found in a Turtle
 A	T. L. Patterson
@@ -1768,10 +1810,12 @@ P	181
 T	The Orthopterological Work of Mr. S. H. Scudder, with Personal Reminiscences
 A	Albert P. Morse
 P	187
+Q       191
 
 T	Synonymical, and Other Notes on the Tipulidae (Diptera)
 A	Charles P. Alexander
 P	192
+Q       202
 
 T	Three New Ants from Mexico and Central America
 A	William Morton Wheeler
@@ -8399,12 +8443,15 @@ T	Henry Clinton Fall (1862-1939)
 A	Philip J. Darlington, Jr.
 P	45
 B	50901481
-# Seems to be missing from Hindawi site 2018-11-26
+# Seems to be missing from Hindawi site 2018-11-26.
+# BHL only!
 
 T	<i>Hilar granditarsis,</i> A Balloon-maker
 A	A. L. Melander
 P	55
-# Seems to be missing from Hindawi site 2018-11-26
+B	50901491
+# Seems to be missing from Hindawi site 2018-11-26.
+# BHL only!
 
 T	A New Species of <i>Haliplus</i>
 A	Edith W. Mank
@@ -8438,7 +8485,8 @@ A	Laurence G. Wesson, Jr.
 P	105
 Q	111
 B	50901545
-# Seems to be missing from Hindawi site 2018-11-26
+# Seems to be missing from Hindawi site 2018-11-26.
+# BHL only!
 
 T	The Histology of the Wing Pads of the Early Instars of <i>Pteronarcys proteus</i> Newport (Plecoptera)
 A	R. P. Holdsworth, Jr.
@@ -8450,7 +8498,7 @@ T	A Synopsis of the Genus Acerataspis (Hymenoptera, Ichneumonidae)
 A	C. D. Michener
 P	121
 
-T	The Mathing Habits of the Winter Mecopteron, <i>Boreus brumalis</i> Fitch
+T	The Mating Habits of the Winter Mecopteron, <i>Boreus brumalis</i> Fitch
 A	G. C. Crampton
 P	125
 
@@ -9559,7 +9607,7 @@ A	R. V. Chamberlin
 P	184
 Q	186
 B	50910090
-# Verified: Hindawi error, in the PDF for previous article
+# Verified: Hindawi error, its pages are in the PDF for previous article
 
 S	56-187
 # Page 194 is a plate
@@ -17286,7 +17334,7 @@ P	19
 Q	25
 
 S	102-027
-T	Cannibalistic caterpillars (<i>Utetheisa ornatrix</i>) fail to differentiate between eggs on the basis on kinship
+T	Cannibalistic caterpillars (<i>Utetheisa ornatrix</i>; Lepidoptera : Arctiidae) fail to differentiate between eggs on the basis on kinship
 A	James F. Hare
 A	Thomas Eisner
 P	27
